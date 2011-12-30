@@ -1,0 +1,4 @@
+permalink: /:categories/:title.html
+auto: true
+pygments: true
+markdown: rdiscount
