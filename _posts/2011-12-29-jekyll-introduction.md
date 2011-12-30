@@ -3,13 +3,8 @@ layout: post
 category : lessons
 ---
 
-This Jekyll introduction is meant to outline a conceptual overview of what jekyll does and how it works
-from a high level. Learning these core concepts should help you avoid common frustrations and ultimately 
-help you better understand the code examples contained throughout Jekyll-Bootstrap.
-
-Be aware that core concepts are introduced in rapid succession without code examples.
-This introduction is not intended to specifically teach you how to do anything.
-For usage lessons you will read the API and Usage articles as well as the source code.
+This Jekyll introduction will outline specifically  what Jekyll is and why you would want to use it.
+Directly following the intro we'll learn exactly _how_ Jekyll does what it does.
 
 ## Overview 
 
@@ -63,6 +58,18 @@ Therefore if you like to keep things simple and you prefer the command-line over
 - Ability to host your blog on a static web-server.
 - Ability to host freely on GitHub Pages.
 - No database required.
+
+# How Jekyll Works
+
+The following is a complete but concise outline of exactly how Jekyll works.
+
+Be aware that core concepts are introduced in rapid succession without code examples.
+This information is not intended to specifically teach you how to do anything, rather it
+is intended to give you the _full picture_ relative to what is going on in Jekyll-world.
+
+Learning these core concepts should help you avoid common frustrations and ultimately 
+help you better understand the code examples contained throughout Jekyll-Bootstrap.
+
 
 ## Initial Setup
 
@@ -280,7 +287,7 @@ Both of which cannot be supported by GitHub Pages.
 As a programmer - this is very frustrating.
 
 But rather than look a gift horse in the mouth we are going to 
-suck it up and view it as an opportunity to work around limitations and adopt client side solutions when possible.
+suck it up and view it as an opportunity to work around limitations and adopt client-side solutions when possible.
 
 **Aside**   
 My personal stance is to not invest time trying to hack liquid. It's really unnecessary
