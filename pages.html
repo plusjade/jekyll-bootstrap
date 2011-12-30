@@ -1,0 +1,21 @@
+---
+layout: page
+title: Pages 
+header: Pages
+group: example-page
+---
+
+<h2>All Pages</h2>
+{% assign pages_list = site.pages %}
+{% include helpers/pages_list.html %}
+
+
+<h2>Pages in group: project</h2>
+{% assign pages_list = site.pages %}
+{% assign group = 'project' %}
+{% include helpers/pages_list.html %}
+
+<h2>Pages in group: example-page</h2>
+{% assign pages_list = site.pages %}
+{% assign group = 'example-page' %}
+{% include helpers/pages_list.html %}

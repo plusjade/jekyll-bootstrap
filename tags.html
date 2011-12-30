@@ -1,0 +1,20 @@
+---
+layout: page
+title: Tags
+header: Posts By Tag
+group: example-page
+---
+	
+<ul class="tag_box inline">
+  {% assign tags_list = site.tags %}  
+  {% include helpers/tags_list.html %}
+</ul>
+
+
+{% for tag in site.tags %} 
+  <h2 id="{{ tag[0] }}-ref">{{ tag[0] }}</h2>
+  <ul>
+    {% assign pages_list = tag[1] %}  
+    {% include helpers/pages_list.html %}
+  </ul>
+{% endfor %}

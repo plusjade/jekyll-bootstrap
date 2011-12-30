@@ -1,0 +1,31 @@
+<div id="page">
+	
+  <h1 class="emphnext">{{ page.title }}</h1>
+  <ul class="tag_box inline">
+  {% assign tags_list = page.tags %}
+  {% include helpers/tags_list.html %}
+  </ul>
+
+  {{ content }}
+
+  <address class="signature">
+    <a class="author" href="/">{{ site.author.name }}</a> 
+    <span class="date">{{ page.date | date_to_long_string }}</span>
+    <span class="location">{{ page.location }}</span>
+  </address>
+  
+  <div class="prev-next">
+  {% if page.next %}
+    <a href="{{ page.next.url }}" class="next" title="{{ page.next.title }}">Next Post &rarr;</a>
+  {% endif %}
+  {% if page.previous %}
+    <a href="{{ page.previous.url }}" class="prev" title="{{ page.previous.title }}">&larr; Earlier Post</a>
+  {% endif %}
+  </div>
+  
+</div><!-- End Page -->
+
+<!-- Discus Comments -->
+<div id="disqus_thread">
+  <h2>Comment Section</h2>
+</div>

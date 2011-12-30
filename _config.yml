@@ -1,0 +1,18 @@
+# This is the default format. 
+# For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink: /:categories/:year/:month/:day/:title 
+auto: true
+pygments: true
+var:
+  archive_path: /archive.html
+  categories_path : /categories.html
+  tags_path : /tags.html
+
+production_url : http://username.github.com # or your custom domain name
+title : My Blog =)
+
+author :
+  name : Name Lastname
+  email : blah@email.test
+  github : username
+  twitter : username
