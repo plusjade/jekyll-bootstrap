@@ -1,8 +1,8 @@
 # A simple way to inspect liquid template variables.
 # Usage:
 #  Can be used anywhere liquid syntax is parsed (templates, includes, posts/pages)
-#  {{ site | inspect }}
-#  {{ site.posts | inspect }}
+#  {{ site | debug }}
+#  {{ site.posts | debug }}
 #
 require 'pp'
 module Jekyll
