@@ -10,7 +10,7 @@ Jekyll-bootstrap is meant to make it easier for technically-minded people to sha
 
 As a self-taught web-developer I am continually indebted to all the diligent people who share their knowledge, bug fixes, and lessons through blogging.
 
-I always thought "I should really share my experiences too", but I never manage to get passed the mental obstacle of having to setup a wordpress install
+I always thought "I should really share my experiences too", but I never manage to get past the mental obstacle of having to setup a wordpress install
 and use some UI to write words. Then do I have to figure out how to highlight code or what?
 
 The point is I'm lazy _in that way_. I have 3 wordpress accounts, a posterous, a sinatra site, and a twitter,
