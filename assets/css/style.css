@@ -107,3 +107,12 @@ ul li a.active, ol li a.active {
 	border-bottom:1px dashed #ccc;
 }
 
+.addthis_toolbox {
+	position:absolute;
+	top:5px;
+	right:10%;
+	width:400px;
+}
+.addthis_toolbox a{
+	margin:0 !important;
+}
