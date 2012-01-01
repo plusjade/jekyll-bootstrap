@@ -11,7 +11,7 @@ If you'd like to help jekyll-bootstrap get better here's how you can do it!
 All collaboration and correspondence should take place on GitHub. Please make 
 extensive use of the issue tracking system, code commenting, and pull requests.
 
-<https://github.com/plusjade/jekyll-bootstrap>
+[Jekyll-Bootstrap on GitHub](https://github.com/plusjade/jekyll-bootstrap)
 
 
 ## Areas Needing the Most Help

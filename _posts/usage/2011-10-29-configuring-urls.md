@@ -7,7 +7,7 @@ tags : [permalinks, urls]
 URL configuration is an important aspect of Jekyll as users usually require
 total control over how links to their content are handled. Fortunately Jekyll provides extensive customization options as to how your permalinks will be generated:
 
-<https://github.com/mojombo/jekyll/wiki/Permalinks>
+[Jekyll Permalinks](https://github.com/mojombo/jekyll/wiki/Permalinks)
 
 ## Jekyll-Bootstrap's URL Configuration
 
