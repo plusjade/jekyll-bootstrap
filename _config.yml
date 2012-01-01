@@ -1,7 +1,6 @@
 permalink: /:categories/:title.html
 auto: true
 pygments: true
-markdown: rdiscount
 var:
   archive_path: /archive.html
   categories_path : /categories.html
