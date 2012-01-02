@@ -1,0 +1,85 @@
+{% comment %}<!--
+The switcher is responsible for switching themes for your website.
+This solution is unideal because we have to manually add
+themes to the switcher case statement in order for it to work.
+Reason is Jekyll's custom 'include' tag does not support passing in variables as its argument.
+So we can't include a file using a dynamic filename.
+
+Usage:
+  To add a theme just follow the same case logic but update the theme-name.
+
+Proposed Fix:
+  There are two easy fixes for this but they will need to be included into Jekyll core
+  and I haven't submitted a pull request yet. The fix will not break or harm anything:
+
+  1. Add ability to specify custom '_layouts' path. Jekyll configuration
+    already supports a custom _plugins path. The same can be applied to the layouts folder.
+    This let's us namespace our _layouts folder by theme.
+    Example:
+      layouts : _layouts/hellokitty
+  
+    The hellokitty folder defines a standardized set of layout files and presto we have ability
+    to install themes.
+
+  2. Update install Liquid tag to support variable parsing. This way we can pass in a variable
+    that essentially namespaces include files. 
+
+  I vote for #1 since it's easier and there's less abstraction.
+-->{% endcomment %}
+
+{% case site.theme %}
+{% when 'tom' %}
+
+  {% assign theme_asset_path = "/assets/themes/tom" %}
+  
+  {% case layout_type %}
+  {% when 'default' %}
+    {% include themes/tom/default.html %}
+  {% when 'post' %}
+    {% include themes/tom/post.html %}
+  {% when 'page' %}
+    {% include themes/tom/page.html %}
+  {% endcase %}
+
+{% when 'tatey' %}
+  
+  {% assign theme_asset_path = "/assets/themes/tatey" %}
+
+  {% case layout_type %}
+  {% when 'default' %}
+    {% include themes/tatey/default.html %}
+  {% when 'post' %}
+    {% include themes/tatey/post.html %}
+  {% when 'page' %}
+    {% include themes/tatey/page.html %}
+  {% endcase %}
+      
+{% when 'bootstrap' %}
+  
+  {% assign theme_asset_path = "/assets/themes/bootstrap" %}
+  
+  {% case layout_type %}
+  {% when 'default' %}
+    {% include themes/bootstrap/default.html %}
+  {% when 'post' %}
+    {% include themes/bootstrap/post.html %}
+  {% when 'page' %}
+    {% include themes/bootstrap/page.html %}
+  {% endcase %}
+  
+{% else %}
+
+  {% assign theme_asset_path = "/assets/themes/bootstrap" %}
+  
+  {% case layout_type %}
+  {% when 'default' %}
+    {% include themes/bootstrap/default.html %}
+  {% when 'post' %}
+    {% include themes/bootstrap/post.html %}
+  {% when 'page' %}
+    {% include themes/bootstrap/page.html %}
+  {% endcase %}
+
+{% endcase %}
+
+{% assign layout_type = null %}
