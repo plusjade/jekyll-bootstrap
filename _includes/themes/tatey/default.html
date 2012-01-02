@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <link href="{{ theme_asset_path }}/css/default.css?9" rel="stylesheet" type="text/css">
+    <link href="{{ theme_asset_path }}/css/highlight.css?9" rel="stylesheet" type="text/css">
+    <link href="http://feeds2.feedburner.com/tatejohnson" rel="alternate" title="Tate Johnson" type="application/atom+xml">
+
+  </head>
+  <body>
+    <h1><a href="{{ base.url }}/">yoursite<span>.</span>com</a></h1>
+    <nav>
+      <ul>
+        <li><a href="{{ base.url }}/">Blog</a></li>
+        <li><a href="{{ base.url }}/projects/">Projects</a></li>
+        <li><a href="{{ base.url }}/about/">About</a></li>
+      </ul>
+    </nav>
+    {{ content }}
+  </body>
+</html>

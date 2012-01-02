@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<title>{{ page.title }} | Jekyll-Bootstrap</title>
+	<link href="{{ theme_asset_path }}/css/bootstrap-1.4.0-min.css" rel="stylesheet" type="text/css" media="all">
+	<link href="{{ theme_asset_path }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+</head>
+<body>
+  <div class="container-fluid">
+    <ul class="project-list">
+      <li><a href="/">home</a></li>
+		  {% assign pages_list = site.pages %}
+		  {% assign group = 'project' %}
+		  {% include pages_list.html %}
+		</ul>
+		
+    <div class="sidebar">
+
+  	  <h4 style="margin-top:30px">Overview</h4>
+  		<ol>
+  	    {% assign pages_list = site.categories.lessons %}  
+  	    {% include pages_list.html %}
+  		</ol>
+
+  		<h4>API</h4>
+  		<ul>
+  		  {% assign pages_list = site.categories.api %}  
+  		  {% include pages_list.html %}
+  		</ul>
+  		
+  		<h4>Usage</h4>
+  		<ul>
+  		  {% assign pages_list = site.categories.usage %}  
+  		  {% include pages_list.html %}
+  		</ul>
+  		      
+      <h4>Helpers</h4>
+  		<ul>
+  		  {% assign pages_list = site.categories.helpers %}  
+  		  {% include pages_list.html %}
+  		</ul>
+  		
+		
+  		<h4>Example Pages</h4>
+  		<ul>
+  		  {% assign pages_list = site.pages %}  
+  		  {% assign group = 'example-page' %}
+  		  {% include pages_list.html %}
+  		</ul>
+
+  		<h4><a href="{{ site.var.categories_path }}">Categories</a></h4>
+  		<ul class="tag_box">
+        {% assign categories_list = site.categories %}
+        {% include categories_list.html %}
+  		</ul>
+
+  		<h4><a href="{{ site.var.tags_path }}">Tags</a></h4>
+  		<ul class="tag_box" style="margin-bottom:30px">
+  		  {% assign tags_list = site.tags %}  
+  		  {% include tags_list.html %}
+  		</ul>
+		  
+    </div>
+
+	  <div id="main-content" class="content">
+      <div class="span10">
+				{{ content }}
+			</div>
+	  </div>
+
+  </div>
+  
+  <a href="http://github.com/plusjade/jekyll-bootstrap" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/30f550e0d38ceb6ef5b81500c64d970b7fb0f028/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub"></a>
+{% if site.safe %}
+  {% include production/share.html %}
+  {% include production/analytics.html %}
+{% endif %}
+</body>
+</html>
