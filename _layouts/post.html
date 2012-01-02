@@ -2,15 +2,6 @@
 layout: default
 ---
 
-<h1 class="title">{{ page.title }}</h1>
+{% assign layout_type = 'post' %}
+{% include themes/switcher.liquid %}
 
-{{ content }}
-
-{% if page.previous %}
-	{% if page.categories == page.previous.categories %}
-<h2>Next Steps</h2>
-<ul>
-	<li><a href="{{ page.previous.url }}">{{ page.previous.title }}</a></li>
-</ul>
-	{% endif %}
-{% endif %}

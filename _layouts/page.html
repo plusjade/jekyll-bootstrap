@@ -2,6 +2,5 @@
 layout: default
 ---
 
-<h1 class="title">{% if page.header %}{{ page.header }}{% else %}{{ page.title }}{% endif %}</h1>
-
-{{ content }}
+{% assign layout_type = 'page' %}
+{% include themes/switcher.liquid %}
