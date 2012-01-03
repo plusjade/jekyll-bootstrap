@@ -1,0 +1,17 @@
+<div id="page">
+	
+  <h1 class="emphnext">{{ page.title }}</h1>
+
+{{ content }}
+
+  <address class="signature">
+    <a class="author" href="/">{{ site.author.name }}</a> 
+    <span class="date">{{ page.date | date_to_long_string }}</span>
+    <span class="location">{{ page.location }}</span>
+  </address>
+</div><!-- End Page -->
+
+<!-- Discus Comments -->
+<div id="disqus_thread">
+  <h2>Comment Section</h2>
+</div>
