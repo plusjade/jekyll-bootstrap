@@ -3,7 +3,7 @@
 <head>
    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
    <title>{{ page.title }}</title>
-   <meta name="author" content="Your name here" />
+   <meta name="author" content="{{ site.author.name }}" />
    <link href="http://feeds.feedburner.com/username" rel="alternate" title="your title" type="application/atom+xml" />
 
    <!-- syntax highlighting CSS -->
@@ -20,8 +20,9 @@
 
 <div class="site">
   <div class="title">
-    <a href="/">Website Title Here</a>
-    <a class="extra" href="/">home</a>
+    <a href="/">{{ site.title }}</a>
+    <a class="extra" href="/archive.html">Archive</a>
+    <a class="extra" href="/pages.html">Pages</a>
   </div>
   
   {{ content }}
@@ -29,15 +30,15 @@
   <div class="footer">
     <div class="contact">
       <p>
-        Your name info<br />
+        {{ site.author.name }}<br />
         tagline<br />
-        you@email.com
+        {{ site.author.email }}
       </p>
     </div>
     <div class="contact">
       <p>
-        <a href="http://github.com/username/">github.com/username</a><br />
-        <a href="http://twitter.com/username/">twitter.com/username</a><br />
+        <a href="http://github.com/{{ site.author.github }}/">github.com/{{ site.author.github }}</a><br />
+        <a href="http://twitter.com/{{ site.author.twitter }}/">twitter.com/{{ site.author.twitter }}</a><br />
         <a href="http://flickr.com/photos/username/">flickr.com/photos/username</a>
       </p>
     </div>
