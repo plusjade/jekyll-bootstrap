@@ -33,7 +33,7 @@ As for my first flurry of content, I would like to share everything I learned ab
 ## People
 
 Jekyll-bootstrap is maintained by me, [Jade Dominguez](http://plusjade.com).
-I encourage everyone to check out the [contribute](contribute.html) page if you are interested in helping. =)
+I encourage everyone to check out the [contribute](contributing.html) page if you are interested in helping. =)
 
 Mostly I try to contribute to GitHub-backed projects because I have a not-so-secret
 mission to somehow work for GitHub in the near future. I still need to plan my attack though.
