@@ -16,12 +16,18 @@
 		</ul>
 		
     <div class="sidebar">
-
-  	  <h4 style="margin-top:30px">Overview</h4>
-  		<ol>
+      
+      <h4 style="margin-top:30px">Usage</h4>
+  		<ul>
+  		  {% assign pages_list = site.categories.usage %}  
+  		  {% include helpers/pages_list.html %}
+  		</ul>
+  		
+  	  <h4>Overview</h4>
+  		<ul>
   	    {% assign pages_list = site.categories.lessons %}  
   	    {% include helpers/pages_list.html %}
-  		</ol>
+  		</ul>
 
   		<h4>API</h4>
   		<ul>
@@ -29,12 +35,6 @@
   		  {% include helpers/pages_list.html %}
   		</ul>
   		
-  		<h4>Usage</h4>
-  		<ul>
-  		  {% assign pages_list = site.categories.usage %}  
-  		  {% include helpers/pages_list.html %}
-  		</ul>
-  		      
       <h4>Helpers</h4>
   		<ul>
   		  {% assign pages_list = site.categories.helpers %}  
