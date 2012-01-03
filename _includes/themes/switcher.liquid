@@ -54,17 +54,17 @@ Proposed Fix:
     {% include themes/mark-reid/page.html %}
   {% endcase %}
 
-{% when 'bootstrap' %}
+{% when 'jade-doc' %}
   
-  {% assign theme_asset_path = "/assets/themes/bootstrap" %}
+  {% assign theme_asset_path = "/assets/themes/jade-doc" %}
   
   {% case layout_type %}
   {% when 'default' %}
-    {% include themes/bootstrap/default.html %}
+    {% include themes/jade-doc/default.html %}
   {% when 'post' %}
-    {% include themes/bootstrap/post.html %}
+    {% include themes/jade-doc/post.html %}
   {% when 'page' %}
-    {% include themes/bootstrap/page.html %}
+    {% include themes/jade-doc/page.html %}
   {% endcase %}
   
 {% endcase %}
