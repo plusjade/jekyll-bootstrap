@@ -12,7 +12,7 @@
       <li><a href="/">home</a></li>
 		  {% assign pages_list = site.pages %}
 		  {% assign group = 'project' %}
-		  {% include pages_list.html %}
+		  {% include helpers/pages_list.html %}
 		</ul>
 		
     <div class="sidebar">
@@ -20,25 +20,25 @@
   	  <h4 style="margin-top:30px">Overview</h4>
   		<ol>
   	    {% assign pages_list = site.categories.lessons %}  
-  	    {% include pages_list.html %}
+  	    {% include helpers/pages_list.html %}
   		</ol>
 
   		<h4>API</h4>
   		<ul>
   		  {% assign pages_list = site.categories.api %}  
-  		  {% include pages_list.html %}
+  		  {% include helpers/pages_list.html %}
   		</ul>
   		
   		<h4>Usage</h4>
   		<ul>
   		  {% assign pages_list = site.categories.usage %}  
-  		  {% include pages_list.html %}
+  		  {% include helpers/pages_list.html %}
   		</ul>
   		      
       <h4>Helpers</h4>
   		<ul>
   		  {% assign pages_list = site.categories.helpers %}  
-  		  {% include pages_list.html %}
+  		  {% include helpers/pages_list.html %}
   		</ul>
   		
 		
@@ -46,19 +46,19 @@
   		<ul>
   		  {% assign pages_list = site.pages %}  
   		  {% assign group = 'example-page' %}
-  		  {% include pages_list.html %}
+  		  {% include helpers/pages_list.html %}
   		</ul>
 
   		<h4><a href="{{ site.var.categories_path }}">Categories</a></h4>
   		<ul class="tag_box">
         {% assign categories_list = site.categories %}
-        {% include categories_list.html %}
+        {% include helpers/categories_list.html %}
   		</ul>
 
   		<h4><a href="{{ site.var.tags_path }}">Tags</a></h4>
   		<ul class="tag_box" style="margin-bottom:30px">
   		  {% assign tags_list = site.tags %}  
-  		  {% include tags_list.html %}
+  		  {% include helpers/tags_list.html %}
   		</ul>
 		  
     </div>

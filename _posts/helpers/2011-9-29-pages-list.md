@@ -12,9 +12,9 @@ The pages list helper follows the [Jekyll-bootstrap include helper](/lessons/boo
 
 {% capture text %}<ul>
   |.% assign pages_list = site.pages %.|
-  |.% include pages_list.html %.|
+  |.% include helpers/pages_list.html %.|
 </ul>{% endcapture %}
-{% include liquid_raw.html %}
+{% include helpers/liquid_raw.html %}
 
 ### List Pages From a Sub-Group
 
@@ -32,12 +32,12 @@ You then pass the group name to the pages\_list helper:
 {% capture text %}<ul>
   |.% assign pages_list = site.pages %.|
   |.% assign group = 'project' %.|
-  |.% include pages_list.html %.|
+  |.% include helpers/pages_list.html %.|
 </ul>{% endcapture %}
-{% include liquid_raw.html %}
+{% include helpers/liquid_raw.html %}
 
 ## Source
 
 The source code is available at:
     
-    ./_includes/pages_list.html
+    ./_includes/helpers/pages_list.html

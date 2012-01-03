@@ -22,14 +22,14 @@ just obviously much more constrained due to Liquid.
 
 The include helper strategy is meant to emulate a ruby method.
 First encapsulate your liquid code logic in a Jekyll include file.   
-example: `tags_list.html` which is a helper to list tags and their total counts. 
+example: `helpers/tags_list.html` which is a helper to list tags and their total counts. 
 
 {% capture text %}|.% for tag in tags_list %.|
   <li><a href="|.{ site.var.tags_path }.||.{ tag[0] }.|-ref">|.{ tag[0] }.| <span>|.{tag[1].size}.|</span></a></li>
 |.% endfor %.|
 
 |.% assign tags_list = null %.|{% endcapture %}    
-{% include liquid_raw.html %}
+{% include helpers/liquid_raw.html %}
 
 In order to emulate passing arguments to the method, your include should reference localized variables whenever possible.
 Now we can pass in arguments by defining the local variables immediately before calling the include file:
@@ -38,9 +38,9 @@ Now we can pass in arguments by defining the local variables immediately before 
 
 {% capture text %}<ul>
   |.% assign tags_list = site.tags %.|
-  |.% include tags_list.html %.|
+  |.% include helpers/tags_list.html %.|
 </ul>{% endcapture %}
-{% include liquid_raw.html %}
+{% include helpers/liquid_raw.html %}
 
 You can define as many "arguments" as you want, just remember to nullify them all at the end of your include to preserve modularity.
 
@@ -61,5 +61,5 @@ then submit a pull request to [Jekyll-Bootstrap](http://github.com/plusjade/jeky
 
 <ul>
   {% assign pages_list = site.categories.helpers %}  
-  {% include pages_list.html %}
+  {% include helpers/pages_list.html %}
 </ul>

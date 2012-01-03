@@ -34,5 +34,5 @@ how we can display our post and site information in a more strategic manner.
 
 <ul>
 {% assign pages_list = site.categories.helpers %}
-{% include pages_list.html %}
+{% include helpers/pages_list.html %}
 </ul>

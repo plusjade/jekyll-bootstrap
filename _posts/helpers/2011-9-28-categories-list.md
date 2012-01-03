@@ -14,9 +14,9 @@ List site-wide categories by passing in the `site.categories` variable:
 
 {% capture text %}<ul>
   |.% assign categories_list = site.categories %.|
-  |.% include categories_list.html %.|
+  |.% include helpers/categories_list.html %.|
 </ul>{% endcapture %}
-{% include liquid_raw.html %}
+{% include helpers/liquid_raw.html %}
 
 ### List Categories for a Specific Post
 
@@ -24,9 +24,9 @@ You can also list categories specific to a post:
 
 {% capture text %}<ul>
   |.% assign categories_list = page.categories %.|
-  |.% include categories_list.html %.|
+  |.% include helpers/categories_list.html %.|
 </ul>{% endcapture %}
-{% include liquid_raw.html %}
+{% include helpers/liquid_raw.html %}
 
 ### List Categories Per Post Iteratively
 
@@ -36,14 +36,14 @@ Finally let's iterate through all posts:
   <h3>Categories for: |.{post.title}.|</h3>  
   <ul>
     |.% assign categories_list = post.categories %.|  
-    |.% include categories_list.html %.|
+    |.% include helpers/categories_list.html %.|
   </ul>
 |.% endfor %.|{% endcapture %}
-{% include liquid_raw.html %}
+{% include helpers/liquid_raw.html %}
 
 
 ## Source
 
 The source code is available at:
     
-    ./_includes/categories_list.html
+    ./_includes/helpers/categories_list.html

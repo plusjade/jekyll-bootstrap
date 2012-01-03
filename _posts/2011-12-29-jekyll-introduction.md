@@ -240,7 +240,7 @@ Render the content variable wherever you want your main content to be injected i
   </div>
 </body>
 ...{% endcapture %}
-{% include liquid_raw.html %}
+{% include helpers/liquid_raw.html %}
 
 ### Sub-Templates
 
