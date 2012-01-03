@@ -27,7 +27,7 @@ Proposed Fix:
   I vote for #1 since it's easier and there's less abstraction.
 -->{% endcomment %}
 
-{% case site.theme %}
+{% case site.theme_config.name %}
 {% when 'tom' %}
 
   {% assign theme_asset_path = "/assets/themes/tom" %}
@@ -41,19 +41,19 @@ Proposed Fix:
     {% include themes/tom/page.html %}
   {% endcase %}
 
-{% when 'tatey' %}
-  
-  {% assign theme_asset_path = "/assets/themes/tatey" %}
+{% when 'mark.reid' %}
+
+  {% assign theme_asset_path = "/assets/themes/mark.reid" %}
 
   {% case layout_type %}
   {% when 'default' %}
-    {% include themes/tatey/default.html %}
+    {% include themes/mark.reid/default.html %}
   {% when 'post' %}
-    {% include themes/tatey/post.html %}
+    {% include themes/mark.reid/post.html %}
   {% when 'page' %}
-    {% include themes/tatey/page.html %}
+    {% include themes/mark.reid/page.html %}
   {% endcase %}
-      
+
 {% when 'bootstrap' %}
   
   {% assign theme_asset_path = "/assets/themes/bootstrap" %}
@@ -67,19 +67,6 @@ Proposed Fix:
     {% include themes/bootstrap/page.html %}
   {% endcase %}
   
-{% else %}
-
-  {% assign theme_asset_path = "/assets/themes/bootstrap" %}
-  
-  {% case layout_type %}
-  {% when 'default' %}
-    {% include themes/bootstrap/default.html %}
-  {% when 'post' %}
-    {% include themes/bootstrap/post.html %}
-  {% when 'page' %}
-    {% include themes/bootstrap/page.html %}
-  {% endcase %}
-
 {% endcase %}
 
 {% assign layout_type = null %}
