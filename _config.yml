@@ -5,3 +5,15 @@ var:
   archive_path: /archive.html
   categories_path : /categories.html
   tags_path : /tags.html
+
+title : My Blog =)
+
+author :
+  name : Jade Dominguez
+  email : plusjade@gmail.com
+  github : plusjade
+  twitter : plusjade
+  
+theme_config :
+  name : tom
+  title : My Blog =)
