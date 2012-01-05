@@ -31,7 +31,7 @@ Your blog is now available at: [http://localhost:4000/](http://localhost:4000/).
 ## 2. Choose a Theme
 
 Jekyll-bootstrap-core has a basic theming system that I'll be steadily improving.
-You can read about how to choose and customize a theme in the [Theming](/usages/theming.html) section.
+You can read about how to choose and customize a theme in the [Theming](/usage/jekyll-theming.html) section.
 
 ## 3. Create Some Content
 
