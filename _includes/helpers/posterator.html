@@ -1,0 +1,31 @@
+{% if site.baseurl == null %}
+	{% assign linkhome = "/" %}
+	{% else %}
+	{% assign linkhome = site.baseurl %}
+{% endif %}
+
+{% for post in paginator.posts %}
+	{% assign content = post.content %}
+	<h1 class="title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+	{{ content }}
+	<h4>Published on {{ post.date | date:'%d %B %Y' }}</h4>
+	{% for category in post.categories %}
+	<h6>{{ category }}</h6>
+	{% endfor %}
+{% endfor %}
+
+<div class="pagination" id="bottom_page">
+	<ul>
+		{% if paginator.previous_page %}
+			{% if paginator.previous_page == 1 %}
+			<li class="previous"><a href="{{ linkhome }}">&larr; Previous</a></li>
+			{% else %}
+			<li class="previous"><a href="{{ site.baseurl }}/page{{ paginator.previous_page }}">&larr; Previous</a></li>
+			{% endif %}
+		{% endif %}
+			<li><p>Page {{ paginator.page }} of {{ paginator.total_pages }}</p></li>
+		{% if paginator.next_page %}
+			<li class="next"><a href="{{ site.baseurl }}/page{{ paginator.next_page }}">Next &rarr;</a></li>
+		{% endif %}
+	</ul>
+</div>

@@ -15,5 +15,12 @@ author :
   twitter : plusjade
   
 theme_config :
-  name : tom
+  name : jade-doc
   title : My Blog =)
+  
+server_port: 4001
+baseurl:
+server: true
+auto: true
+
+paginate: 10

@@ -116,3 +116,27 @@ ul li a.active, ol li a.active {
 .addthis_toolbox a{
 	margin:0 !important;
 }
+#bottom_page{
+	clear: both;
+	padding-top: 40px;
+}
+
+.sidebar h6{
+	line-height: 18px;
+	font-size: 14px;
+}
+
+#bottom_page ul p{
+	padding: 0 14px;
+	line-height: 34px;
+	margin-bottom: 0;
+	display: inline;
+	float: left;
+	border-right: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+pre code{
+	background-color: transparent;
+	color: #404040;
+	padding: 0;
+}
