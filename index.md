@@ -38,20 +38,25 @@ The framework provides theme integration, code-helpers, and coded page-stubs to 
   
 <h2 id="start-now">Zero to Hosted Jekyll Blog in 3 Minutes</h2>
 
+<form action="#" id="generate_code" class="alert-message block-message warn">
+  My GitHub username: <input type="text" id="github_username" /> <button class="btn success">Show Install Code</button>
+</form>
+
 ### 1 - Create a New Repository
 
-Go to your [Github Dashboard](https://github.com/) and create a new repository named `USERNAME.github.com`
+Go to your [Github Dashboard](https://github.com/) and create a new repository named <strong id="repo_name">USERNAME.github.com</strong>
 
 ### 2 - Install Jekyll-Bootstrap-Core
 
-    $ git clone https://github.com/plusjade/jekyll-bootstrap-core.git
-    $ cd jekyll-bootstrap-core
-    $ git add remote origin git@github.com:USERNAME/USERNAME.github.com.git
+    $ git clone https://github.com/plusjade/jekyll-bootstrap-core.git USERNAME.github.com
+    $ cd USERNAME.github.com
+    $ git remote set-url origin git@github.com:USERNAME/USERNAME.github.com.git
     $ git push origin master
 
 ### 3 - Profit
 
-After GitHub has a couple minutes to do its magic your blog will be publicly available at [http://USERNAME.github.com](http://USERNAME.github.com)
+After GitHub has a couple minutes to do its magic your blog will be publicly available at 
+<a href="http://USERNAME.github.com" id="blog_link">http://USERNAME.github.com</a>
 
 ### \*Already have your blog on GitHub?
 
