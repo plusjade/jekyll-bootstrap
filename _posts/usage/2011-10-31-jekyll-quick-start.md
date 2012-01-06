@@ -71,7 +71,7 @@ The following outlines the deeper Jekyll-Bootstrap documentation.
 
 ### Jekyll Introduction
 
-The [{{site.categories.lessons.first.title}}]({{site.lessons.usage.first.url}})  is meant for core understanding of how and why Jekyll works the way it does.
+The [{{site.categories.lessons.first.title}}]({{site.categories.lessons.first.url}})  is meant for core understanding of how and why Jekyll works the way it does.
 You must start with this in order to understand everything else in Jekyll-Bootstrap.
 
 ### The API Section 
