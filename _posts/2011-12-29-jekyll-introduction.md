@@ -351,8 +351,8 @@ Configuration parameters for YAML Front-Matter is outlined here:
 #### Defining Layouts for Posts and Templates Parsing.
 
 The `layout` parameter in the YAML Front Matter defines the template file for which the given post or template should be injected into.
-If a template file specifies its own layout, it is effectively being used as a `sub-template.`
-That is to say loading a post file into a template file that refers to another template file with work in the way you'd expect; as a nested sub-template.
+If a template file specifies a layout parameter, it is effectively being used as a `sub-template.`
+That is to say loading a post file into a template file that refers to another template file will work in the way you'd expect; as a nested sub-template.
 
 
 
