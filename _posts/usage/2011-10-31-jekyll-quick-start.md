@@ -22,7 +22,7 @@ You can also [contact me](http://github.com/plusjade) through github.
 Once the gem is installed you can navigate to your Jekyll-bootstrap-core directory
 and run jekyll:
 
-    $ cd jekyll-bootstrap-core
+    $ cd jekyll-bootstrap
     $ jekyll --server
 
 Your blog is now available at: [http://localhost:4000/](http://localhost:4000/).

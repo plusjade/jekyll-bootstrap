@@ -16,7 +16,7 @@ Switch themes via the rake task
     $ rake switch_theme['mark-reid']
 
 If you are new to `rake` a rake task is just a ruby method that can be run in the base-directory
-of jekyll-bootstrap-core. Feel free to view the [Rakefile](https://github.com/plusjade/jekyll-bootstrap-core/blob/master/Rakefile) source.
+of jekyll-bootstrap. Feel free to view the [Rakefile](https://github.com/plusjade/jekyll-bootstrap/blob/master/Rakefile) source.
 
 ## Editing Themes
 
