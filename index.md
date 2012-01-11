@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Home
+head_title: Beginner Jekyll Tutorial
 header: This is Jekyll-Bootstrap
 ---
 
