@@ -40,7 +40,7 @@ The framework provides theme integration, code-helpers, and coded page-stubs to 
 <h2 id="start-now">Zero to Hosted Jekyll Blog in 3 Minutes</h2>
 
 <form action="#" id="generate_code" class="alert-message block-message warn">
-  My GitHub username: <input type="text" id="github_username" /> <button class="btn success">Show Install Code</button>
+  My GitHub username: <input type="text" id="github_username" /> <button class="btn success">Personalize Install Code</button>
 </form>
 
 ### 1 - Create a New Repository
