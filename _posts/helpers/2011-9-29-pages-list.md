@@ -4,7 +4,7 @@ categories : helpers
 ---
 
 The pages list helper provides a convenient way to list pages.
-The pages list helper follows the [Jekyll-bootstrap include helper](/lessons/bootstrap-api.html) strategy.
+The pages list helper follows the [Jekyll-bootstrap include helper](/api/bootstrap-api.html) strategy.
 
 ## Usage
 

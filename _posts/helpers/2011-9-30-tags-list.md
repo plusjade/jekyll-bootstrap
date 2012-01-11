@@ -4,7 +4,7 @@ categories : helpers
 ---
 
 The tag list helper lists tags and their total counts.   
-The tag list helper follows the [Jekyll-bootstrap include helper](/lessons/bootstrap-api.html) strategy.
+The tag list helper follows the [Jekyll-bootstrap include helper](/api/bootstrap-api.html) strategy.
 
 ## Usage
 
