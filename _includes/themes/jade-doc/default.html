@@ -2,7 +2,10 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-	<title>{{ page.title }} | Jekyll-Bootstrap</title>
+	<title>{% if page.head_title %}{{ page.head_title }}{% else %}{{ page.title }}{% endif %} | Jekyll-Bootstrap</title>
+{% if page.meta_description %}
+	<meta name="description" content="{{ page.meta_description }}">
+{% endif %}
 	<link href="{{ theme_asset_path }}/css/bootstrap-1.4.0-min.css" rel="stylesheet" type="text/css" media="all">
 	<link href="{{ theme_asset_path }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
 </head>
