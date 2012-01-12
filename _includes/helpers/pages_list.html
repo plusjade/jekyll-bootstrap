@@ -25,7 +25,7 @@ Usage:
   {% if group == null or group == node.group %}
   
   	{% if page.url == node.url %}
-  	<li><a href="{{node.url}}" class="active">{{node.title}}</a></li>
+  	<li class="active"><a href="{{node.url}}" class="active">{{node.title}}</a></li>
   	{% else %}
   	<li><a href="{{node.url}}">{{node.title}}</a></li>
   	{% endif %}
