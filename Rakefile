@@ -27,3 +27,7 @@ task :switch_theme, :theme do |t, args|
   end
 end # task :switch_theme
 
+desc "Launch preview environment"
+task :preview do
+  system "jekyll --auto --server"
+end
