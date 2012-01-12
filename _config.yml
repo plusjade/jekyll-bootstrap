@@ -9,7 +9,7 @@ var:
   tags_path : /tags.html
 
 production_url : http://username.github.com # or your custom domain name
-title : the_minimum
+title : Jekyll Boostrap
 
 author :
   name : Name Lastname
