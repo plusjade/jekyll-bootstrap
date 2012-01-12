@@ -1,20 +1,21 @@
 ---
-layout: page
+layout: default
 title: Home
 head_title: Beginner Jekyll Tutorial
 header: This is Jekyll-Bootstrap
 ---
 
-<p class="alert-message block-message success" style="margin-top:20px">
-	The quickest and most hassle-free way to get your new Jekyll powered website up and running.
-  100% compatible with GitHub pages. 
-  (No idea what Jekyll is? <a href="{{ site.categories.lessons.first.url }}" style="text-decoration:underline">read the intro</a>)
+<p class="alert-message block-message success" style="margin-top:20px; margin-left:-40px">
+	<strong>Jekyll Bootstrap</strong> is the quickest, most hassle-free way to get your new Jekyll powered website published.
+  All code is 100% compatible with GitHub pages. 
 </p>
 
 
-## Why Use Jekyll-bootstrap?
+## Why Use Jekyll-Bootstrap?
 
-**Experienced Jekyll users recommend cloning an existing blog** in order to get up and running the fastest.
+New to blogging with Jekyll? <a href="{{ site.categories.lessons.first.url }}" style="text-decoration:underline">Read the introduction</a>.
+
+**Experienced Jekyll users recommend cloning an existing Jekyll blog** to use as your starting point.
 Jekyll-bootstrap takes this advice to the next level by attempting to be the _definitive_ Jekyll-framework to clone.
 The framework provides theme integration, code-helpers, and coded page-stubs to get you rolling.
 
@@ -22,7 +23,7 @@ The framework provides theme integration, code-helpers, and coded page-stubs to 
 
 - **Convenient**  
   The main drawback to Jekyll _as a publishing platform_ is you have to set everything up yourself.
-  Jekyll-bootstrap takes you from 0 to hosted blog in 2 minutes, really!
+  Jekyll-bootstrap takes you from 0 to hosted blog in 3 minutes, really!
 
 - **Comprehensive**  
   Jekyll-bootstrap goes beyond documentation and explains how and why jekyll works the way it does,
@@ -39,15 +40,15 @@ The framework provides theme integration, code-helpers, and coded page-stubs to 
   
 <h2 id="start-now">Zero to Hosted Jekyll Blog in 3 Minutes</h2>
 
-<form action="#" id="generate_code" class="alert-message block-message warn">
-  My GitHub username: <input type="text" id="github_username" /> <button class="btn success">Personalize Install Code</button>
+<form action="#" id="generate_code" class="alert-message block-message warn" style="margin-left:-40px; text-align:center">
+  My GitHub username: <input type="text" id="github_username"/> <button class="btn success">Personalize Install Code</button>
 </form>
 
 ### 1 - Create a New Repository
 
 Go to your [Github Dashboard](https://github.com/) and create a new repository named <strong id="repo_name">USERNAME.github.com</strong>
 
-### 2 - Install Jekyll-Bootstrap-Core
+### 2 - Install Jekyll-Bootstrap
 
     $ git clone https://github.com/plusjade/jekyll-bootstrap.git USERNAME.github.com
     $ cd USERNAME.github.com
