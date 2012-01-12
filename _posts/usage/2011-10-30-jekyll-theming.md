@@ -6,8 +6,9 @@ categories : usage
 
 ## Switching Themes
 
-Jekyll-bootstrap-core comes with two themes
+Jekyll-bootstrap-core comes with three themes
 
+- **twitter** from [http://twitter.github.com/bootstrap](http://twitter.github.com/bootstrap)
 - **tom** from [http://tom.preston-werner.com](http://tom.preston-werner.com)
 - **mark-reid** from [http://mark.reid.name](http://mark.reid.name)
 
