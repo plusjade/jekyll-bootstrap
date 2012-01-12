@@ -4,7 +4,7 @@ categories : helpers
 ---
 
 The posts collate helper organizes and lists posts in month/year clusters.
-The posts collate helper follows the [Jekyll-bootstrap include helper](/lessons/bootstrap-api.html) strategy.
+The posts collate helper follows the [Jekyll-bootstrap include helper](/api/bootstrap-api.html) strategy.
 
 ## Usage
 

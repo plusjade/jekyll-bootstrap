@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Hello from Jekyll-Bootstrap-Core
+title: Hello from Jekyll-Bootstrap
 header: This is Jekyll-Bootstrap
 ---
 
