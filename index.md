@@ -73,6 +73,8 @@ See it in action at [http://localhost:4000](http://localhost:4000).
 
 ## Next Steps
 
-The Usage section contains information on pragmatically using your new Jekyll-bootstrap blog.
+Please show your support by "watching" [Jekyll-Bootstrap](http://github.com/plusjade/jekyll-bootstrap) on GitHub - Thanks!
+
+Next, the Usage section contains information on pragmatically using your new Jekyll-bootstrap blog.
 
 - [{{site.categories.usage.first.title}}]({{site.categories.usage.first.url}}) 
