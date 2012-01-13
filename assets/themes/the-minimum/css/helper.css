@@ -29,15 +29,19 @@ hr { -moz-box-sizing: content-box; }
 .hasGrid:before,
 .hasGrid:after,
 .unit-inner:before,
-.unit-inner:after { content: ""; display: table; }
+.unit-inner:after,
+.tag_box:before,
+.tag_box:after { content: ""; display: table; }
 .clearfix:after,
 .cf:after,
 .hasGrid:after,
-.unit-inner:after { clear: both; }
+.unit-inner:after,
+.tag_box:after { clear: both; }
 .clearfix,
 .cf,
 .hasGrid,
-.unit-inner { *zoom: 1; }
+.unit-inner,
+.tag_box { *zoom: 1; }
 .left {
 	*display: inline;
 	float: left;

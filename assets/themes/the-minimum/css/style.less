@@ -69,7 +69,6 @@ pre {
 /* MAIN
 --------------------------------------------------------------------------------- */
 .unit-article {
-	.unit-article-inner {
 
 		header {
 			background: url('@{noise-100-90-5}');
@@ -151,7 +150,6 @@ pre {
 		}
 		img.left { margin-right: 16px; }
 		img.right { margin-left: 16px; }
-		img.huge { position: relative; }
 
 		.date-publish { margin-bottom: 0; }
 		.list-linear .list-head { margin-right: 4px; }
@@ -182,12 +180,54 @@ pre {
 			.gotop { margin-bottom: 0; }
 		} // .article-inner .unit-foot
 
-	} // .article-inner
 } // .the-article
 
 /* post & page */
-.page-post {
-
+.layout-page {
+	.tag_box {
+		background-color: @subtle;
+		padding: (@line-height / @em) / 2;
+		list-style: none;
+		li {
+			display: inline;
+			line-height: normal;
+			vertical-align: middle;
+		}
+		a {
+			background-color: @green;
+			float: left;
+			border: 1px solid darken(@green, 30%);
+			padding: 3px 6px 3px 6px;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+			margin: 5px;
+			-moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+			text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.4);
+			-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+			-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+			box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+			-webkit-transition-duration: 0.2s;
+			-moz-transition-duration: 0.2s;
+			transition-duration: 0.2s;
+			-webkit-user-select:none;
+			-moz-user-select:none;
+			-ms-user-select:none;
+			user-select:none;
+			&:link {}
+			&:active {
+				-webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+				-moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+				box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+				background: darken(@green, 40%);
+				border: solid darken(@green, 40%);
+			}
+			&:hover {
+				background-color: darken(@green, 10%);
+				border: 1px solid darken(@green, 40%);
+			}
+		}
+	}
 } // .page-post
 
 /* FOOTER

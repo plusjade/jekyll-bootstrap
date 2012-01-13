@@ -36,36 +36,3 @@ No styleguide reference.
 .media .img img { display:block; }
 .media .media-right { float:right; margin-left: 14px; }
 .media .bd, .media .ft, .media .hd { overflow:hidden; *overflow:visible; zoom:1; }
-
-/*
-List modules
-
-.list-linear  - list line up horizontally
-HTML:
-<ul class="list-linear">
-	<li></li>
-	<li></li>
-	<li></li>
-</ul>
-
-No styleguide reference.
-*/
-
-.list-linear {
-	letter-spacing: -0.31em;
-	*letter-spacing: normal;
-	word-spacing: -0.43em;
-	list-style: none;
-	padding-left: 0;
-}
-.list-linear li {
-	display: inline-block;
-	*display: inline;
-	zoom: 1;
-	line-height: normal;
-	letter-spacing: normal;
-	margin-right: 16px;
-	word-spacing: normal;
-	vertical-align: middle;
-}
-.list-linear li:last-child { margin-right: 0; }

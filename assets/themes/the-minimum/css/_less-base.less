@@ -184,6 +184,30 @@ No styleguide reference.
 
 /*
 LESS helper
+*/
+
+/*
+List modules
+.list-linear  - list line up horizontally
 
 No styleguide reference.
 */
+
+.list-linear {
+	letter-spacing: -0.31em;
+	*letter-spacing: normal;
+	word-spacing: -0.43em;
+	list-style: none;
+	padding-left: 0;
+	li {
+		display: inline-block;
+		*display: inline;
+		zoom: 1;
+		line-height: normal;
+		letter-spacing: normal;
+		margin-right: 16px;
+		word-spacing: normal;
+		vertical-align: middle;
+		&:last-child { margin-right: 0; }
+	}
+}
