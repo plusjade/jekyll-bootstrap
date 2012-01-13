@@ -4,10 +4,10 @@ categories : usage
 ---
 
 
-## 1. Install Jekyll-Bootstrap-Core
+## 1. Install Jekyll-Bootstrap
 
 [Install Jekyll-Bootsrap-Core](/index.html#start-now) if you haven't already.
-Jekyll-bootstrap-core is a clean base framework for your blog.
+Jekyll-bootstrap is a clean base framework for your blog.
 It includes two themes, some useful pages, and bootstrap include-helpers.
 
 ## 2. Run Jekyll Locally
@@ -30,7 +30,7 @@ Your blog is now available at: [http://localhost:4000/](http://localhost:4000/).
 
 ## 2. Choose a Theme
 
-Jekyll-bootstrap-core has a basic theming system that I'll be steadily improving.
+Jekyll-bootstrap has a basic theming system that I'll be steadily improving.
 You can read about how to choose and customize a theme in the [Theming](/usage/jekyll-theming.html) section.
 
 ## 3. Create Some Content
@@ -63,7 +63,7 @@ A GitHub post-commit hook will automatically deploy your changes to your hosted 
 
 ## 5. Customize
 
-Jekyll-bootstrap-core can be used as-is as a basic blogging platform with little need
+Jekyll-bootstrap can be used as-is as a basic blogging platform with little need
 to understand what's going on under the hood.
 
 However I'm betting you want to get your hands dirty. 
