@@ -6,11 +6,12 @@ categories : usage
 
 ## Switching Themes
 
-Jekyll-bootstrap-core comes with three themes
+Jekyll-bootstrap-core comes with four themes
 
-- **twitter** from [http://twitter.github.com/bootstrap](http://twitter.github.com/bootstrap)
-- **tom** from [http://tom.preston-werner.com](http://tom.preston-werner.com)
-- **mark-reid** from [http://mark.reid.name](http://mark.reid.name)
+- **twitter** by [http://twitter.github.com/bootstrap](http://twitter.github.com/bootstrap/examples/container-app.html)
+- **the-minimum** by [Yuya Saito](http://studiomohawk.github.com/jekyll-bootstrap/)
+- **tom** by [http://tom.preston-werner.com](http://tom.preston-werner.com)
+- **mark-reid** by [http://mark.reid.name](http://mark.reid.name)
 
 Switch themes via the rake task
 
