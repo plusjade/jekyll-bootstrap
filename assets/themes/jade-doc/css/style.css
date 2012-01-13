@@ -108,11 +108,7 @@ ul li a.active, ol li a.active {
 }
 
 .addthis_toolbox {
-	position:absolute;
-	top:5px;
-	right:10%;
+	position:relative;
+	top:10px;
 	width:400px;
-}
-.addthis_toolbox a{
-	margin:0 !important;
 }

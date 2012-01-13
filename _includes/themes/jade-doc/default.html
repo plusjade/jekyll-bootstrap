@@ -11,16 +11,24 @@
 </head>
 <body>
   <div class="container-fluid">
-    <ul class="project-list">
-      <li><a href="/">home</a></li>
-		  {% assign pages_list = site.pages %}
-		  {% assign group = 'project' %}
-		  {% include helpers/pages_list.html %}
-		</ul>
-		
+	  
+	  <div id="main-content" class="content">
+      <div class="span10">
+				{{ content }}
+			</div>
+	  </div>
+	  		
     <div class="sidebar">
+      {% if site.safe %}{% include production/share.html %}{% endif %}
       
-      <h4 style="margin-top:30px">Usage</h4>
+      <ul style="margin-top:30px">
+        <li><a href="/">home</a></li>
+  		  {% assign pages_list = site.pages %}
+  		  {% assign group = 'project' %}
+  		  {% include helpers/pages_list.html %}
+  		</ul>
+  		  
+      <h4>Usage</h4>
   		<ul>
   		  {% assign pages_list = site.categories.usage %}  
   		  {% include helpers/pages_list.html %}
@@ -43,7 +51,6 @@
   		  {% assign pages_list = site.categories.helpers %}  
   		  {% include helpers/pages_list.html %}
   		</ul>
-  		
 		
   		<h4>Example Pages</h4>
   		<ul>
@@ -53,12 +60,6 @@
   		</ul>
 
     </div>
-
-	  <div id="main-content" class="content">
-      <div class="span10">
-				{{ content }}
-			</div>
-	  </div>
 
   </div>
   
@@ -83,7 +84,6 @@
   </script>
   
 {% if site.safe %}
-  {% include production/share.html %}
   {% include production/analytics.html %}
 {% endif %}
 </body>
