@@ -12,8 +12,9 @@ task :new_post, :title do |t, args|
   raise "### Cannot locate the #{posts_dir}." unless File.directory?(posts_dir)
   mkdir_p "#{jekyll_dir}/#{posts_dir}"
   args.with_defaults(:title => 'new-post')
-  title = args.title.gsub(/ /,'-')
-  filename = "#{jekyll_dir}/#{posts_dir}/#{Time.now.strftime('%Y-%m-%d')}-#{title}.#{new_post_ext}"
+  slug = args.title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+  title = args.title.gsub(/-/,' ')
+  filename = "#{jekyll_dir}/#{posts_dir}/#{Time.now.strftime('%Y-%m-%d')}-#{slug}.#{new_post_ext}"
   if File.exist?(filename)
     abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
   end
@@ -21,7 +22,7 @@ task :new_post, :title do |t, args|
   open(filename, 'w') do |post|
     post.puts "---"
     post.puts "layout: post"
-    post.puts "title: #{title.gsub(/-/,' ')}"
+    post.puts "title: \"#{title}\""
     post.puts "comments: true"
     post.puts "category: "
     post.puts "tags: []"
