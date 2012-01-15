@@ -17,5 +17,6 @@ author :
   github : username
   twitter : username
   feedbuder : feedname
+  disqus_shortname: shortname
 
 exclude: .rbenv-version
