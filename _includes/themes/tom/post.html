@@ -6,7 +6,9 @@
   </p>
   {{ content }}
 </div>
-
+{% if site.tweet_button %}
+    {% include helpers/tweet-button.html %}
+{% endif %}
 <div id="related">
   <h2>Related Posts</h2>
   <ul class="posts">
