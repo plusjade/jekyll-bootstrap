@@ -5,6 +5,9 @@
 <div class="row">
   <div class="span10">
     {{ content }}
+    {% if site.tweet_button %}
+      {% include helpers/tweet-button.html %}
+    {% endif %}
     <hr>
     <div class="pagination">
       <ul>
