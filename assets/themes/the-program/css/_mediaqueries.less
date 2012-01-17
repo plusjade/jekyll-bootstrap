@@ -11,7 +11,7 @@
 						display: block;
 						font-size: 30px;
 						line-height: 52px;
-						margin-bottom: 26px;
+						padding-bottom: 26px;
 					}
 				}
 			}
@@ -74,6 +74,7 @@
 
 	.the-header {
 		.unit-head {
+			padding: 0;
 			.nav-global {
 				li {
 					float: left;
@@ -84,19 +85,24 @@
 						padding: 26px; 
 						height: 26px;
 					}
+					a:link {}
+					a:hover {
+						background-color: #fff04a;
+						color: lighten(@main-font-color, 10%);
+					}
 				}
 				li:nth-child(2) { border-width: 0 1px; }
 				li:last-child { border-width: 0; }
 				.logo {
 					border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 					border-right: none 0;
-					font-size: 30px;
 					display: block;
 					width: 100%;
 					a {
-						position: relative;
-							top: -4px;
+						font-size: 30px;
+						line-height: normal;
 					}
+					a:hover { background-color: transparent; }
 				}
 			}
 		}
@@ -115,13 +121,12 @@
 			.nav-global {
 				.logo {
 					border-bottom: 0 none;
-					font-size: 30px;
 					display: block;
 					width: auto;
 					a {
+						line-height: 18px;
+						margin-bottom: 0;
 						padding-left: (@line-height * 2) * 1px;
-						position: relative;
-							top: -4px;
 					}
 				}
 			}
@@ -169,8 +174,8 @@
 					float: none;
 					border: none;
 					a, div {
-						display: inline;
-						padding: 0; 
+						display: block;
+						padding: 2px 5px;
 						height: auto;
 					}
 				}
@@ -184,7 +189,7 @@
 						font-size: 30px;
 						line-height: 52px;
 						margin-bottom: 26px;
-						padding-left: 0;
+						padding-left: 5px;
 						position: relative;
 						top: auto;
 					}

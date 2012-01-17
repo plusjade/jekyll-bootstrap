@@ -273,13 +273,13 @@ pre {
   margin-top: 0;
 }
 .unit-article a:link {
-  border-bottom: 1px solid #6699cc;
+  border-bottom: 1px dashed #f2777a;
 }
 .unit-article a:visited {
-  border-bottom: 1px solid #407fbf;
+  border-bottom: 1px dashed #ee484c;
 }
 .unit-article a:hover {
-  border-bottom: 1px solid #8cb3d9;
+  border-bottom: 1px dashed #f6a6a8;
 }
 .unit-article blockquote {
   border-left: 1em solid rgba(21, 25, 25, 0.8);
@@ -479,15 +479,15 @@ pre {
 /* FOOTER
 ----------------------------------------------- */
 .the-footer a:link {
-  color: #6699cc;
+  color: #f2777a;
   border: 0;
 }
 .the-footer a:visited {
-  color: #407fbf;
+  color: #ee484c;
   border: 0;
 }
 .the-footer a:hover {
-  color: #8cb3d9;
+  color: #f6a6a8;
   border: 0;
 }
 .the-footer ul {
@@ -514,7 +514,7 @@ pre {
   display: block;
   font-size: 30px;
   line-height: 52px;
-  margin-bottom: 26px;
+  padding-bottom: 26px;
 }
 .body .unit-body {
   border-top: 1px solid rgba(255, 255, 255, 0.6);
@@ -528,15 +528,15 @@ pre {
   padding: 26px;
 }
 .the-footer a:link {
-  color: #6699cc;
+  color: #f2777a;
   border: 0;
 }
 .the-footer a:visited {
-  color: #407fbf;
+  color: #ee484c;
   border: 0;
 }
 .the-footer a:hover {
-  color: #8cb3d9;
+  color: #f6a6a8;
   border: 0;
 }
 .the-footer h4 {
@@ -557,6 +557,9 @@ pre {
 	Tablet
 */
 @media only screen and (min-width: 768px) {
+  .the-header .unit-head {
+    padding: 0;
+  }
   .the-header .unit-head .nav-global li {
     float: left;
     border: 1px solid rgba(0, 0, 0, 0.05);
@@ -567,6 +570,10 @@ pre {
     padding: 26px;
     height: 26px;
   }
+  .the-header .unit-head .nav-global li a:hover {
+    background-color: #fff04a;
+    color: #474747;
+  }
   .the-header .unit-head .nav-global li:nth-child(2) {
     border-width: 0 1px;
   }
@@ -576,13 +583,15 @@ pre {
   .the-header .unit-head .nav-global .logo {
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     border-right: none 0;
-    font-size: 30px;
     display: block;
     width: 100%;
   }
   .the-header .unit-head .nav-global .logo a {
-    position: relative;
-    top: -4px;
+    font-size: 30px;
+    line-height: normal;
+  }
+  .the-header .unit-head .nav-global .logo a:hover {
+    background-color: transparent;
   }
 }
 /*
@@ -591,14 +600,13 @@ pre {
 @media only screen and (min-width: 1280px) {
   .the-header .unit-head .nav-global .logo {
     border-bottom: 0 none;
-    font-size: 30px;
     display: block;
     width: auto;
   }
   .the-header .unit-head .nav-global .logo a {
+    line-height: 18px;
+    margin-bottom: 0;
     padding-left: 52px;
-    position: relative;
-    top: -4px;
   }
   .body {
     float: left;
@@ -637,8 +645,8 @@ pre {
     border: none;
   }
   .the-header .unit-head .nav-global li a, .the-header .unit-head .nav-global li div {
-    display: inline;
-    padding: 0;
+    display: block;
+    padding: 2px 5px;
     height: auto;
   }
   .the-header .unit-head .nav-global li:nth-child(2) {
@@ -654,7 +662,7 @@ pre {
     font-size: 30px;
     line-height: 52px;
     margin-bottom: 26px;
-    padding-left: 0;
+    padding-left: 5px;
     position: relative;
     top: auto;
   }

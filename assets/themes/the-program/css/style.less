@@ -7,7 +7,7 @@
 @main-bg: #ffffff;
 @subtle-bg: @base01;
 @main-font-color: @base03;
-@accent-color: @blue;
+@accent-color: @red;
 
 /* GLOBAL
 --------------------------------------------------------------------------------- */
@@ -122,9 +122,9 @@ pre {
 		.entry-content:first-child h6 { margin-top: 0; } // Canceling header margin since there is margin on header
 
 		a {
-			&:link { border-bottom: 1px solid @accent-color; }
-			&:visited { border-bottom: 1px solid darken(@accent-color, 10%); }
-			&:hover { border-bottom: 1px solid lighten(@accent-color, 10%); }
+			&:link { border-bottom: 1px dashed @accent-color; }
+			&:visited { border-bottom: 1px dashed darken(@accent-color, 10%); }
+			&:hover { border-bottom: 1px dashed lighten(@accent-color, 10%); }
 		}
 
 		blockquote {
