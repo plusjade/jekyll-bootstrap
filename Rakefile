@@ -6,8 +6,8 @@ task :switch_theme, :theme do |t, args|
   theme_path = File.join(File.dirname(__FILE__), "_includes", "themes", args.theme)
   layouts_path = File.join(File.dirname(__FILE__), "_layouts")
   
-  abort("rake aborted: './_includes/themes/#{args.theme}' directory not found.") unless Dir.exists?(theme_path)
-  abort("rake aborted: './_layouts' directory not found.") unless Dir.exists?(layouts_path)
+  abort("rake aborted: './_includes/themes/#{args.theme}' directory not found.") unless FileTest.directory?(theme_path)
+  abort("rake aborted: './_layouts' directory not found.") unless FileTest.directory?(layouts_path)
   
   Dir.glob("#{theme_path}/*") do |filename|
     puts "Generating '#{args.theme}' layout: #{File.basename(filename)}"
