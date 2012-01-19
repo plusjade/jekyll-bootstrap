@@ -22,6 +22,10 @@
     <a href="{{ page.previous.url }}" class="prev" title="{{ page.previous.title }}">&larr; Earlier Post</a>
   {% endif %}
   </div>
+
+  {% if site.tweet_button %}
+    {% include helpers/tweet-button.html %}
+  {% endif %}
   
 </div><!-- End Page -->
 
