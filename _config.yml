@@ -1,6 +1,7 @@
 permalink: /:categories/:title.html
 auto: true
 pygments: true
+exclude: ["Rakefile", "README.md", "CNAME"]
 var:
   archive_path: /archive.html
   categories_path : /categories.html
