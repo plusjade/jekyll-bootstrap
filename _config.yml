@@ -19,4 +19,10 @@ author :
   twitter : username
   feedbuder : feedname
 
+sharing:
+  enable_twitter: true
+  enable_gplus: true
+  enable_digg: true
+  enable_reddit: true
+
 exclude: .rbenv-version
