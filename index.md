@@ -1,7 +1,6 @@
 ---
 layout: page
-title: Hello from Jekyll-Bootstrap
-header: This is Jekyll-Bootstrap
+title: Hello World!
 ---
 
 Read [Jekyll Quick Start](http://jekyllbootstrap.com/jekyll-quick-start.html)
