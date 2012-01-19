@@ -20,9 +20,9 @@ author :
   feedbuder : feedname
 
 sharing:
-  enable_twitter: true
-  enable_gplus: true
-  enable_digg: true
-  enable_reddit: true
+  enable_twitter: false
+  enable_gplus: false
+  enable_digg: false
+  enable_reddit: false
 
 exclude: .rbenv-version
