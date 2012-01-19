@@ -19,4 +19,4 @@ author :
   twitter : username
   feedbuder : feedname
 
-exclude: .rbenv-version
+exclude: [".rbenv-version", "README.md", "Rakefile"]
