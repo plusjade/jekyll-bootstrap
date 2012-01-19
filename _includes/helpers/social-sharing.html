@@ -1,0 +1,74 @@
+<head>
+    <!-- defining all the css here-->
+    <style type="text/css"> 
+        .social-button-container {
+            overflow: hidden;
+        }
+        .social-button {
+            float: left;
+            width: 90px;
+            height: 20px;
+        }
+    </style>
+</head>     
+            
+<!-- displaying the various social buttons here-->
+<div class="social-button-container">
+    {% if site.sharing.enable_twitter %}
+        <div class="social-button">
+            <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>    
+        </div>
+    {% endif %}
+    {% if site.sharing.enable_gplus %}
+        <div class="social-button">
+            <div class="g-plusone" data-size="medium" data-width="100" data-href="#"></div>
+        </div>
+    {% endif %}
+    {% if site.sharing.enable_digg %}
+        <div class="social-button">
+            <a class="DiggThisButton DiggCompact"></a>    
+        </div>
+    {% endif %}
+    {% if site.sharing.enable_reddit %}
+        <div class="social-button">
+           <script type="text/javascript" src="http://www.reddit.com/static/button/button1.js">
+           </script>
+        </div>
+    {% endif %}   
+</div>
+
+<!-- The JavaScript for each button as provided by Twitter, Google Plus, Digg and Reditt -->
+
+<!--google plus -->
+<script type="text/javascript">
+    (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+</script>
+
+<!-- twitter -->
+<script>
+    !function(d,s,id)
+    {
+        var js,fjs=d.getElementsByTagName(s)[0];
+        if(!d.getElementById(id)){
+            js=d.createElement(s);
+            js.id=id;js.src="//platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js,fjs);
+        }
+    }
+    (document,"script","twitter-wjs");
+</script>
+
+<!-- digg -->
+<script type="text/javascript">
+    (function() {
+        var s = document.createElement('SCRIPT'), s1 = document.getElementsByTagName('SCRIPT')[0];
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'http://widgets.digg.com/buttons.js';
+        s1.parentNode.insertBefore(s, s1);
+    })();
+</script>
