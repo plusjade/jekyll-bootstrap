@@ -35,16 +35,20 @@ end # task :new_post
 desc "Switch between Jekyll-bootstrap themes."
 task :switch_theme, :theme do |t, args|
   theme_path = File.join(CONFIG['themes'], args.theme)
+  settings_file = File.join(theme_path, "settings.yml")
+  non_layout_files = ["settings.yml"]
   
   abort("rake aborted: '#{CONFIG['themes']}/#{args.theme}' directory not found.") unless FileTest.directory?(theme_path)
   abort("rake aborted: '#{CONFIG['layouts']}' directory not found.") unless FileTest.directory?(CONFIG['layouts'])
   
   Dir.glob("#{theme_path}/*") do |filename|
+    next if non_layout_files.include?(File.basename(filename).downcase)
     puts "Generating '#{args.theme}' layout: #{File.basename(filename)}"
     
     open(File.join(CONFIG['layouts'], File.basename(filename)), 'w') do |page|
       if File.basename(filename, ".html").downcase == "default"
         page.puts "---"
+        page.puts File.read(settings_file) if File.exist?(settings_file)
         page.puts "---"
         page.puts "{% assign theme_asset_path = \"/assets/themes/#{args.theme}\" %}"
       else
