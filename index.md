@@ -3,9 +3,9 @@ layout: page
 title: Hello World!
 ---
 
-Read [Jekyll Quick Start](http://jekyllbootstrap.com/jekyll-quick-start.html)
+Read [Jekyll Quick Start](http://jekyllbootstrap.com/usage/jekyll-quick-start.html)
 
-Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllboostrap.com)
+Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllbootstrap.com)
 
 ## Update Author Attributes
 
