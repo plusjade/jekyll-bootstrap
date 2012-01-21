@@ -20,3 +20,28 @@ author :
   feedburner : feedname
 
 exclude: [".rbenv-version", "README.md", "Rakefile"]
+
+# Jekyll-Bootstrap configurations
+JB :
+  comments :
+    engine : disqus
+    disqus :
+      short_name : jekyllbootstrap
+    livefyre :
+      site_id : 123
+    intensedebate :
+      account : 123abc
+    facebook :
+      apikey : 123
+   
+        
+  analytics :
+    engine : google
+    google : 
+        tracking_id : 'UA-123-12'
+    getclicky :
+      site_id : 
+
+
+  sharing :
+    engine : false
