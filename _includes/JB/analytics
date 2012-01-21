@@ -1,0 +1,12 @@
+{% if site.safe and site.JB.analytics.engine and page.JB.analytics != false %}
+
+{% case site.JB.analytics.engine %}
+{% when "google" %}
+  {% include JB/analytics-engines/google.html %}
+{% when "getclicky" %}
+  {% include JB/analytics-engines/getclicky.html %}
+{% when "custom" %}
+  {% include custom/analytics.html %}
+{% endcase %}
+
+{% endif %}
