@@ -17,6 +17,6 @@ author :
   email : blah@email.test
   github : username
   twitter : username
-  feedbuder : feedname
+  feedburner : feedname
 
 exclude: [".rbenv-version", "README.md", "Rakefile"]
