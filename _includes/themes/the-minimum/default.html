@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>{{ page.title }}</title>
 	<meta name="author" content="{{ site.author.name }}">
-	<link href='{{ theme_asset_path }}/css/style.css' rel="stylesheet" media="all">
+	<link href='{{ ASSET_PATH }}/css/style.css' rel="stylesheet" media="all">
 	<link href="http://feeds.feedburner.com/{{ site.author.feedbaname }}" rel="alternate" title="{{ page.title }}" type="application/atom+xml">
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
 </head>
@@ -18,7 +18,7 @@
 	<header class="the-header">
 		<div class="unit-head">
 			<div class="unit-inner unit-head-inner">
-				<p class="logo"><a href="/">{{ site.title }}</a></p>
+				<p class="logo"><a href="{{ HOME_URL }}">{{ site.title }}</a></p>
 				<nav class="nav-global">
 					<ul>
 						<li class="archive"><a href="/archive.html">archive</a></li>
