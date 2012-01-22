@@ -23,6 +23,25 @@ exclude: [".rbenv-version", "README.md", "Rakefile"]
 
 # Jekyll-Bootstrap configurations
 JB :
+  
+  # All links will be namespaced by BASE_PATH if defined.
+  # This is required for hosting GitHub Project Pages.
+  # If you are deploying this website for one of your GitHub projects
+  # you must set BASE_PATH to the name of your GitHub project.
+  #
+  BASE_PATH : "/narly"
+
+  # By default, the asset_path is automatically defined relative to BASE_PATH plus the enabled theme.
+  # ex: [BASE_PATH]/assets/themes/[THEME-NAME]
+  #
+  # Override this by defining an absolute path to assets here.
+  # ex: 
+  #   http://s3.amazonaws.com/yoursite/themes/watermelon
+  #   /assets
+  #
+  ASSET_PATH : false
+  
+  
   comments :
     engine : disqus
     disqus :
