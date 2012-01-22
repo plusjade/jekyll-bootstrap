@@ -50,12 +50,12 @@ task :switch_theme, :theme do |t, args|
         page.puts "---"
         page.puts File.read(settings_file) if File.exist?(settings_file)
         page.puts "---"
-        page.puts "{% assign theme_asset_path = \"/assets/themes/#{args.theme}\" %}"
       else
         page.puts "---"
         page.puts "layout: default"
         page.puts "---"
       end 
+      page.puts "{% include JB/set_paths %}"
       page.puts "{% include themes/#{args.theme}/#{File.basename(filename)} %}" 
     end
   end
