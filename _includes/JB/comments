@@ -2,15 +2,15 @@
 
 {% case site.JB.comments.engine %}
 {% when "disqus" %}
-  {% include JB/comments-engines/disqus.html %}
+  {% include JB/comments-engines/disqus %}
 {% when "livefyre" %}
-  {% include JB/comments-engines/livefyre.html %}
+  {% include JB/comments-engines/livefyre %}
 {% when "intensedebate" %}
-  {% include JB/comments-engines/intensedebate.html %}
+  {% include JB/comments-engines/intensedebate %}
 {% when "facebook" %}
-  {% include JB/comments-engines/facebook.html %}
+  {% include JB/comments-engines/facebook %}
 {% when "custom" %}
-  {% include custom/comments.html %}
+  {% include custom/comments %}
 {% endcase %}
 
 {% endif %}

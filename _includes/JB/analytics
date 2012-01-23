@@ -2,11 +2,11 @@
 
 {% case site.JB.analytics.engine %}
 {% when "google" %}
-  {% include JB/analytics-engines/google.html %}
+  {% include JB/analytics-engines/google %}
 {% when "getclicky" %}
-  {% include JB/analytics-engines/getclicky.html %}
+  {% include JB/analytics-engines/getclicky %}
 {% when "custom" %}
-  {% include custom/analytics.html %}
+  {% include custom/analytics %}
 {% endcase %}
 
 {% endif %}

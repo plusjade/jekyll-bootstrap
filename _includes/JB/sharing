@@ -2,7 +2,7 @@
 
 {% case site.JB.sharing.engine %}
 {% when "custom" %}
-  {% include custom/sharing.html %}
+  {% include custom/sharing %}
 {% endcase %}
 
 {% endif %}
