@@ -29,6 +29,7 @@ task :new_post, :title do |t, args|
     post.puts "category: "
     post.puts "tags: []"
     post.puts "---"
+    page.puts "{% include JB/setup %}"
   end
 end # task :new_post
 
@@ -55,7 +56,7 @@ task :switch_theme, :theme do |t, args|
         page.puts "layout: default"
         page.puts "---"
       end 
-      page.puts "{% include JB/set_paths %}"
+      page.puts "{% include JB/setup %}"
       page.puts "{% include themes/#{args.theme}/#{File.basename(filename)} %}" 
     end
   end
