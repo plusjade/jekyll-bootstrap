@@ -1,12 +1,25 @@
 # This is the default format. 
 # For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink: /:categories/:year/:month/:day/:title 
+
+exclude: [".rbenv-version", "README.md", "Rakefile"]
 auto: true
 pygments: true
 
-production_url : http://username.github.com # or your custom domain name
-title : Jekyll Bootstrap
+# The production_url is only used when full-domain names are needed
+# such as sitemap.txt 
+# Most places will/should use BASE_PATH to make the urls
+#
+# If you have set a CNAME (pages.github.com) set your custom domain here.
+# Else if you are pushing to username.github.com, replace with your username.
+# Finally if you are pushing to a GitHub project page, include the project name at the end.
+#
+production_url : http://username.github.com 
 
+# Themes are encouraged to use these universal variables 
+# so be sure to set them if your theme uses them.
+#
+title : Jekyll Bootstrap
 author :
   name : Name Lastname
   email : blah@email.test
@@ -14,15 +27,17 @@ author :
   twitter : username
   feedburner : feedname
 
-exclude: [".rbenv-version", "README.md", "Rakefile"]
-
-# Jekyll-Bootstrap configurations
+# All Jekyll-Bootstrap specific configurations are namespaced into this hash
+#
 JB :
   
   # All links will be namespaced by BASE_PATH if defined.
   # This is required for hosting GitHub Project Pages.
   # If you are deploying this website for one of your GitHub projects
   # you must set BASE_PATH to the name of your GitHub project.
+  #
+  # Leave this blank if you have defined a CNAME for your site (pages.github.com)
+  # NOTE: When in localhost, your site will run from root "/" regardless of BASE_PATH
   #
   BASE_PATH : "/narly"
 
@@ -38,11 +53,15 @@ JB :
 
   # These paths are to the main pages Jekyll-Bootstrap ships with.
   # Some JB helpers refer to these paths; change theme here if needed.
-  #  
+  #
   archive_path: /archive.html
   categories_path : /categories.html
   tags_path : /tags.html
-      
+
+  # Settings for comments helper
+  # Set 'engine' to the comment engine you want to use.
+  # Set 'engine' to false to turn commenting off globally.
+  #
   comments :
     engine : disqus
     disqus :
@@ -54,7 +73,10 @@ JB :
     facebook :
       apikey : 123
    
-        
+  # Settings for analytics helper
+  # Set 'engine' to the analytics engine you want to use.
+  # Set 'engine' to false to turn analytics off globally.
+  #        
   analytics :
     engine : google
     google : 
@@ -62,6 +84,22 @@ JB :
     getclicky :
       site_id : 
 
-
+  # Settings for sharing helper. 
+  # Sharing is for things like tweet, plusone, like, reddit buttons etc.
+  # Set 'engine' to the sharing engine you want to use.
+  # Set 'engine' to false to turn sharing off globally.
+  #
   sharing :
     engine : false
+    
+  # Settings for all other include helpers can be defined by creating 
+  # a hash with key named for the given helper. ex:
+  #
+  #   pages_list :
+  #     engine : "custom"   
+  #
+  # Setting any helper's engine to 'custom' will bypass the helper code
+  # and include your custom code. Your custom file must be defined at:
+  #   ./_includes/custom/[HELPER]
+  # where [HELPER] is the name of the helper you are overriding.
+  
