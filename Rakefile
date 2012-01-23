@@ -9,12 +9,12 @@ CONFIG = {
   'post_ext' => "md"
 }
 
-# usage rake new_post[my-new-post] or rake new_post['my new post'] or rake new_post (defaults to "new-post")
+# Usage: rake post title="A Title"
 desc "Begin a new post in #{CONFIG['posts']}"
-task :new_post, :title do |t, args|
+task :post do
   abort("rake aborted: '#{CONFIG['posts']}' directory not found.") unless FileTest.directory?(CONFIG['posts'])
-  args.with_defaults(:title => 'new-post')
-  slug = args.title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+  title = ENV["title"] || "new-post"
+  slug = title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
   filename = File.join(CONFIG['posts'], "#{Time.now.strftime('%Y-%m-%d')}-#{slug}.#{CONFIG['post_ext']}")
   if File.exist?(filename)
     abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
@@ -24,14 +24,13 @@ task :new_post, :title do |t, args|
   open(filename, 'w') do |post|
     post.puts "---"
     post.puts "layout: post"
-    post.puts "title: \"#{args.title.gsub(/-/,' ')}\""
-    post.puts "comments: true"
+    post.puts "title: \"#{title.gsub(/-/,' ')}\""
     post.puts "category: "
     post.puts "tags: []"
     post.puts "---"
-    page.puts "{% include JB/setup %}"
+    post.puts "{% include JB/setup %}"
   end
-end # task :new_post
+end # task :post
 
 desc "Switch between Jekyll-bootstrap themes."
 task :switch_theme, :theme do |t, args|
