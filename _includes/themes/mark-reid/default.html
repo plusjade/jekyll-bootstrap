@@ -7,7 +7,7 @@
    <title>{{ page.title }} &larr; {{ page.top }}</title>
    <meta name="author" content="{{ site.author.name }}" />
 
-   <link rel="start" href="{{ HOME_URL }}" />
+   <link rel="start" href="{{ HOME_PATH }}" />
 
 	{% if page.keywords %}
 	<meta name="keywords" content="{{ page.keywords }}">
@@ -29,11 +29,11 @@
   
   <div id="header">
     <h1>
-    	<a href="{{ HOME_URL }}" title="{{ site.title }}">{{ site.title }}</a>
-    	<span class="byline">&larr; <a href="{{ HOME_URL }}">{{ site.author.name }}</a></span>
+    	<a href="{{ HOME_PATH }}" title="{{ site.title }}">{{ site.title }}</a>
+    	<span class="byline">&larr; <a href="{{ HOME_PATH }}">{{ site.author.name }}</a></span>
     </h1>
     <ul class="nav">
-      <li><a class="home" href="{{ HOME_URL }}">Home</a></li>
+      <li><a class="home" href="{{ HOME_PATH }}">Home</a></li>
       <li><a  href="/archive.html">Archive</a></li>
       <li><a  href="/pages.html">Pages</a></li>
       <li><a  href="/categories.html">Categories</a></li>

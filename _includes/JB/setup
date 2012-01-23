@@ -4,10 +4,10 @@
   -->
   {% if site.safe and site.JB.BASE_PATH %}
     {% assign BASE_PATH = site.JB.BASE_PATH %}
-    {% assign HOME_URL = site.JB.BASE_PATH %}
+    {% assign HOME_PATH = site.JB.BASE_PATH %}
   {% else %}
     {% assign BASE_PATH = nil %}
-    {% assign HOME_URL = "/" %}
+    {% assign HOME_PATH = "/" %}
   {% endif %}
 
   {% if site.JB.ASSET_PATH %}
