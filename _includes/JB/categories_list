@@ -2,11 +2,11 @@
 The categories_list include is a listing helper for categories.
 Usage:
   1) assign the 'categories_list' variable to a valid array of tags.
-  2) include helpers/categories_list.html.
+  2) include JB/categories_list
   example:
     <ul>
   	  {% assign categories_list = site.categories %}  
-  	  {% include helpers/categories_list.html %}
+  	  {% include JB/categories_list %}
   	</ul>
   
   Notes: 

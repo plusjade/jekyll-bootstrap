@@ -11,7 +11,7 @@ intend to give liquid examples. It's not an elegant by any means:
 
 Usage: 
   1) Define a 'text' variable with the block of liquid code you intend to display.
-  2) Pass the text variable to include helpers/liquid_raw.html.
+  2) Pass the text variable to include JB/liquid_raw
 
   example:
   {% capture text %}|.% for tag in tags_list %.|
@@ -19,7 +19,7 @@ Usage:
   |.% endfor %.|
 
   |.% assign tags_list = null %.|{% endcapture %}    
-  {% include helpers/liquid_raw.html %}
+  {% include JB/liquid_raw %}
   
   As seen here, you must use "|." and ".|" as opening and closing brackets.
 -->{% endcomment%}
