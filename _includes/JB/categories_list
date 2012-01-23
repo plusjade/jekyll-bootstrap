@@ -17,18 +17,21 @@ Usage:
   This helper can be seen in use at: ../_layouts/default.html
 -->{% endcomment %}
 
-{% if categories_list.first[0] == null %}
-  {% for category in categories_list %} 
-  	<li><a href="{{ BASE_PATH }}{{ site.var.categories_path }}#{{ category }}-ref">
-  		{{ category | join: "/" }} <span>{{ site.categories[category].size }}</span>
-  	</a></li>
-  {% endfor %}
+{% if site.JB.categories_list.engine == "custom" %}
+  {% include custom/categories_list %}
 {% else %}
-  {% for category in categories_list %} 
-  	<li><a href="{{ BASE_PATH }}{{ site.var.categories_path }}#{{ category[0] }}-ref">
-  		{{ category[0] | join: "/" }} <span>{{ category[1].size }}</span>
-  	</a></li>
-  {% endfor %}
+  {% if categories_list.first[0] == null %}
+    {% for category in categories_list %} 
+    	<li><a href="{{ BASE_PATH }}{{ site.var.categories_path }}#{{ category }}-ref">
+    		{{ category | join: "/" }} <span>{{ site.categories[category].size }}</span>
+    	</a></li>
+    {% endfor %}
+  {% else %}
+    {% for category in categories_list %} 
+    	<li><a href="{{ BASE_PATH }}{{ site.var.categories_path }}#{{ category[0] }}-ref">
+    		{{ category[0] | join: "/" }} <span>{{ category[1].size }}</span>
+    	</a></li>
+    {% endfor %}
+  {% endif %}
 {% endif %}
-
-{% assign categories_list = null %}
+{% assign categories_list = nil %}
