@@ -1,10 +1,10 @@
-{% if site.safe and site.JB.analytics.engine and page.JB.analytics != false %}
+{% if site.safe and site.JB.analytics.provider and page.JB.analytics != false %}
 
-{% case site.JB.analytics.engine %}
+{% case site.JB.analytics.provider %}
 {% when "google" %}
-  {% include JB/analytics-engines/google %}
+  {% include JB/analytics-providers/google %}
 {% when "getclicky" %}
-  {% include JB/analytics-engines/getclicky %}
+  {% include JB/analytics-providers/getclicky %}
 {% when "custom" %}
   {% include custom/analytics %}
 {% endcase %}

@@ -1,14 +1,14 @@
-{% if site.JB.comments.engine and page.JB.comments != false %}
+{% if site.JB.comments.provider and page.JB.comments != false %}
 
-{% case site.JB.comments.engine %}
+{% case site.JB.comments.provider %}
 {% when "disqus" %}
-  {% include JB/comments-engines/disqus %}
+  {% include JB/comments-providers/disqus %}
 {% when "livefyre" %}
-  {% include JB/comments-engines/livefyre %}
+  {% include JB/comments-providers/livefyre %}
 {% when "intensedebate" %}
-  {% include JB/comments-engines/intensedebate %}
+  {% include JB/comments-providers/intensedebate %}
 {% when "facebook" %}
-  {% include JB/comments-engines/facebook %}
+  {% include JB/comments-providers/facebook %}
 {% when "custom" %}
   {% include custom/comments %}
 {% endcase %}

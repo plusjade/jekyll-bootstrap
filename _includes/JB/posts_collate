@@ -17,7 +17,7 @@ Usage:
         
 -->{% endcomment %}
 
-{% if site.JB.posts_collate.engine == "custom" %}
+{% if site.JB.posts_collate.provider == "custom" %}
   {% include custom/posts_collate %}
 {% else %}
   {% for post in posts_collate  %}

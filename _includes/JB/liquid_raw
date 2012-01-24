@@ -24,7 +24,7 @@ Usage:
   As seen here, you must use "|." and ".|" as opening and closing brackets.
 -->{% endcomment%}
 
-{% if site.JB.liquid_raw.engine == "custom" %}
+{% if site.JB.liquid_raw.provider == "custom" %}
   {% include custom/liquid_raw %}
 {% else %}
   <pre><code>{{text | replace:"|.", "&#123;" | replace:".|", "&#125;" | replace:">", "&gt;" | replace:"<", "&lt;" }}</code></pre>

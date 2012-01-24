@@ -17,7 +17,7 @@ Usage:
   This helper can be seen in use at: ../_layouts/default.html
 -->{% endcomment %}
 
-{% if site.JB.tags_list.engine == "custom" %}
+{% if site.JB.tags_list.provider == "custom" %}
   {% include custom/tags_list %}
 {% else %}
   {% if tags_list.first[0] == null %}
