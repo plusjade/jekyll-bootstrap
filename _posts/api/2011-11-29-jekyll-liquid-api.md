@@ -26,13 +26,3 @@ The standard library is also available in Jekyll.
 Jekyll introduces a few other filters and tags as outlined here:
 
 <http://github.com/mojombo/jekyll/wiki/Liquid-Extensions>
-
-## Examples
-
-Finally we take a look out the included helper examples and their source to see 
-how we can display our post and site information in a more strategic manner.
-
-<ul>
-{% assign pages_list = site.categories.helpers %}
-{% include helpers/pages_list.html %}
-</ul>
