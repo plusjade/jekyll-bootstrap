@@ -40,7 +40,7 @@ JB :
   # Leave this blank if you have defined a CNAME for your site (pages.github.com)
   # NOTE: When in localhost, your site will run from root "/" regardless of BASE_PATH
   #
-  BASE_PATH : "/narly"
+  BASE_PATH : ""
 
   # By default, the asset_path is automatically defined relative to BASE_PATH plus the enabled theme.
   # ex: [BASE_PATH]/assets/themes/[THEME-NAME]
