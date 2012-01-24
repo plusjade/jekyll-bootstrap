@@ -21,7 +21,12 @@
     <div class="sidebar">
       {% if site.safe %}{% include production/share.html %}{% endif %}
       
-      <h4 style="margin-top:30px">Usage</h4>
+      <p style="margin-top:30px; font-weight:bold; line-height:2em">
+        <span class="label notice" style="font-size:1.1em">0.1.0</span> &larr; JB Latest Version
+        <br><span class="label notice" style="font-size:1.1em">24-01-2012</span> &larr; Release Date
+      </p>
+      
+      <h4>Usage</h4>
   		<ul>
   		  <li><a href="/">Home</a></li>
   		  {% assign pages_list = site.categories.usage %}  
