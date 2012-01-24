@@ -1,13 +1,13 @@
 ---
 layout: default
 title: Home
-head_title: Beginner Jekyll Tutorial
+head_title: Blogging with Jekyll Tutorial
 header: This is Jekyll-Bootstrap
 ---
 
 <p class="alert-message block-message success" style="margin-top:20px; margin-left:-40px">
-	<strong>Jekyll Bootstrap</strong> is the quickest, most hassle-free way to get your new Jekyll powered website published.
-  All code is 100% compatible with GitHub pages. 
+	<strong>Jekyll Bootstrap</strong> is the quickest way to start and publish your Jekyll powered blog.
+  <br>All code is 100% compatible with GitHub pages. 
 </p>
 
 
