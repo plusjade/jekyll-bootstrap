@@ -69,7 +69,16 @@ then submit a pull request to [Jekyll-Bootstrap](http://github.com/plusjade/jeky
 
 ## JB/analytics
 
+Includes analytics tracking code into your website.
 
+{% capture text %}|.% include JB/analytics %.|{% endcapture %}
+{% include helpers/liquid_raw.html %}    
+
+By default, analytics **are not loaded** when in localhost (development).
+Analytics are loaded when `site.safe` is set to true. GitHub sets this flag so we treat a true setting as "production" mode.
+
+This method should be used within a theme's default.html layout file.
+Configuration for this method is outlined at: [Jekyll Configuration System](/usage/blog-configuration.html)
 
 ## JB/categories\_list
 
@@ -115,6 +124,18 @@ Finally let's iterate through all posts:
     
 
 ## JB/comments
+
+Includes a commenting system on blog post pages.
+
+{% capture text %}|.% include JB/comments %.|{% endcapture %}
+{% include helpers/liquid_raw.html %}    
+
+Depending on your provider, comments may not always work when on localhost (development).
+
+This method should be used within a theme's post.html layout file.
+Configuration for this method is outlined at: [Jekyll Configuration System](/usage/blog-configuration.html)
+
+
 
 
 ## JB/pages\_list
@@ -190,10 +211,33 @@ Bellow, only posts tagged "jekyll" will be collated:
 
 ## JB/setup
 
+Provides global Liquid variables to all layouts, posts, and pages.
+
+{% capture text %}|.% include JB/setup %.|{% endcapture %}
+{% include helpers/liquid_raw.html %}
+
+This is automatically included for you when you use `rake post` and `rake page` to create posts and pages.
+
+The most relevant variables this sets is `BASE_PATH` which should be prepended to all post and page links,
+and `ASSET_PATH` which should be prepended to all theme-specific assets.
+
+These paths dynamically change based on localhost vs production mode as a convenience to you.
+
+
 
 ## JB/sharing
 
+**This is not finished yet =(**
 
+Includes sharing widgets on your blog post pages.
+
+Examples include tweet, plusone, like, reddit, etc.
+
+{% capture text %}|.% include JB/sharing %.|{% endcapture %}
+{% include helpers/liquid_raw.html %}    
+
+This should be specified within a theme's post.html layout file.
+Configuration for this method is outlined at: [Jekyll Configuration System](/usage/blog-configuration.html)
 
 
 ## JB/tags\_list
@@ -238,6 +282,8 @@ Finally let's iterate through all posts:
     ./_includes/JB/tags_list
     
 
+
+
 # Method Overrides
 
 All Jekyll-Bootstrap methods documented above can be overridden with a custom implementation.
@@ -246,7 +292,6 @@ All Jekyll-Bootstrap methods documented above can be overridden with a custom im
 Instead you can define another file with your own customizations. 
 This is useful if you want to define an alternative HTML output syntax for things like tag and page lists. 
 You also might want to override a comment provider with your own custom comment provider.
-
 
 
 ## Usage
@@ -274,5 +319,3 @@ This file, exactly as named, will be used in place of the source Jekyll-Bootstra
 You'll probably want to copy the "meat" of the code logic from the original source file into your custom file and then edit it as needed.
     
 You can follow this procedure for as many methods as you wish.
-
-
