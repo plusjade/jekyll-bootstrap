@@ -30,7 +30,8 @@ production_url : http://username.github.com
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
 JB :
-  
+  version : 0.1.0
+
   # All links will be namespaced by BASE_PATH if defined.
   # This is required for hosting GitHub Project Pages.
   # If you are deploying this website for one of your GitHub projects
