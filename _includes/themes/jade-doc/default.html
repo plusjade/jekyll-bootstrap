@@ -21,15 +21,9 @@
     <div class="sidebar">
       {% if site.safe %}{% include production/share.html %}{% endif %}
       
-      <ul style="margin-top:30px">
-        <li><a href="/">home</a></li>
-  		  {% assign pages_list = site.pages %}
-  		  {% assign group = 'project' %}
-  		  {% include helpers/pages_list.html %}
-  		</ul>
-  		  
-      <h4>Usage</h4>
+      <h4 style="margin-top:30px">Usage</h4>
   		<ul>
+  		  <li><a href="/">Home</a></li>
   		  {% assign pages_list = site.categories.usage %}  
   		  {% include helpers/pages_list.html %}
   		</ul>
@@ -46,12 +40,6 @@
   		  {% include helpers/pages_list.html %}
   		</ul>
   		
-      <h4>Helpers</h4>
-  		<ul>
-  		  {% assign pages_list = site.categories.helpers %}  
-  		  {% include helpers/pages_list.html %}
-  		</ul>
-		
   		<h4>Example Pages</h4>
   		<ul>
   		  {% assign pages_list = site.pages %}  
@@ -59,6 +47,13 @@
   		  {% include helpers/pages_list.html %}
   		</ul>
 
+      <h4>Info</h4>
+      <ul>
+  		  {% assign pages_list = site.pages %}
+  		  {% assign group = 'project' %}
+  		  {% include helpers/pages_list.html %}
+  		</ul>
+  		
     </div>
 
   </div>
