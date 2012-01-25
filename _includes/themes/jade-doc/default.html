@@ -19,7 +19,7 @@
 	  </div>
 	  		
     <div class="sidebar">
-      {% if site.safe %}{% include production/share.html %}{% endif %}
+      {% if site.safe %}{% include JB/sharing %}{% endif %}
       
       <p style="margin-top:30px; font-weight:bold; line-height:2em">
         <span class="label notice" style="font-size:1.1em">0.1.0</span> &larr; JB Latest Version
@@ -83,8 +83,6 @@
     })
   </script>
   
-{% if site.safe %}
-  {% include production/analytics.html %}
-{% endif %}
+  {% include JB/analytics %}
 </body>
 </html>
