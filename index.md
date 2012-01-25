@@ -11,23 +11,19 @@ header: This is Jekyll-Bootstrap
 </p>
 
 
-## Why Use Jekyll-Bootstrap?
+## Why Use Jekyll-Bootstrap for Your Blog?
 
 New to blogging with Jekyll? <a href="{{ site.categories.lessons.first.url }}" style="text-decoration:underline">Read the introduction</a>.
 
-**Experienced Jekyll users recommend cloning an existing Jekyll blog** to use as your starting point.
-Jekyll-bootstrap takes this advice to the next level by attempting to be the _definitive_ Jekyll-framework to clone.
-The framework provides theme integration, code-helpers, and coded page-stubs to get you rolling.
+**Experienced Jekyll users recommend cloning an existing Jekyll blog** so you don't have to manually create
+your website structure. With Jekyll-Bootstrap you get the full structure plus modular theming, plug-and-play commenting, analytics, 
+new post and page generators, and coded page-stubs to get you rolling.
 
 ### Core Benefits
 
-- **Convenient**  
-  The main drawback to Jekyll _as a publishing platform_ is you have to set everything up yourself.
+- **Convenient Blogging**   
+  Without Jekyll-Bootstrap, you'd have to configure _every single page_ of your blog.
   Jekyll-bootstrap takes you from 0 to hosted blog in 3 minutes, really!
-
-- **Comprehensive**  
-  Jekyll-bootstrap goes beyond documentation and explains how and why jekyll works the way it does,
-  empowering you to extend as you fit without the barrier of a high learning curve.
 
 - **Free and Easy Hosting via GitHub Pages**  
   Jekyll-bootstrap is 100% compatible with deploying to GitHub.
@@ -35,8 +31,9 @@ The framework provides theme integration, code-helpers, and coded page-stubs to 
 
 - **Progressive, Unified Development**  
   Ensuring your Jekyll blog is always compatible with GitHub Pages
-  means development can be built upon in a way that moves the most users forward.
-  This helps improve the current horizontal and highly segmented Jekyll ecosystem.
+  means development can move the most users forward.
+  This helps improve the current horizontal and highly segmented Jekyll ecosystem. 
+  Look forward to more and better features that simply _drop in_.
   
 <h2 id="start-now">Zero to Hosted Jekyll Blog in 3 Minutes</h2>
 
