@@ -1,6 +1,7 @@
 ---
 layout: page
 categories : usage
+title : Development &amp; Hosting
 ---
 
 Deploying a jekyll-based website comes in two flavors.
