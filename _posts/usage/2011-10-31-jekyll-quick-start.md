@@ -69,7 +69,7 @@ You can study the source and customize it for your own needs.
 <ul>
 {% assign pages_list = site.pages %}
 {% assign group = "example-page" %}
-{% include helpers/pages_list.html %}
+{% include JB/pages_list %}
 </ul>
 
 ## 4. Publish

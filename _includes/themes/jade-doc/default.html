@@ -30,33 +30,33 @@
   		<ul>
   		  <li><a href="/">Home</a></li>
   		  {% assign pages_list = site.categories.usage %}  
-  		  {% include helpers/pages_list.html %}
+  		  {% include JB/pages_list %}
   		</ul>
   		
   	  <h4>Overview</h4>
   		<ul>
   	    {% assign pages_list = site.categories.lessons %}  
-  	    {% include helpers/pages_list.html %}
+  	    {% include JB/pages_list %}
   		</ul>
 
   		<h4>API</h4>
   		<ul>
   		  {% assign pages_list = site.categories.api %}  
-  		  {% include helpers/pages_list.html %}
+  		  {% include JB/pages_list %}
   		</ul>
   		
   		<h4>Example Pages</h4>
   		<ul>
   		  {% assign pages_list = site.pages %}  
   		  {% assign group = 'example-page' %}
-  		  {% include helpers/pages_list.html %}
+  		  {% include JB/pages_list %}
   		</ul>
 
       <h4>Info</h4>
       <ul>
   		  {% assign pages_list = site.pages %}
   		  {% assign group = 'project' %}
-  		  {% include helpers/pages_list.html %}
+  		  {% include JB/pages_list %}
   		</ul>
   		
     </div>

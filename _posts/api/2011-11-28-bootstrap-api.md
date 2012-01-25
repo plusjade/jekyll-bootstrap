@@ -32,7 +32,7 @@ First encapsulate your liquid code logic in a Jekyll include file:
   |.% endif %.|
 |.% endif %.|
 |.% assign tags_list = null %.|{% endcapture %}    
-{% include helpers/liquid_raw.html %}
+{% include JB/liquid_raw %}
 
 The example above is `JB/tags_list` which is a helper to list tags and their total counts. 
 
@@ -45,7 +45,7 @@ Now we can pass in arguments by defining the local variables immediately before 
   |.% assign tags_list = site.tags %.|
   |.% include JB/tags_list %.|
 </ul>{% endcapture %}
-{% include helpers/liquid_raw.html %}
+{% include JB/liquid_raw %}
 
 You can define as many "arguments" as you want, just remember to nullify them all at the end of your include to preserve modularity.
 
@@ -72,7 +72,7 @@ then submit a pull request to [Jekyll-Bootstrap](http://github.com/plusjade/jeky
 Includes analytics tracking code into your website.
 
 {% capture text %}|.% include JB/analytics %.|{% endcapture %}
-{% include helpers/liquid_raw.html %}    
+{% include JB/liquid_raw %}    
 
 By default, analytics **are not loaded** when in localhost (development).
 Analytics are loaded when `site.safe` is set to true. GitHub sets this flag so we treat a true setting as "production" mode.
@@ -92,7 +92,7 @@ List site-wide categories by passing in the `site.categories` variable:
   |.% assign categories_list = site.categories %.|
   |.% include JB/categories_list %.|
 </ul>{% endcapture %}
-{% include helpers/liquid_raw.html %}
+{% include JB/liquid_raw %}
 
 ### List Categories for a Specific Post
 
@@ -102,7 +102,7 @@ You can also list categories specific to a post:
   |.% assign categories_list = page.categories %.|
   |.% include JB/categories_list %.|
 </ul>{% endcapture %}
-{% include helpers/liquid_raw.html %}
+{% include JB/liquid_raw %}
 
 ### List Categories Per Post Iteratively
 
@@ -115,7 +115,7 @@ Finally let's iterate through all posts:
     |.% include JB/categories_list %.|
   </ul>
 |.% endfor %.|{% endcapture %}
-{% include helpers/liquid_raw.html %}
+{% include JB/liquid_raw %}
 
 
 ### Source
@@ -128,7 +128,7 @@ Finally let's iterate through all posts:
 Includes a commenting system on blog post pages.
 
 {% capture text %}|.% include JB/comments %.|{% endcapture %}
-{% include helpers/liquid_raw.html %}    
+{% include JB/liquid_raw %}    
 
 Depending on your provider, comments may not always work when on localhost (development).
 
@@ -148,7 +148,7 @@ Provides a convenient way to list pages.
   |.% assign pages_list = site.pages %.|
   |.% include JB/pages_list %.|
 </ul>{% endcapture %}
-{% include helpers/liquid_raw.html %}
+{% include JB/liquid_raw %}
 
 ### List Pages From a Sub-Group
 
@@ -168,7 +168,7 @@ You then pass the group name to the pages\_list helper:
   |.% assign group = 'project' %.|
   |.% include JB/pages_list %.|
 </ul>{% endcapture %}
-{% include helpers/liquid_raw.html %}
+{% include JB/liquid_raw %}
 
 ### Source
 
@@ -188,7 +188,7 @@ By default all posts are organized in reverse-chronological order - newest to ol
 
 {% capture text %}|.% assign posts_collate = site.posts %.|
 |.% include JB/posts_collate %.|{% endcapture %}
-{% include helpers/liquid_raw.html %}
+{% include JB/liquid_raw %}
 
 
 ### Collate a Sub-Set of Posts
@@ -198,7 +198,7 @@ Bellow, only posts tagged "jekyll" will be collated:
 
 {% capture text %}|.% assign posts_collate = site.tags.jekyll %.|
 |.% include JB/posts_collate %.|{% endcapture %}
-{% include helpers/liquid_raw.html %}
+{% include JB/liquid_raw %}
 
 
 ### Source
@@ -214,7 +214,7 @@ Bellow, only posts tagged "jekyll" will be collated:
 Provides global Liquid variables to all layouts, posts, and pages.
 
 {% capture text %}|.% include JB/setup %.|{% endcapture %}
-{% include helpers/liquid_raw.html %}
+{% include JB/liquid_raw %}
 
 This is automatically included for you when you use `rake post` and `rake page` to create posts and pages.
 
@@ -234,7 +234,7 @@ Includes sharing widgets on your blog post pages.
 Examples include tweet, plusone, like, reddit, etc.
 
 {% capture text %}|.% include JB/sharing %.|{% endcapture %}
-{% include helpers/liquid_raw.html %}    
+{% include JB/liquid_raw %}    
 
 This should be specified within a theme's post.html layout file.
 Configuration for this method is outlined at: [Jekyll Configuration System](/usage/blog-configuration.html)
@@ -252,7 +252,7 @@ You can list sitewide tags by passing in the `site.tags` variable:
   |.% assign tags_list = site.tags %.|
   |.% include JB/tags_list %.|
 </ul>{% endcapture %}
-{% include helpers/liquid_raw.html %}
+{% include JB/liquid_raw %}
 
 ### List Tags for a Specific Post
 
@@ -262,7 +262,7 @@ You can also list tags specific to a post:
   |.% assign tags_list = page.tags %.|
   |.% include JB/tags_list %.|
 </ul>{% endcapture %}
-{% include helpers/liquid_raw.html %}
+{% include JB/liquid_raw %}
 
 ### List Tags Per Post Iteratively
 
@@ -275,7 +275,7 @@ Finally let's iterate through all posts:
     |.% include JB/tags_list %.|
   </ul>
 |.% endfor %.|{% endcapture %}
-{% include helpers/liquid_raw.html %}
+{% include JB/liquid_raw %}
 
 ### Source
 
