@@ -1,8 +1,60 @@
+/* Override some defaults */
+html, body {
+  background-color: #eee;
+}
+.container {
+ 	width: 720px; /* downsize our container to make the content feel a bit tighter and more cohesive. NOTE: this removes two full columns from the grid, meaning you only go to 14 columns and not 16. */
+	box-shadow: 1px -2px 18px #ccc;
+}
+/* The white background content wrapper */
+.container > .content {
+  background-color: #fff;
+  padding: 10px 20px 20px 20px;
+  -webkit-border-radius: 0 0 6px 6px;
+     -moz-border-radius: 0 0 6px 6px;
+          border-radius: 0 0 6px 6px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+          box-shadow: 0 1px 2px rgba(0,0,0,.15);
+}
+.sidebar {
+ 	position:absolute;
+	top:5px;
+	right:-195px;
+  width: 175px;
+	eight:100%;
+  background:transparent;
+ 	ox-shadow: inset 1px -2px 18px #ccc;
+	overflow:auto;
+	z-index:0;
+}
+.sidebar h4 {
+	font-size:14px;
+	color:#555;
+}
+.sidebar ul {
+	list-style: none;
+	margin-left: 0;
+	padding-left: 1em;
+	text-indent: -1em;
+}
+.sidebar ul li {
+	line-height:1.5em;
+}
+.sidebar ul li:before {
+	content: "\00BB \0020";
+}
+
+
 ul li, ol li {
   color:#404040;
 }
 h1 {
-  margin:20px 0 20px -80px;
+  margin:20px 0 20px -100px;
+	background:#046D8B;
+	color:#FFF;
+	padding:10px 20px;
+	border-radius:5px;
 }
 h2 {
 	margin:10px 0 10px -40px;
@@ -34,27 +86,8 @@ ul li a.active, ol li a.active {
 	color:#FFF;
 	border-radius:3px;
 }
-#main-content {
-}
 
-.container-fluid > .sidebar {
-  position:fixed;
-  left:0;
-  width: 220px;
-	height:100%;
-  padding:0 10px 20px 40px;
-  background:#f4f4f4;
-  box-shadow: inset 1px -2px 18px #ccc;
-	overflow:auto;
-}
-
-.container-fluid > .content {
-  
-  margin-left: 360px;
-}
-#main-content {
-  padding-bottom:50px;
-}
+.highlight-wrap span{ background:#FFFFCC }
 
 /* tag_box ======================================================== */
 
