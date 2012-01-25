@@ -5,21 +5,19 @@ head_title: Blogging with Jekyll Tutorial
 header: This is Jekyll-Bootstrap
 ---
 
-<p class="alert-message block-message success" style="margin-top:20px; margin-left:-40px">
-	<strong>Jekyll Bootstrap</strong> is the quickest way to start and publish your Jekyll powered blog.
-  <br>All code is 100% compatible with GitHub pages. 
-</p>
-
-
-## Why Use Jekyll-Bootstrap for Your Blog?
+<h2 class="alert-message block-message warn" style="text-align:center">
+  Jekyll Bootstrap is the Quickest Way to Start and Publish Your Jekyll Powered Blog.
+</h2>
 
 New to blogging with Jekyll? <a href="{{ site.categories.lessons.first.url }}" style="text-decoration:underline">Read the introduction</a>.
 
-**Experienced Jekyll users recommend cloning an existing Jekyll blog** so you don't have to manually create
-your website structure. With Jekyll-Bootstrap you get the full structure plus modular theming, plug-and-play commenting, analytics, 
-new post and page generators, and coded page-stubs to get you rolling.
+<span class="highlight-wrap">
+  Jekyll-Bootstrap ships with a complete pre-built Jekyll directory structure for blogging, 
+  <span>modular theming</span>, plug-and-play <span>commenting</span>, <span>analytics</span>, 
+  <span>new post and page generators</span>, and coded <span>page-stubs</span> to get you rolling.
+</span>
 
-### Core Benefits
+## Core Benefits
 
 - **Convenient Blogging**   
   Without Jekyll-Bootstrap, you'd have to configure _every single page_ of your blog.
@@ -35,7 +33,7 @@ new post and page generators, and coded page-stubs to get you rolling.
   This helps improve the current horizontal and highly segmented Jekyll ecosystem. 
   Look forward to more and better features that simply _drop in_.
   
-<h2 id="start-now">Zero to Hosted Jekyll Blog in 3 Minutes</h2>
+<h1 id="start-now">Zero to Hosted Jekyll Blog in 3 Minutes</h1>
 
 <form action="#" id="generate_code" class="alert-message block-message warn" style="margin-left:-40px; text-align:center">
   My GitHub username: <input type="text" id="github_username"/> <button class="btn success">Personalize Install Code</button>
@@ -70,8 +68,7 @@ See it in action at [http://localhost:4000](http://localhost:4000).
 
 ## Next Steps
 
-Please show your support by "watching" [Jekyll-Bootstrap](http://github.com/plusjade/jekyll-bootstrap) on GitHub - Thanks!
-
-Next, the Usage section contains information on pragmatically using your new Jekyll-bootstrap blog.
-
-- [{{site.categories.usage.first.title}}]({{site.categories.usage.first.url}}) 
+<ul class="pills">
+  <li><a href="http://github.com/plusjade/jekyll-bootstrap" class="">Watch Jekyll Bootstrap on GitHub, then ...</a></li>
+	<li class="active"><a href="{{ BASE_PATH }}{{ site.categories.usage.first.url }}">{{ site.categories.usage.first.title }} &rarr;</a></li>
+</ul>
