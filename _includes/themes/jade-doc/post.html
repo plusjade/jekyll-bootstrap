@@ -2,11 +2,9 @@
 
 {{ content }}
 
-{% if page.previous %}
-	{% if page.categories == page.previous.categories %}
-<h2>Next Steps</h2>
-<ul>
-	<li><a href="{{ page.previous.url }}">{{ page.previous.title }}</a></li>
-</ul>
-	{% endif %}
+{% if page.previous and page.categories == page.previous.categories %}
+  <h2>Next Steps</h2>
+  <ul class="pills">
+  	<li class="active"><a href="{{ BASE_PATH }}{{ page.previous.url }}">{{ page.previous.title }} &rarr;</a></li>
+  </ul>
 {% endif %}
