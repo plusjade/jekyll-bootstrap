@@ -4,8 +4,19 @@ title : Blog Themes
 categories : usage
 ---
 
+## Browse Themes
 
-## Switching Themes
+Jekyll-Bootstrap currently ships with a few themes. Use the switching method below to test them out.
+Additionally our [Theme Explorer](http://themes.jekyllbootstrap.com) shows full-site previews of available themes.
+
+<div style="text-align:right">
+  (alpha release) <a href="http://themes.jekyllbootstrap.com" class="btn primary" style="">Launch Theme Explorer</a>
+</div>
+
+
+
+
+## Switch Themes
 
 Jekyll-Bootstrap comes with four themes
 
@@ -21,7 +32,7 @@ Switch themes via the rake task
 If you are new to `rake` a rake task is just a ruby method that can be run in the base-directory
 of jekyll-bootstrap. Feel free to view the [Rakefile](https://github.com/plusjade/jekyll-bootstrap/blob/master/Rakefile) source.
 
-## Editing Themes
+## Edit Themes
 
 Theme layouts are contained in `./_includes/themes/THEME-NAME`.
 It is important that you edit files in the theme directory rather than `_layouts` 
