@@ -15,19 +15,19 @@
 	  <div id="main-content" class="content">
 	    <div class="row">
       <div class="span10 offset1">
+        <div>
+          <div style="float:right; color:#555">
+            JB latest version: <span class="label" style="background:#777">0.1.0</span> 
+            <span class="label" style="background:#777">24-01-2012</span>
+          </div>
+          {% include JB/sharing %}
+        </div>
 				{{ content }}
 			</div>
 			</div>
 	  </div>
 	  		
     <div class="sidebar">
-      {% if site.safe %}{% include JB/sharing %}{% endif %}
-
-      <p style="margin-top:20px; line-height:2em">
-        <span class="label warning" style="font-size:1em">0.1.0</span> &larr; JB Latest Version
-        <br><span class="label warning" style="font-size:1em">24-01-2012</span> &larr; Release Date
-      </p>
-
       <h4>Start</h4>
   		<ul>
   		  <li><a href="/">Home</a></li>

@@ -141,7 +141,5 @@ ul li a.active, ol li a.active {
 }
 
 .addthis_toolbox {
-	position:relative;
-	top:10px;
 	width:400px;
 }
