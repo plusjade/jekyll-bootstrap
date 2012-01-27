@@ -5,7 +5,7 @@ head_title: Blogging with Jekyll Tutorial
 header: This is Jekyll-Bootstrap
 ---
 
-<h2 class="alert-message block-message warn" style="text-align:center">
+<h2 style="margin:20px 0; border:0">
   Jekyll Bootstrap is the Quickest Way to Start and Publish Your Jekyll Powered Blog.
 </h2>
 
