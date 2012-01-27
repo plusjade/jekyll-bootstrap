@@ -2,7 +2,8 @@
 
 Theme Name: the\_program  
 Description: A minimumlist theme for [jekyll](https://github.com/mojombo/jekyll). Theming is done on [Jekyll-Bootstrap](http://jekyllbootstrap.com/).  
-Author: Yuya Saito @ [\_layout](http://www.layouts-the.me/)  
+Author: Yuya Saito @ cssradar@gmail.com  
+Demo URL: http://layouts-the.me.s3-website-us-east-1.amazonaws.com/themes/the-program/
 Version: 1.0
 
 ## About the\_program
