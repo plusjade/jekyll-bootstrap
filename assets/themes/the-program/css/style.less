@@ -1,13 +1,13 @@
-@import "base.css";
-@import "module.css";
+@import "_base.less";
+@import "_module.less";
 @import "_less-base.less";
 
 /* LESS VARIABLES
 --------------------------------------------------------------------------------- */
 @main-bg: #ffffff;
-@subtle-bg: @base01;
-@main-font-color: @base03;
-@accent-color: @red;
+@subtle-bg: #515151;
+@main-font-color: #2d2d2d;
+@accent-color: #c26164;
 
 /* GLOBAL
 --------------------------------------------------------------------------------- */
@@ -186,6 +186,8 @@ pre {
 			text-transform: capitalize;
 		}
 
+		.comment a { border-bottom: 0; }
+
 		.unit-foot {
 			border-top: 5px solid rgba(21, 25, 25, 0.8);
 			padding-top: @line-height / @em;
@@ -238,6 +240,7 @@ pre {
 			-moz-user-select:none;
 			-ms-user-select:none;
 			user-select:none;
+			vertical-align: bottom;
 			&:link {}
 			&:active {
 				-webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
@@ -306,5 +309,5 @@ pre {
 }
 
 @import "_mediaqueries.less";
-@import "syntaxhighlighter.css";
-@import "helper.css";
+@import "_syntaxhighlighter.less";
+@import "_helper.less";
