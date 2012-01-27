@@ -1,0 +1,235 @@
+// GO MOBILE FIRST!
+
+	.the-header {
+		.unit-head {
+			padding: @line-height * 1px;
+			.nav-global {
+				.logo {
+					display: block;
+					width: auto;
+					a {
+						display: block;
+						font-size: 30px;
+						line-height: 52px;
+						padding-bottom: 26px;
+					}
+				}
+			}
+		}
+	} // the-header
+
+
+	.body {
+		.unit-body {
+			border-top: 1px solid rgba(255,255,255,0.6);
+			padding: @line-height * 1px;
+		}
+	}
+
+	.the-footer {
+		background-color: #1a1a1a;
+		background-color: rgba(21, 25, 25, 0.8);
+		color: #fafafa;
+		color: rgba(250, 250, 250, 0.8);
+		a {
+			&:link {
+				color: @accent-color;
+				border: 0;
+			}
+			&:visited {
+				color: darken(@accent-color, 10%);
+				border: 0;
+			}
+			&:hover {
+			color: lighten(@accent-color, 10%);
+			border: 0;
+			}
+		}
+		h4 { margin-top: 0; }
+		padding: (@line-height ) * 1px;
+	}  // .the-footer
+
+
+/*
+ 	IE
+*/
+
+.ie {
+
+} // .ie
+
+/*
+	Smartphone
+*/
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+	img { max-width: 100%; }
+}
+
+/*
+	Tablet
+*/
+
+@media only screen and (min-width: 768px) {
+
+	.the-header {
+		.unit-head {
+			padding: 0;
+			.nav-global {
+				li {
+					float: left;
+					border: 1px solid rgba(0, 0, 0, 0.05);
+					border-width: 0 1px 0 0;
+					a, div {
+						display: block;
+						padding: 26px; 
+						height: 26px;
+					}
+					a:link {}
+					a:hover {
+						background-color: #fff04a;
+						color: lighten(@main-font-color, 10%);
+					}
+				}
+				li:nth-child(2) { border-width: 0 1px; }
+				li:last-child { border-width: 0; }
+				.logo {
+					border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+					border-right: none 0;
+					display: block;
+					width: 100%;
+					a {
+						font-size: 30px;
+						line-height: normal;
+					}
+					a:hover { background-color: transparent; }
+				}
+			}
+		}
+	} // the-header
+
+} // min-width: 768px
+
+/*
+	Not that old computer layout 
+*/
+
+@media only screen and (min-width: 1280px) {
+
+	.the-header {
+		.unit-head {
+			.nav-global {
+				.logo {
+					border-bottom: 0 none;
+					display: block;
+					width: auto;
+					a {
+						line-height: 18px;
+						margin-bottom: 0;
+						padding-left: (@line-height * 2) * 1px;
+					}
+				}
+			}
+		}
+	} // the-header
+
+	.body {
+		float: left;
+		width: 100%;
+		margin-right: -450px;
+		.unit-body {
+			border-top: 0 none;
+			margin-right: 450px;
+			padding: @line-height * 1px (@line-height * 2) * 1px;
+		}
+	}
+
+	.the-footer {
+		background-color: transparent;
+		color: @main-font-color;
+
+		position: relative;
+		top: auto;
+		display: block;
+		float: left;
+		padding: 0 0 0 @line-height * 1px;
+		width: 420px;
+	}  // .the-footer
+
+} // min-width: 1280px
+
+/*
+	Huge-screen layout 
+*/
+
+@media only screen and (min-width: 1410px) {
+
+	.the-header {
+			float: left;
+			width: 19%;
+		.unit-head {
+			padding: @line-height * 1px;
+			.nav-global {
+				li {
+					float: none;
+					border: none;
+					a, div {
+						display: block;
+						padding: 2px 5px;
+						height: auto;
+					}
+				}
+				li:nth-child(2) { border-width: 0; }
+				.logo {
+					border-bottom: none 0;
+					display: list-item;
+					width: auto;
+					a {
+						display: block;
+						font-size: 30px;
+						line-height: 52px;
+						margin-bottom: 26px;
+						padding-left: 5px;
+						position: relative;
+						top: auto;
+					}
+				}
+			}
+		}
+	} // the-header
+
+	.body {
+		border-left: 1px solid rgba(0,0,0,0.2);
+		-webkit-box-shadow: rgba(255,255,255,1.0) 0px 0px 2px;
+		-moz-box-shadow: rgba(255,255,255,1.0) 0px 0px 2px;
+		-o-box-shadow: rgba(255,255,255,1.0) 0px 0px 2px;
+		float: left;
+		width: 81%;
+		margin-right: -450px;
+		.unit-body {
+			border-right: 1px solid rgba(0,0,0,0.2);
+			-webkit-box-shadow: rgba(255,255,255,1.0) 0px 0px 2px;
+			-moz-box-shadow: rgba(255,255,255,1.0) 0px 0px 2px;
+			-o-box-shadow: rgba(255,255,255,1.0) 0px 0px 2px;
+			margin-right: 450px;
+			padding: @line-height * 1px (@line-height * 2) * 1px;
+			min-height: 1050px;
+		}
+	}
+
+	.the-footer {
+		position: relative;
+		top: auto;
+		display: block;
+		float: left;
+		padding: @line-height * 1px 0 0 @line-height * 1px;
+		width: 420px;
+		h4 {
+			font-size: 30px;
+			line-height: 52px;
+			margin-top: 0;
+			margin-bottom: 26px;
+		}
+	}  // .the-footer
+
+} // min-width: 1410px
