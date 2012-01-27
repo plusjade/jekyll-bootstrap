@@ -19,7 +19,7 @@ html, body {
 }
 .sidebar {
  	position:absolute;
-	top:5px;
+	top:30px;
 	right:-195px;
   width: 175px;
 	eight:100%;
@@ -31,10 +31,11 @@ html, body {
 .sidebar h4 {
 	font-size:14px;
 	color:#555;
+	margin:0;
 }
 .sidebar ul {
 	list-style: none;
-	margin-left: 0;
+	margin:0 0 0 10px;
 	padding-left: 1em;
 	text-indent: -1em;
 }

@@ -15,7 +15,7 @@
 	  <div id="main-content" class="content">
 	    <div class="row">
       <div class="span10 offset1">
-        <div>
+        <div style="overflow:hidden">
           <div style="float:right; color:#555">
             JB latest version: <span class="label" style="background:#777">0.1.0</span> 
             <span class="label" style="background:#777">24-01-2012</span>
@@ -28,20 +28,20 @@
 	  </div>
 	  		
     <div class="sidebar">
-      <h4>Start</h4>
+      <h4>Start Blogging</h4>
   		<ul>
   		  <li><a href="/">Home</a></li>
   		  {% assign pages_list = site.categories.usage %}  
   		  {% include JB/pages_list %}
   		</ul>
 
-  	  <h4>Overview</h4>
+  	  <h4>Learn Jekyll</h4>
   		<ul>
   	    {% assign pages_list = site.categories.lessons %}  
   	    {% include JB/pages_list %}
   		</ul>
 
-  		<h4>API</h4>
+  		<h4>Customize Jekyll</h4>
   		<ul>
   		  {% assign pages_list = site.categories.api %}  
   		  {% include JB/pages_list %}

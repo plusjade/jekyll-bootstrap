@@ -6,7 +6,8 @@ header: This is Jekyll-Bootstrap
 ---
 
 <h2 style="margin:20px 0; border:0">
-  Jekyll Bootstrap is the Quickest Way to Start and Publish Your Jekyll Powered Blog.
+  Jekyll-Bootstrap &rarr; <br>
+  The Quickest Way to Blog with Jekyll.
 </h2>
 
 New to blogging with Jekyll? <a href="{{ site.categories.lessons.first.url }}" style="text-decoration:underline">Read the introduction</a>.
