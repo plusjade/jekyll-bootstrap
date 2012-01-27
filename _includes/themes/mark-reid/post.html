@@ -3,13 +3,13 @@
   <h1 class="emphnext">{{ page.title }}</h1>
   <ul class="tag_box inline">
   {% assign tags_list = page.tags %}
-  {% include helpers/tags_list.html %}
+  {% include JB/tags_list %}
   </ul>
 
   {{ content }}
 
   <address class="signature">
-    <a class="author" href="/">{{ site.author.name }}</a> 
+    <a class="author" href="{{ HOME_PATH }}">{{ site.author.name }}</a> 
     <span class="date">{{ page.date | date_to_long_string }}</span>
     <span class="location">{{ page.location }}</span>
   </address>
@@ -25,7 +25,4 @@
   
 </div><!-- End Page -->
 
-<!-- Discus Comments -->
-<div id="disqus_thread">
-  <h2>Comment Section</h2>
-</div>
+{% include JB/comments %}

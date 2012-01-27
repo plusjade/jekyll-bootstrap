@@ -24,12 +24,12 @@
 						<ul class="list-category list-linear">
 							<li class="list-head">category: </li>
 							{% assign categories_list = page.categories %}
-							{% include helpers/categories_list.html %}
+							{% include JB/categories_list %}
 						</ul>
 						<ul class="list-tag list-linear">
 							<li class="list-head">tags: </li>
 							{% assign tags_list = page.tags %}
-							{% include helpers/tags_list.html %}
+							{% include JB/tags_list %}
 						</ul>
 					</div><!-- meta -->
 				</div><!-- entry-content -->
@@ -40,7 +40,10 @@
 							<li><div class="twitter-follow"><a href="https://twitter.com/{{ site.author.twitter }}" class="twitter-follow-button" data-show-count="false" data-lang="en"></a></div></li>
 						</ul>
 					</div>
+					
+					{% include JB/comments %}
 				</div><!-- misc-content -->
+				
 			</div><!-- bd -->
 			<footer class="unit-foot">
 				<div class="unit-inner unit-foot-inner">

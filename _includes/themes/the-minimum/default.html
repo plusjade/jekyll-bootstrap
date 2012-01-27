@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>{{ page.title }}</title>
 	<meta name="author" content="{{ site.author.name }}">
-	<link href='{{ theme_asset_path }}/css/style.css' rel="stylesheet" media="all">
+	<link href='{{ ASSET_PATH }}/css/style.css' rel="stylesheet" media="all">
 	<link href="http://feeds.feedburner.com/{{ site.author.feedbaname }}" rel="alternate" title="{{ page.title }}" type="application/atom+xml">
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
 </head>
@@ -18,7 +18,7 @@
 	<header class="the-header">
 		<div class="unit-head">
 			<div class="unit-inner unit-head-inner">
-				<p class="logo"><a href="/">{{ site.title }}</a></p>
+				<p class="logo"><a href="{{ HOME_PATH }}">{{ site.title }}</a></p>
 				<nav class="nav-global">
 					<ul>
 						<li class="archive"><a href="/archive.html">archive</a></li>
@@ -77,8 +77,7 @@
 /*! A fix for the iOS orientationchange zoom bug.Script by @scottjehl, rebound by @wilto. MIT License.*/
 (function(j){var i=j.document;if(!i.querySelectorAll){return}var l=i.querySelectorAll("meta[name=viewport]")[0],a=l&&l.getAttribute("content"),h=a+", maximum-scale=1.0",d=a+", maximum-scale=10.0",g=true,c=j.orientation,k=0;if(!l){return}function f(){l.setAttribute("content",d);g=true}function b(){l.setAttribute("content",h);g=false}function e(m){c=Math.abs(j.orientation);k=Math.abs(m.gamma);if(k>8&&c===0){if(g){b()}}else{if(!g){f()}}}j.addEventListener("orientationchange",f,false);j.addEventListener("deviceorientation",e,false)})(this);
 </script>
-{% if site.safe %}
-  {% include production/analytics.html %}
-{% endif %}
+
+  {% include JB/analytics %}
 </body>
 </html>
