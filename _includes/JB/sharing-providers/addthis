@@ -1,0 +1,20 @@
+<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+{% if site.JB.sharing.addthis.enable_fblike_button %}
+	<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+{% endif %}
+
+{% if site.JB.sharing.addthis.enable_tweet_button %}
+	<a class="addthis_button_tweet"></a>
+{% endif %}
+
+{% if site.JB.sharing.addthis.enable_gplus_button %}
+	<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+{% endif %}
+
+{% if site.JB.sharing.addthis.enable_addthis_button %}
+	<a class="addthis_counter addthis_pill_style"></a>
+{% endif %}
+</div>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4f20673f576c234a"></script>
+<!-- AddThis Button END -->
