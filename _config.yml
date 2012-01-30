@@ -10,6 +10,7 @@ pygments: true
 # so be sure to set them if your theme uses them.
 #
 title : Jekyll Bootstrap
+tagline: Site Tagline
 author :
   name : Name Lastname
   email : blah@email.test
