@@ -123,14 +123,34 @@ end # task :preview
 
 namespace :theme do
   
-  # 0.1.0 version of theme install will be simple 1:1 file matching.
+  # Public: Install a theme using the theme packager.
+  # Version 0.1.0 simple 1:1 file matching.
+  #
+  # git  - String, Optional path to the git repository of the theme to be installed.
+  # name - String, Optional name of the theme you want to install.
+  #        Passing name requires that the theme package already exist.
+  #
+  # Examples
+  #
+  #   rake theme:install git="https://github.com/jekyllbootstrap/theme-twitter.git"
+  #   rake theme:install name="cool-theme"
+  #
+  # Returns Success/failure messages.
   desc "Install theme"
   task :install do
-    name = ENV["name"].to_s.downcase
-    packaged_theme_path = JB::Path.build(:theme_packages, :node => name)
+    if ENV["git"]
+      manifest = theme_from_git_url(ENV["git"])
+      name = manifest["name"]
+    else
+      name = ENV["name"].to_s.downcase
+    end
 
+    packaged_theme_path = JB::Path.build(:theme_packages, :node => name)
+    
     abort("rake aborted: name cannot be blank") if name.empty?
     abort("rake aborted: '#{packaged_theme_path}' directory not found.") unless FileTest.directory?(packaged_theme_path)
+    
+    manifest = verify_manifest(packaged_theme_path)
     
     # Get relative paths to packaged theme files
     packaged_theme_files = []
@@ -155,10 +175,18 @@ namespace :theme do
       system("rake switch_theme name='#{name}'")
     end
   end
-  
-  # The 0.1.0 version of theme packaging will be simple 1:1 file matching.
-  # The theme repo will outline it's files in the same structure 
-  # it expects to be included into the Jekyll structure.
+
+  # Public: Package a theme using the theme packager.
+  # The theme must be structured using valid JB API.
+  # In other words packaging is essentially the reverse of installing.
+  #
+  # name - String, Required name of the theme you want to package.
+  #        
+  # Examples
+  #
+  #   rake theme:package name="twitter"
+  #
+  # Returns Success/failure messages.
   desc "Package theme"
   task :package do
     name = ENV["name"].to_s.downcase
@@ -190,6 +218,39 @@ namespace :theme do
   
 end # end namespace :theme
 
+# Internal: Download and process a theme from a git url.
+# Notice we don't know the name of the theme until we look it up in the manifest.
+# So we'll have to change the folder name once we get the name.
+#
+# url - String, Required url to git repository.
+#        
+# Returns theme manifest hash
+def theme_from_git_url(url)
+  tmp_path = JB::Path.build(:theme_packages, :node => "_tmp")
+  system("git clone #{url} #{tmp_path}")
+  manifest = verify_manifest(tmp_path)
+  new_path = JB::Path.build(:theme_packages, :node => manifest["name"])
+  if File.exist?(new_path) && ask("=> #{new_path} theme package already exists. Override?", ['y', 'n']) == 'n'
+    remove_dir(tmp_path)
+    abort("rake aborted: '#{manifest["name"]}' already exists as theme package.")
+  end
+
+  remove_dir(new_path) if File.exist?(new_path)
+  mv(tmp_path, new_path)
+  manifest
+end
+
+# Internal: Process theme package manifest file.
+#
+# theme_path - String, Required. File path to theme package.
+#        
+# Returns theme manifest hash
+def verify_manifest(theme_path)
+  manifest = File.join(theme_path, "manifest.yml")
+  abort("rake aborted: repo must contain valid manifest.yml") unless File.exist? manifest
+  manifest = YAML.load_file(manifest)
+  manifest
+end
 
 def ask(message, valid_options)
   if valid_options
