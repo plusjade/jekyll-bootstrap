@@ -144,3 +144,16 @@ ul li a.active, ol li a.active {
 .addthis_toolbox {
 	width:400px;
 }
+
+
+/* homepage */
+#tab-list li a {
+  font-size:14px;
+  font-weight:bold;
+}
+#tab-content-wrapper {
+  min-height:190px;
+}
+#tab-content-wrapper div {
+}
+

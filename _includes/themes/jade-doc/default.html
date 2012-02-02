@@ -67,9 +67,40 @@
   
   
   <a href="http://github.com/plusjade/jekyll-bootstrap" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/30f550e0d38ceb6ef5b81500c64d970b7fb0f028/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub"></a>
+  
+{% if page.url == "/index.html" %}  
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" charset="utf-8"></script>
   <script>
+    var Tabs = {
+      $list : null,
+      $content : null,
+      
+      init : function(list, content){
+       Tabs.$list = $(list);
+       Tabs.$content = $(content);
+       
+       Tabs.$list.find("a").click(function(e){
+         Tabs.show($(this).parent().index());
+         e.preventDefault();
+         return false;
+       })
+       
+       Tabs.show(0);
+      },
+      
+      show : function(index){
+        Tabs.$list
+          .find("li").removeClass("active")
+          .eq(index).addClass("active");
+        Tabs.$content
+          .find("div").hide()
+          .eq(index).show();
+      }
+    }
+    
     $(function(){
+      Tabs.init("#tab-list", "#tab-content-wrapper");
+      
       var $codeContainer = $("#2__install_jekyllbootstrap").next("pre").find("code");
       var code = $codeContainer.text();
       var $repoName = $("#repo_name");
@@ -85,7 +116,7 @@
       })
     })
   </script>
-  
+{% endif %}
   {% include JB/analytics %}
 </body>
 </html>

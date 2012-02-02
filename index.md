@@ -6,34 +6,91 @@ header: This is Jekyll-Bootstrap
 ---
 
 <h2 style="margin:20px 0; border:0">
-  Jekyll-Bootstrap &rarr; <br>
   The Quickest Way to Blog with Jekyll.
 </h2>
 
-New to blogging with Jekyll? <a href="{{ site.categories.lessons.first.url }}" style="text-decoration:underline">Read the introduction</a>.
+<div class="highlight-wrap" style="margin-bottom:10px">
+  <strong>Jekyll-Bootstrap</strong> is a blogging framework made for developers and designers.
+  <br>Create content in markdown or textile and manage everything with git.
+  <br>Publish from terminal, no database, no hosting headaches.
+</div>
 
-<span class="highlight-wrap">
-  Jekyll-Bootstrap ships with a complete pre-built Jekyll directory structure for blogging, 
-  <span>modular theming</span>, plug-and-play <span>commenting</span>, <span>analytics</span>, 
-  <span>new post and page generators</span>, and coded <span>page-stubs</span> to get you rolling.
-</span>
-
-## Core Benefits
-
-- **Convenient Blogging**   
-  Without Jekyll-Bootstrap, you'd have to configure _every single page_ of your blog.
-  Jekyll-bootstrap takes you from 0 to hosted blog in 3 minutes, really!
-
-- **Free and Easy Hosting via GitHub Pages**  
-  Jekyll-bootstrap is 100% compatible with deploying to GitHub.
-  Just push your repository to a valid [GitHub Pages](http://pages.github.com) endpoint and GitHub hosts your website &lt;3.  
-
-- **Progressive, Unified Development**  
-  Ensuring your Jekyll blog is always compatible with GitHub Pages
-  means development can move the most users forward.
-  This helps improve the current horizontal and highly segmented Jekyll ecosystem. 
-  Look forward to more and better features that simply _drop in_.
+<ul id="tab-list" class="pills">
+  <li><a href="#">Themes</a></li>
+  <li><a href="#">Comments</a></li>
+  <li><a href="#">Posts &amp; Pages</a></li>
+  <li><a href="#">Free Hosting</a></li>
+  <li><a href="#">Community</a></li>
+</ul>
+<div id="tab-content-wrapper">
   
+  <div>
+    <h3>Install and Switch Blog Themes With One Command.</h3>
+    <p>
+      Jekyll Bootstrap is the first Jekyll blogging engine to support modular theming.
+      <br>This makes designing and sharing themes for Jekyll blogs much easier and automatic.
+    </p>
+    <p style="margin-top:40px">
+      <a href="http://themes.jekyllbootstrap.com" class="btn" target="_blank">Browse Current Themes</a> <small>(new window)</small>
+    </p>
+  </div>
+
+  <div>
+    <h3>Support For All Major Blog Comment Engines.</h3>
+    <p>Installation is as easy as pasting in your account identifier.</p>
+    <ul>
+      <li>Disqus</li>
+      <li>Livefyre</li>
+      <li>Intense Debate</li>
+      <li>Facebook</li>
+    </ul>
+  </div>
+
+  <div>
+    <h3>Built-in Post and Page File Creation.</h3>
+    <p>
+      Easily create post and page file stubs using Jekyll Bootstrap's built in rake tasks.
+      <br>Plus dynamically generated page stubs for all these goodies:
+    </p>
+    <ul>
+      <li>archive.html</li>
+      <li>pages.html</li>
+      <li>tags.html</li>
+      <li>categories.html</li>
+      <li>sitemap.xml</li>
+      <li>atom.xml</li>
+    </ul>
+  </div>
+
+  <div>
+    <h3>Free and Easy Blog Hosting With GitHub Pages.</h3>
+    <p>
+      Jekyll-bootstrap is 100% compatible with deploying to GitHub.
+      <br>Just push your repository to a valid <a href="http://pages.github.com">GitHub Pages</a> endpoint and GitHub hosts your website &lt;3.
+    </p>
+  </div>
+
+  <div>
+    <h3>Blog Your Way to a Better World =)</h3>
+    <p>
+      Jekyll Bootstrap started as a way to empower more programmers to share their knowledge, advice, and experiences.
+       We've grown through embracing Open Source and prolifically refining Jekyll Bootstrap's Public API.
+    </p>
+    <p>
+      <strong>The Result?</strong><br>
+      Each new supporter builds a bigger and better community from which we mutually benefit. 
+      More and better themes, plugins, javascript goodies, and ultimately more knowledge shared.
+    </p>
+    <p>
+      <strong>- Thank you for investing in our community!</strong>
+    </p>
+  </div>
+</div>
+
+<div style="text-align:center; color:#777">
+  New to blogging with Jekyll? <a href="{{ site.categories.lessons.first.url }}" style="text-decoration:underline">Read the introduction</a>.
+</div>
+
 <h1 id="start-now">Zero to Hosted Jekyll Blog in 3 Minutes</h1>
 
 <form action="#" id="generate_code" class="alert-message block-message warn" style="margin-left:-40px; text-align:center">
