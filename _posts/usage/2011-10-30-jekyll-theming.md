@@ -4,35 +4,58 @@ title : Blog Themes
 categories : usage
 ---
 
-## Browse Themes
+## Introduction
 
-Jekyll-Bootstrap currently ships with a few themes. Use the switching method below to test them out.
-Additionally our [Theme Explorer](http://themes.jekyllbootstrap.com) shows full-site previews of available themes.
+As of JB version 0.2.0 themes are now entirely modular. They are tracked and versioned individually as **Theme Packages**.
+This allows everyone to publish and share themes freely.
 
-<div style="text-align:right">
-  (alpha release) <a href="http://themes.jekyllbootstrap.com" class="btn primary" style="">Launch Theme Explorer</a>
+Jekyll-Bootstrap v 0.2.0 ships with only the stock "twitter" theme.
+Additional themes need to be "installed" as outlined below.
+
+<span class="label warning">NOTE</span>
+Jekyll-Bootstrap uses `rake tasks` to implement much of its functionality.
+If you are new to `rake` a rake task is just a ruby method that can be run in the base-directory
+of Jekyll-Bootstrap. You should never run arbitrary server side code on your system without first reviewing the source!
+View the [Rakefile](https://github.com/plusjade/jekyll-bootstrap/blob/master/Rakefile) source.
+
+## Find Themes
+
+You can find and browse the latest official themes in the [Theme Explorer](http://themes.jekyllbootstrap.com).
+The theme explorer is still a work in progress; it shows full-website previews of all available themes.
+
+<div style="ext-align:right; margin-bottom:10px">
+  <a href="http://themes.jekyllbootstrap.com" class="btn primary" style="">Launch Theme Explorer</a>
 </div>
 
+Additionally, designers are free to publish their own themes as long as they are packaged appropriately.
+You can then use the same installation method outlined below to install the theme.
 
+Directly browse current Theme Packages on GitHub: <https://github.com/jekyllbootstrap>
 
+## Install Themes
+
+Install a theme by using the rake task and passing in the theme's git url.
+
+    $ rake theme:install git="https://github.com/jekyllbootstrap/theme-the-program.git"
+
+The installer uses git to download the Theme Package and then installs it.
+If you have obtained a Theme Package in another way, such as zip download, you can manually
+place it into your `./_theme_packages` folder and then run the installer with the name of the theme.
+
+    $ rake theme:install name="THEME-NAME"
+
+As a convenience, after the install is successful, the task will ask you if you'd like to switch to the newly installed theme.
+Type 'y' and enter to switch!
 
 ## Switch Themes
 
-Jekyll-Bootstrap comes with four themes
+Once your themes are installed you can switch between them via rake task:
 
-- **twitter** by [http://twitter.github.com/bootstrap](http://twitter.github.com/bootstrap/examples/container-app.html)
-- **the-minimum** by [Yuya Saito](http://studiomohawk.github.com/jekyll-bootstrap/)
-- **tom** by [http://tom.preston-werner.com](http://tom.preston-werner.com)
-- **mark-reid** by [http://mark.reid.name](http://mark.reid.name)
-
-Switch themes via the rake task
-
-    $ rake switch_theme name="the-minimum"
-
-If you are new to `rake` a rake task is just a ruby method that can be run in the base-directory
-of jekyll-bootstrap. Feel free to view the [Rakefile](https://github.com/plusjade/jekyll-bootstrap/blob/master/Rakefile) source.
-
-## Edit Themes
+    $ rake theme:switch name="the-program"
+      
+    ## for 0.1.0 users `rake switch_theme` still works.
+    
+## Customize Themes
 
 Theme layouts are contained in `./_includes/themes/THEME-NAME`.
 It is important that you edit files in the theme directory rather than `_layouts` 
@@ -46,7 +69,7 @@ You are free add extra template files to `_layouts` in order to customize your b
 However if you want to add theme-specific layouts you should add them to the theme's directory in `_includes`.
 After your files are added make sure to run the switcher again:
 
-    $ rake switch_theme name="the-minimum"
+    $ rake theme:switch name="the-minimum"
 
 
 ### Static Assets
@@ -57,14 +80,5 @@ All themes are provided with the liquid variable: `ASSET_PATH` which trace back 
 
 ## Add Your Own Theme
 
-To add your own theme just copy the theme structure of a current theme and change out the templates and assets.
-
-At this time a theme needs two main but separate directory components:
-
-1. **./\_includes/themes/THEME-NAME**  
-  Any template defined in this folder will be usable as a normal layout once you run     
-  `$ rake switch_theme name="THEME-NAME"`.
-1. **./assets/themes/THEME-NAME**  
-  Static assets for your theme should be namespaced via this folder.
-  Your templates should use the liquid variable : `ASSET_PATH` to call these assets.
+Read the [Theme API Documentation](/api/theme-api.html) for instructions on how to build and publish custom themes for Jekyll Bootstrap.
 
