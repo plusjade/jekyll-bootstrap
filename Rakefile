@@ -134,6 +134,9 @@ namespace :theme do
         page.puts "{% include themes/#{theme_name}/#{File.basename(filename)} %}" 
       end
     end
+    
+    puts "=> Theme successfully switched!"
+    puts "=> Reload your web-page to check it out =)"
   end # task :switch
   
   # Public: Install a theme using the theme packager.
@@ -160,16 +163,26 @@ namespace :theme do
 
     packaged_theme_path = JB::Path.build(:theme_packages, :node => name)
     
-    abort("rake aborted: name cannot be blank") if name.empty?
-    abort("rake aborted: '#{packaged_theme_path}' directory not found.") unless FileTest.directory?(packaged_theme_path)
+    abort("rake aborted!
+      => ERROR: 'name' cannot be blank") if name.empty?
+    abort("rake aborted! 
+      => ERROR: '#{packaged_theme_path}' directory not found.
+      => Installable themes can be added via git. You can find some here: http://github.com/jekyllbootstrap
+      => To download+install run: `rake theme:install git='[PUBLIC-CLONE-URL]'`
+      => example : rake theme:install git='git@github.com:jekyllbootstrap/theme-the-program.git'
+    ") unless FileTest.directory?(packaged_theme_path)
     
     manifest = verify_manifest(packaged_theme_path)
     
     # Get relative paths to packaged theme files
+    # Exclude directories as they'll be recursively created. Exclude meta-data files.
     packaged_theme_files = []
-    FileUtils.cd(packaged_theme_path) { packaged_theme_files += Dir["**/*.*"] }
-    # Don't install metadata files.
-    packaged_theme_files.delete_if { |f| f =~ /^(manifest|readme|packager)/i }
+    FileUtils.cd(packaged_theme_path) {
+      Dir.glob("**/*.*") { |f| 
+        next if ( FileTest.directory?(f) || f =~ /^(manifest|readme|packager)/i )
+        packaged_theme_files << f 
+      }
+    }
     
     # Mirror each file into the framework making sure to prompt if already exists.
     packaged_theme_files.each do |filename|
