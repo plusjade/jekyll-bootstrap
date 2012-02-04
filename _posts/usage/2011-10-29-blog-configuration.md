@@ -36,7 +36,7 @@ When in localhost, your site will run from root "/" regardless of `BASE_PATH`.
 
 ## Enabling Comments
 
-Jekyll-Bootstrap ships with widget codes that enable commenting for [Disqus](http://disqus.com), [Intense Debate](http://intensedebate.com), and [livefyre](http://www.livefyre.com/).
+Jekyll-Bootstrap ships with widget codes that enable commenting for [Disqus](http://disqus.com), [Intense Debate](http://intensedebate.com), [livefyre](http://www.livefyre.com/), and [Facebook Comments](https://developers.facebook.com/docs/reference/plugins/comments/).
 
 To enable commenting for your blog you will need to have setup an account with one of these providers.
 In the `_config.yml` you should see a hash named `comments` as shown below:
@@ -54,7 +54,10 @@ In the `_config.yml` you should see a hash named `comments` as shown below:
       intensedebate :
         account : 123abc
       facebook :
-        apikey : 123
+        appid : 123
+        num_posts: 5
+        width: 580
+        colorscheme: light
 
 
 ### Choose a Provider
