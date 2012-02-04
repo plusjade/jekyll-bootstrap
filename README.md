@@ -8,7 +8,7 @@ For all usage and documentation please see: <http://jekyllbootstrap.com>
 
 ## Version
 
-0.1.0 - stable and versioned using [semantic versioning](http://semver.org/).
+0.2.0 - stable and versioned using [semantic versioning](http://semver.org/).
 
 ## Contributing 
 
