@@ -10,8 +10,10 @@ clicky_site_ids.push(66527697);
 })();
 </script>
 <script type="text/javascript">
+
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-635329-12']);
+  _gaq.push(['_setDomainName', 'jekyllbootstrap.com']);
   _gaq.push(['_trackPageview']);
 
   (function() {
@@ -19,4 +21,5 @@ clicky_site_ids.push(66527697);
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
+
 </script>
