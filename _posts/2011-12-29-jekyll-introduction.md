@@ -80,22 +80,23 @@ Jekyll-bootstrap conveniently provides the base directory format.
 
 Jekyll expects your website directory to be laid out like so:
 
-    .
-    |-- _config.yml
-    |-- _includes
-    |-- _layouts
-    |   |-- default.html
-    |   |-- post.html
-    |-- _posts
-    |   |-- 20011-10-25-open-source-is-good.markdown
-    |   |-- 20011-04-26-hello-world.markdown
-    |-- _site
-    |-- index.html
-    |-- assets
-        |-- css
-            |-- style.css
-        |-- javascripts
-
+{% highlight text %}
+.
+|-- _config.yml
+|-- _includes
+|-- _layouts
+|   |-- default.html
+|   |-- post.html
+|-- _posts
+|   |-- 20011-10-25-open-source-is-good.markdown
+|   |-- 20011-04-26-hello-world.markdown
+|-- _site
+|-- index.html
+|-- assets
+    |-- css
+        |-- style.css
+    |-- javascripts
+{% endhighlight %}
 
 - **\_config.yml**  
 	Stores configuration data.
@@ -169,10 +170,13 @@ Note categories in Jekyll work in a specific way.
 If you define more than one category you are defining a category hierarchy "set".
 Example:
 
-    ---
-    title :  Hello World
-    categories : [lessons, beginner]
-    ---
+{% highlight yaml %}
+---
+title :  Hello World
+categories : [lessons, beginner]
+---
+{% endhighlight %}
+
 
 This defines the category hierarchy "lessons/beginner". Note this is _one category_ node in Jekyll.
 You won't find "lessons" and "beginner" as two separate categories unless you define them elsewhere as singular categories.
@@ -193,10 +197,12 @@ Pages do not compute categories nor tags so defining them will have no effect.
 If pages are defined in sub-directories, the path to the page will be reflected in the url.
 Example:
 
-    .
-    |-- people
-        |-- bob
-            |-- essay.html
+{% highlight text %}
+.
+|-- people
+    |-- bob
+        |-- essay.html
+{% endhighlight %}
 
 This page will be available at `http://yourdomain.com/people/bob/essay.html`
 
@@ -334,13 +340,15 @@ This is the only way Jekyll knows you want the file processed.
 
 YAML Front Matter must be prepended to the top of template/post/page files:
 
-    ---
-    layout: post
-    category : pages
-    tags : [how-to, jekyll]
-    ---
+{% highlight yaml %}
+---
+layout: post
+category : pages
+tags : [how-to, jekyll]
+---
 
-    ... contents ...
+... contents ...
+{% endhighlight %}
 
 Three hyphens on a new line start the Front-Matter block and three hyphens on a new line end the block.
 The data inside the block must be valid YAML.

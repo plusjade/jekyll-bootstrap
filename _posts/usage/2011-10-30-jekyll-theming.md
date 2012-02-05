@@ -36,13 +36,19 @@ Directly browse current Theme Packages on GitHub: <https://github.com/jekyllboot
 
 Install a theme by using the rake task and passing in the theme's git url.
 
-    $ rake theme:install git="https://github.com/jekyllbootstrap/theme-the-program.git"
+{% highlight bash %}
+$ rake theme:install git="https://github.com/jekyllbootstrap/theme-the-program.git"
+{% endhighlight %}
+
 
 The installer uses git to download the Theme Package and then installs it.
 If you have obtained a Theme Package in another way, such as zip download, you can manually
 place it into your `./_theme_packages` folder and then run the installer with the name of the theme.
 
-    $ rake theme:install name="THEME-NAME"
+{% highlight bash %}
+$ rake theme:install name="THEME-NAME"
+{% endhighlight %}
+    
 
 As a convenience, after the install is successful, the task will ask you if you'd like to switch to the newly installed theme.
 Type 'y' and enter to switch!
@@ -51,10 +57,11 @@ Type 'y' and enter to switch!
 
 Once your themes are installed you can switch between them via rake task:
 
-    $ rake theme:switch name="the-program"
-      
-    ## for 0.1.0 users `rake switch_theme` still works.
-    
+{% highlight bash %}
+$ rake theme:switch name="the-program"
+# for 0.1.0 users `rake switch_theme` still works.
+{% endhighlight %}
+
 ## Customize Themes
 
 Theme layouts are contained in `./_includes/themes/THEME-NAME`.
@@ -69,7 +76,10 @@ You are free add extra template files to `_layouts` in order to customize your b
 However if you want to add theme-specific layouts you should add them to the theme's directory in `_includes`.
 After your files are added make sure to run the switcher again:
 
-    $ rake theme:switch name="the-minimum"
+{% highlight bash %}
+$ rake theme:switch name="the-minimum"
+{% endhighlight %}
+    
 
 
 ### Static Assets

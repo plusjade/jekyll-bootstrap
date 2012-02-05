@@ -14,7 +14,10 @@ You can consult the format table here: [Jekyll Permalinks](https://github.com/mo
 
 Jekyll-Bootstrap ships with the traditional default format for blogs:
 
-    permalink: /:categories/:year/:month/:day/:title/
+{% highlight yaml %}
+permalink: /:categories/:year/:month/:day/:title/
+{% endhighlight %}
+    
     
 Any category structure specified on a post will be included within the url, then the date, and finally the post title.
 
@@ -41,23 +44,25 @@ Jekyll-Bootstrap ships with widget codes that enable commenting for [Disqus](htt
 To enable commenting for your blog you will need to have setup an account with one of these providers.
 In the `_config.yml` you should see a hash named `comments` as shown below:
 
-    # Settings for comments helper
-    # Set 'provider' to the comment provider you want to use.
-    # Set 'provider' to false to turn commenting off globally.
-    #
-    comments :
-      provider : disqus
-      disqus :
-        short_name : jekyllbootstrap
-      livefyre :
-        site_id : 123
-      intensedebate :
-        account : 123abc
-      facebook :
-        appid : 123
-        num_posts: 5
-        width: 580
-        colorscheme: light
+{% highlight yaml %}
+# Settings for comments helper
+# Set 'provider' to the comment provider you want to use.
+# Set 'provider' to false to turn commenting off globally.
+#
+comments :
+  provider : disqus
+  disqus :
+    short_name : jekyllbootstrap
+  livefyre :
+    site_id : 123
+  intensedebate :
+    account : 123abc
+  facebook :
+    appid : 123
+    num_posts: 5
+    width: 580
+    colorscheme: light
+{% endhighlight %}
 
 
 ### Choose a Provider
@@ -70,7 +75,10 @@ In the example above, the **disqus** provider will be used and will be provided 
 
 To use a custom provider, set `provider: custom`. Next create a file at this path:
 
-    ./_includes/custom/comments
+{% highlight text %}
+./_includes/custom/comments
+{% endhighlight %}
+    
     
 This file will load wherever the theme has included its comments so you can inject your own widget code via this file.
 If you have a provider I don't know about, consider opening a [GitHub Issue](http://github.com/plusjade/jekyll-bootstrap/issues) so I can include it!
@@ -81,12 +89,15 @@ Set `provider: false` to disable comments globally.
 
 Disable comments for individual pages/posts by specifying `comments: false` in the page/post YAML Front Matter:
 
-    ---
-    layout: post
-    category : lessons
-    comments : false
-    tags : [yay]
-    ---
+{% highlight yaml %}
+---
+layout: post
+category : lessons
+comments : false
+tags : [yay]
+---
+{% endhighlight %}
+
 
 
 ## Enabling Analytics
@@ -96,16 +107,19 @@ Jekyll-Bootstrap ships with website analytics codes for [Google](http://google.c
 To enable analytics for your blog you will need to have setup an account with one of these providers.
 In the `_config.yml` you should see a hash named `analytics` as shown below:
 
-    # Settings for analytics helper
-    # Set 'provider' to the analytics provider you want to use.
-    # Set 'provider' to false to turn analytics off globally.
-    #        
-    analytics :
-      provider : google
-      google : 
-          tracking_id : 'UA-123-12'
-      getclicky :
-        site_id :
+{% highlight yaml %}
+# Settings for analytics helper
+# Set 'provider' to the analytics provider you want to use.
+# Set 'provider' to false to turn analytics off globally.
+#        
+analytics :
+  provider : google
+  google : 
+      tracking_id : 'UA-123-12'
+  getclicky :
+    site_id :
+{% endhighlight %}
+
 
 
 ### Choose a Provider
@@ -118,7 +132,10 @@ In the example above, the **google** provider will be used and will be provided 
 
 To use a custom provider, set `provider: custom`. Next create a file at this path:
 
-    ./_includes/custom/analytics
+{% highlight text %}
+./_includes/custom/analytics
+{% endhighlight %}
+    
 
 This file will load wherever the theme has included its analytics so you can inject your own widget code via this file.
 If you have a provider I don't know about, consider opening a [GitHub Issue](http://github.com/plusjade/jekyll-bootstrap/issues) so I can include it!
@@ -129,11 +146,14 @@ Set `provider: false` to disable analytics globally.
 
 Disable analytics for individual pages/posts by specifying `analytics: false` in the post/page YAML Front Matter:
 
-    ---
-    layout: post
-    category : lessons
-    analytics : false
-    tags : [yay]
-    ---
+{% highlight yaml %}
+---
+layout: post
+category : lessons
+analytics : false
+tags : [yay]
+---
+{% endhighlight %}
+
     
     
