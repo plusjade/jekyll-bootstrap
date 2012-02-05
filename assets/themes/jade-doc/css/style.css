@@ -70,17 +70,7 @@ h2.title {
   background:#FEFBF3;
   border-radius:0 0 5px 5px;
 }
-  
-code {
-	background:#f5f5f5;
-	padding:1px;
-	border:1px solid #ccc;
-}
-pre code {
-	padding:0;
-	border:0;
-	background:transparent;
-}
+ 
 ul li a.active, ol li a.active {
 	background:#57A957;
 	padding:1px 4px;
@@ -156,4 +146,3 @@ ul li a.active, ol li a.active {
 }
 #tab-content-wrapper div {
 }
-
