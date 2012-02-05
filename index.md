@@ -103,12 +103,10 @@ Go to your [Github Dashboard](https://github.com/) and create a new repository n
 
 ### 2 - Install Jekyll-Bootstrap
 
-{% highlight bash linenos %}
-$ git clone https://github.com/plusjade/jekyll-bootstrap.git USERNAME.github.com
-$ cd USERNAME.github.com
-$ git remote set-url origin git@github.com:USERNAME/USERNAME.github.com.git
-$ git push origin master
-{% endhighlight %}
+    $ git clone https://github.com/plusjade/jekyll-bootstrap.git USERNAME.github.com
+    $ cd USERNAME.github.com
+    $ git remote set-url origin git@github.com:USERNAME/USERNAME.github.com.git
+    $ git push origin master
 
 ### 3 - Profit
 
@@ -120,11 +118,9 @@ After GitHub has a couple minutes to do its magic your blog will be publicly ava
 I'll assume you have the Jekyll gem installed on your local machine.
 Run Jekyll-Bootstrap-Core locally to see what all the fuss is about:
 
-{% highlight bash linenos %}
-$ git clone https://github.com/plusjade/jekyll-bootstrap.git
-$ cd jekyll-bootstrap
-$ jekyll --server
-{% endhighlight %}
+    $ git clone https://github.com/plusjade/jekyll-bootstrap.git
+    $ cd jekyll-bootstrap
+    $ jekyll --server
 
 See it in action at [http://localhost:4000](http://localhost:4000).
 
