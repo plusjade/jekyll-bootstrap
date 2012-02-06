@@ -6,10 +6,10 @@ categories : usage
 
 ## Introduction
 
-As of JB version 0.2.0 themes are now entirely modular. They are tracked and versioned individually as **Theme Packages**.
+As of JB version 0.2.x themes are now entirely modular. They are tracked and versioned individually as **Theme Packages**.
 This allows everyone to publish and share themes freely.
 
-Jekyll-Bootstrap v 0.2.0 ships with only the stock "twitter" theme.
+Jekyll-Bootstrap v 0.2.x ships with only the stock "twitter" theme.
 Additional themes need to be "installed" as outlined below.
 
 <span class="label warning">NOTE</span>
