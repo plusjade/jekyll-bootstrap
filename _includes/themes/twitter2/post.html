@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="span8 offset2">
+    <div class="content post">
+      <h1 class="title">{{ page.title }}</h1>
+      {{ page.description }}
+      {{ content }}
+    {% if page.previous and page.categories == page.previous.categories %}
+      <hr>
+      <ul class="pager">
+        <li><a href="{{ BASE_PATH }}{{ page.previous.url }}">Next Step: {{ page.previous.title }} &rarr;</a></li>
+      </ul>
+    {% endif %}
+  	</div>	
+	</div>
+</div>

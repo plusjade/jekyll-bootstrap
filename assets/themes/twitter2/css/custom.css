@@ -1,0 +1,134 @@
+/* Override some defaults */
+html, body {
+  background-color: #FFF;
+}
+body {
+  padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+}
+.container > .content {
+  padding: 20px 30px 20px 30px;
+}
+
+/* HEADERS ======================================================== */ 
+h1 {margin:20px 0 20px 0}
+h2 {margin:10px 0 10px 0}
+h3 {margin:0px 0 10px 0}
+.content.page h1, .content.post h1, 
+  .content.splash h1, .content.landing h1 { 
+  margin-left:-60px; 
+  padding:10px 20px;
+	background:#046D8B;
+	color:#FFF;
+	border-radius:5px;
+}
+.content.page h2, .content.post h2{ 
+  margin:20px 0 20px -40px;
+  padding:7px 20px;
+	background:#FBF3DC;
+	border-radius:5px;
+}
+.content.page h3, .content.post h3{
+  margin-left:-10px; 
+}
+
+/* SIDEBAR ======================================================== */ 
+.sidebar {
+ 	position:absolute;
+	top:30px;
+	right:-195px;
+  width: 175px;
+  background:transparent;
+	overflow:auto;
+	z-index:0;
+}
+.sidebar h4 {
+	font-size:14px;
+	color:#555;
+	margin:0;
+}
+.sidebar ul {
+	list-style: none;
+	margin:0 0 0 10px;
+	padding-left: 1em;
+	text-indent: -1em;
+}
+.sidebar ul li {
+	line-height:1.5em;
+}
+.sidebar ul li:before {
+	content: "\00BB \0020";
+}
+
+/* TAGS ======================================================== */
+.tag_box {
+	list-style:none;
+	margin:0;
+	padding:5px 0 ;
+	overflow:hidden;
+}
+.tag_box li {
+	line-height:1.8em;
+}
+.tag_box.inline li {
+	float:left;
+}
+.tag_box a {
+	padding: 3px 6px;
+	margin: 2px;
+	background: #eee;
+	border-radius: 3px;
+	border:1px dashed #ccc;
+	text-decoration:none;
+}
+.tag_box a span{
+	vertical-align:super;
+	font-size:0.8em;
+}
+.tag_box a.active {
+	background:#57A957;
+	border:1px solid #4C964D;
+	color:#FFF;
+}
+
+/* LANDING PAGE ================================================= */
+.highlight-wrap span{ background:#FFFFCC }
+
+#tab-list li a {
+  font-size:14px;
+  font-weight:bold;
+}
+#tab-content-wrapper {
+  min-height:190px;
+}
+
+/* NAVBAR ================================================= */
+#navbar a {
+  color:#ECE5CE;
+}
+#navbar li.active a {
+ background:#046D8B; 
+}  
+
+/* SPLASH PAGES ================================================= */
+.page_icon div {
+  height:100px;
+  padding:10px;
+}
+.page_icon h4 {
+  margin-bottom:10px
+}
+
+/* MISC ================================================= */
+.pager li a {
+  padding:15px 40px;
+  font-size:24px;
+  font-weight:bold;
+  border:0;
+}
+ul li a.active, ol li a.active {
+	background:#57A957;
+	padding:1px 4px;
+	color:#FFF;
+	border-radius:3px;
+}
+.sharing {width:150px; margin-top:12px}
