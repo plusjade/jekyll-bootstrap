@@ -106,7 +106,16 @@ Go to your [Github Dashboard](https://github.com/) and create a new repository n
     $ git clone https://github.com/plusjade/jekyll-bootstrap.git USERNAME.github.com
     $ cd USERNAME.github.com
     $ git remote set-url origin git@github.com:USERNAME/USERNAME.github.com.git
+    $ git remote add jekyllbootstrap git://github.com/plusjade/jekyll-bootstrap.git
     $ git push origin master
+
+You can use `git remote -v` to see what remotes you have.
+
+And if you want to get new features from Jekyll-Bootstrap, juse do:
+
+    $ git pull jekyllbootstrap master
+
+Then use `git status` to check what changes. You may encounter **conflicts** with some files especially **_config.yml**. Merge it manually and then just push to your site!
 
 ### 3 - Profit
 
