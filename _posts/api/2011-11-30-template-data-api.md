@@ -1,11 +1,10 @@
 ---
 layout : post
 categories : api
-tags : [templating, liquid]
+tags : [learn, templating, liquid]
+description : |
+  The Template data API is a comprehensive list of all data accessible in templates via the Liquid templating language.
 ---
-
-The Template data API is a comprehensive list of all data accessible in templates through using the Liquid templating language.
-The next lesson will focus on [accessing Jekyll data via Liquid]({{page.previous.url}})
 
 ## Global Page/Post Data
 

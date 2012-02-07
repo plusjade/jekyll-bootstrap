@@ -1,10 +1,11 @@
 ---
 layout : post
 categories : api
-tags : api
+tags : [learn, api]
+description: |
+  The Liquid API gets us up to speed with the syntax, methods, and logic needed to build templates
+  and interact with our data structures.
 ---
-
-Here we'll get familiar with the Liquid syntax and learn about all the methods and logic available to us.
 
 ## Introduction
 

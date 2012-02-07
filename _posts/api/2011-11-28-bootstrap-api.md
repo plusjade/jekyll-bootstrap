@@ -2,17 +2,21 @@
 layout : post
 title : Jekyll Bootstrap API
 categories : api
-tags : api
+tags : [jb, api]
+description: |
+  The Bootstrap API documents all method calls available to your blog
+  when using the JB framework.
 ---
 
-Jekyll-Bootstrap takes advantage of Jekyll's ability to "include" files within other files.
-This allows us to package chunks of complex [Liquid](http://liquidmarkup.org/) code into reusable modules that 
-can be called throughout your templates, pages, and posts.
-
-If you are familiar with ruby on rails this pattern is essentially the same as defining methods in a view helper module and invoking them in your views.
 
 ## How it Works
 
+The Bootstrap API takes advantage of Jekyll's ability to "include" files within other files.
+This allows us to package chunks of complex [Liquid](http://liquidmarkup.org/) code into reusable modules that 
+can be called throughout your templates, pages, and posts.
+
+If you are familiar with ruby on rails this pattern is essentially the same as defining methods in a view helper module and invoking them in your views.  
+  
 ### Define a new "method"
 
 Jekyll-Bootstrap uses includes to emulate a ruby method.

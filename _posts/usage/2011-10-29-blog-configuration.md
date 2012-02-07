@@ -2,6 +2,8 @@
 layout : post
 categories : usage
 tags : [permalinks, urls]
+description: | 
+  Learn how to configure URL formats, and add comments and analytics.
 ---
 
 Your Jekyll-Bootstrap blog can be configured by setting options within the `./_config.yml` file.

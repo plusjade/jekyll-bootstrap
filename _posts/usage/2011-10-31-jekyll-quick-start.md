@@ -1,6 +1,9 @@
 ---
 layout: post
 categories : usage
+description : |
+  Quickly get your blog installed and published via GitHub Pages.
+  Then run your blog locally and create your first post and page.
 ---
 
 

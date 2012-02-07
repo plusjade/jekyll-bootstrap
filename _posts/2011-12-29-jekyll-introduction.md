@@ -1,10 +1,11 @@
 ---
 layout: post
 category : lessons
+tags : [learn]
+description: |
+  The Jekyll introduction outlines specifically what Jekyll is and why you would want to use it,
+  as well as exactly how Jekyll does what it does.
 ---
-
-This Jekyll introduction will outline specifically  what Jekyll is and why you would want to use it.
-Directly following the intro we'll learn exactly _how_ Jekyll does what it does.
 
 ## Overview 
 
@@ -411,8 +412,10 @@ Jekyll-bootstrap is intended to provide helper methods and strategies aimed at m
 
 **Thank you** for reading this far.
 
-## Next Steps
+---
 
-<ul class="pills">
-	<li class="active"><a href="{{ BASE_PATH }}{{ site.categories.api.first.url }}">{{ site.categories.api.first.title }} &rarr;</a></li>
+<ul class="pager">
+  <li>
+    <a href="{{ BASE_PATH }}{{ page.previous.url }}">Next Step: {{ page.previous.title }} &rarr;</a>
+  </li>
 </ul>

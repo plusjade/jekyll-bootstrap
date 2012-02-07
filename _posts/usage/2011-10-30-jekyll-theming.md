@@ -1,7 +1,9 @@
 ---
 layout: post
-title : Blog Themes
+title : Using Themes
 categories : usage
+description: |
+  Learn how to install, switch between, and edit themes in Jekyll Bootstrap.
 ---
 
 ## Introduction

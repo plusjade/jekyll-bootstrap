@@ -2,10 +2,10 @@
 layout: page
 categories : usage
 title : Deployment &amp; Hosting
+description: |
+  Jekyll Bootstrap is built to deploy instantly to GitHub Pages.
+  However you can also deploy to your own server as well as Amazon S3.
 ---
-
-Deploying a jekyll-based website comes in two flavors.
-You can deploy to GitHub Pages or you can deploy to your own custom server.
 
 ## Deploy Jekyll to GitHub Pages
 
