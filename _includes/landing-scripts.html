@@ -1,0 +1,49 @@
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="{{ ASSET_PATH }}/js/jquery.min.js"><\/script>')</script>
+<script src="{{ ASSET_PATH }}/js/bootstrap.min.js"></script>
+<script>
+  var Tabs = {
+    $list : null,
+    $content : null,
+    
+    init : function(list, content){
+     Tabs.$list = $(list);
+     Tabs.$content = $(content);
+     
+     Tabs.$list.find("a").click(function(e){
+       Tabs.show($(this).parent().index());
+       e.preventDefault();
+       return false;
+     })
+     
+     Tabs.show(0);
+    },
+    
+    show : function(index){
+      Tabs.$list
+        .find("li").removeClass("active")
+        .eq(index).addClass("active");
+      Tabs.$content
+        .find("div").hide()
+        .eq(index).show();
+    }
+  }
+  
+  $(function(){
+    Tabs.init("#tab-list", "#tab-content-wrapper");
+    
+    var $codeContainer = $("#2__install_jekyllbootstrap").next("pre").find("code");
+    var code = $codeContainer.text();
+    var $repoName = $("#repo_name");
+    var $blogLink = $("#blog_link");
+    $("form").submit(function(e){
+      var username = $("#github_username").val();
+      $codeContainer.text(code.replace(/USERNAME/g, username));
+      $repoName.text( username + ".github.com");
+      $blogLink.text("http://" + username + ".github.com").attr("href", "http://" + username + ".github.com");
+      if ($.trim(username) !== "") _gaq.push(['_trackEvent', 'Forms', 'Input', username]);
+      e.preventDefault();
+      return false;
+    })
+  })
+</script>
