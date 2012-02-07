@@ -1,0 +1,16 @@
+{% if site.JB.pages_icons.provider == "custom" %}
+  {% include custom/pages_icons %}
+{% else %}
+  {% for node in pages_icons %}
+    {% if group == null or group == node.group %}
+      <li class="span4 page_icon">
+        <div class="thumbnail">
+          <h4><a href="{{ BASE_PATH }}{{node.url}}">{{node.title}}</a></h4>
+          <p>{{ node.description }}</p>
+        </div>
+      </li>
+    {% endif %}
+  {% endfor %}
+{% endif %}
+{% assign pages_icons = nil %}
+{% assign group = nil %}
