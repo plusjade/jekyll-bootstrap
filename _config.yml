@@ -6,10 +6,18 @@ exclude: [".rbenv-version", "README.md", "Rakefile", "CNAME"]
 auto: true
 pygments: true
 
+topbar:
+  - 
+    url : '/usage/index.html'
+    title : 'Start Blogging'
+  - 
+    url : '/developers/index.html'
+    title : 'Developers'
+
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Jekyll Bootstrap
+title : JB
 author :
   name : Jade Dominguez
   email : plusjade@gmail.com
