@@ -1,0 +1,30 @@
+{% if page.categories contains "usage" %}
+
+<div id="sidebar" class="sidebar">
+  <h4>Start Blogging</h4>
+	<ul>
+	  {% assign pages_list = site.categories.usage %}  
+	  {% include JB/pages_list %}
+	</ul>
+	
+</div>
+
+{% elsif page.categories contains "api" or page.categories contains "lessons" %}
+
+<div id="sidebar" class="sidebar">
+  <h4>1 - Learn Jekyll</h4>
+  <ul>
+    {% assign pages_list = site.tags.learn %}
+    {% include JB/pages_list %}
+  </ul>
+
+  <br>
+  <h4>2 - Learn Jekyll Bootstrap</h4>
+  <ul>
+    {% assign pages_list = site.tags.jb %}  
+    {% include JB/pages_list %}
+  </ul>
+
+</div>
+
+{% endif %}
