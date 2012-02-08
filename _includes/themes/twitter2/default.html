@@ -51,10 +51,23 @@
         </p>
       </footer>
     </div> <!-- /container -->
-
-  {% if page.url == "/index.html" %}  
-    {% include landing-scripts.html %}
-  {% endif %}
+    
+    {% include sidebar.html %}
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{{ ASSET_PATH }}/js/jquery.min.js"><\/script>')</script>
+    <script src="/assets/app.js"></script>
+    
+    <script>
+      $(function(){
+      {% if page.url == "/index.html" %}
+        Tabs.init("#tab-list", "#tab-content-wrapper");
+        Pc.init();
+      {% else %}
+        Toc.init('#sidebar', '#main');
+      {% endif %}
+      })
+    </script>
     {% include JB/analytics %}
   </body>
 </html>

@@ -33,30 +33,54 @@ h3 {margin:0px 0 10px 0}
 
 /* SIDEBAR ======================================================== */ 
 .sidebar {
- 	position:absolute;
-	top:30px;
-	right:-195px;
-  width: 175px;
-  background:transparent;
+ 	position:fixed;
+	top:70px;
+	left:0;
+  max-width: 200px;
+  background:#FFF;
 	overflow:auto;
 	z-index:0;
 }
 .sidebar h4 {
+  padding:5px;
 	font-size:14px;
 	color:#555;
-	margin:0;
+	margin-bottom:5px;
 }
+
 .sidebar ul {
 	list-style: none;
-	margin:0 0 0 10px;
-	padding-left: 1em;
-	text-indent: -1em;
+	margin:0 0 0 15px;
 }
 .sidebar ul li {
-	line-height:1.5em;
+  margin-bottom:5px;
 }
-.sidebar ul li:before {
-	content: "\00BB \0020";
+.sidebar ul li a{
+  display:block;
+  padding:0 8px;
+  background:#E8F3F8;
+	line-height:21px;
+	border-radius:2px;
+}
+
+#sidebar ul.nest {
+  margin-top:5px;
+  background:#FFF;
+}
+#sidebar ul.nest li strong {
+  display:block;
+  color:#555;
+  margin-left:-5px;
+}
+#sidebar ul.nest li a{ 
+  background:#F8F8EC;
+  border:0;
+}
+#sidebar ul li a.active {
+  display:block;
+	background:#046D8B;
+	color:#FFF;
+	border:0;
 }
 
 /* TAGS ======================================================== */
@@ -124,11 +148,5 @@ h3 {margin:0px 0 10px 0}
   font-size:24px;
   font-weight:bold;
   border:0;
-}
-ul li a.active, ol li a.active {
-	background:#57A957;
-	padding:1px 4px;
-	color:#FFF;
-	border-radius:3px;
 }
 .sharing {width:150px; margin-top:12px}
