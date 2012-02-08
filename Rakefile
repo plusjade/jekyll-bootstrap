@@ -254,7 +254,7 @@ end # end namespace :theme
 # Returns theme manifest hash
 def theme_from_git_url(url)
   tmp_path = JB::Path.build(:theme_packages, :node => "_tmp")
-  system("git clone #{url} #{tmp_path}")
+  abort("rake aborted: could not find git in environment") if !system("git clone #{url} #{tmp_path}")
   manifest = verify_manifest(tmp_path)
   new_path = JB::Path.build(:theme_packages, :node => manifest["name"])
   if File.exist?(new_path) && ask("=> #{new_path} theme package already exists. Override?", ['y', 'n']) == 'n'
