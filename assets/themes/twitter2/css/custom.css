@@ -150,3 +150,11 @@ h3 {margin:0px 0 10px 0}
   border:0;
 }
 .sharing {width:150px; margin-top:12px}
+
+.btn-large {
+  padding: 14px 28px;
+  font-size: 20px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}

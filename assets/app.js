@@ -35,7 +35,7 @@ var Pc = {
     var code = $codeContainer.text();
     var $repoName = $("#repo_name");
     var $blogLink = $("#blog_link");
-    $("form").submit(function(e){
+    $("form").first().submit(function(e){
       var username = $("#github_username").val();
       $codeContainer.text(code.replace(/USERNAME/g, username));
       $repoName.text( username + ".github.com");

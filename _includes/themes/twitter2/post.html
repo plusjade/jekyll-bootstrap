@@ -6,9 +6,9 @@
       {{ content }}
     {% if page.previous and page.categories == page.previous.categories %}
       <hr>
-      <ul class="pager">
-        <li><a href="{{ BASE_PATH }}{{ page.previous.url }}">Next Step: {{ page.previous.title }} &rarr;</a></li>
-      </ul>
+      <div style="text-align:center">
+        <a href="{{ BASE_PATH }}{{ page.previous.url }}" class="btn btn-success btn-large">Next Step: {{ page.previous.title }} &rarr;</a>
+      </div>
     {% endif %}
   	</div>	
 	</div>

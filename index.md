@@ -99,8 +99,8 @@ head_title: Blogging with Jekyll Tutorial
 
 <h1 id="start-now">Zero to Hosted Jekyll Blog in 3 Minutes</h1>
 
-<form action="#" id="generate_code" class="alert alert-block alert-warn" style="text-align:center; vertical-align:middle">
-  My GitHub username: <input type="text" id="github_username"/> <button class="btn btn-success">Personalize Install Code</button>
+<form action="#" id="generate_code" class="alert alert-block alert-warn form-inline" style="text-align:center; vertical-align:middle">
+  <label>My GitHub username:</label> <input type="text" id="github_username"/> <button class="btn btn-success">Personalize Install Code</button>
 </form>
 
 ### 1 - Create a New Repository
@@ -132,10 +132,3 @@ See it in action at [http://localhost:4000](http://localhost:4000).
 
 ## Next Steps
 
-<ul class="pager">
-  <li><a href="http://github.com/plusjade/jekyll-bootstrap" class="">Watch Jekyll Bootstrap on GitHub</a></li>
-</ul>
-
-<ul class="pager">
-	<li class="active"><a href="{{ BASE_PATH }}{{ site.categories.usage.first.url }}">{{ site.categories.usage.first.title }} &rarr;</a></li>
-</ul>
