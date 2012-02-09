@@ -40,7 +40,10 @@ var Pc = {
       $codeContainer.text(code.replace(/USERNAME/g, username));
       $repoName.text( username + ".github.com");
       $blogLink.text("http://" + username + ".github.com").attr("href", "http://" + username + ".github.com");
-      if ($.trim(username) !== "") _gaq.push(['_trackEvent', 'Forms', 'Input', username]);
+      if ($.trim(username) !== ""){ 
+        if (typeof mpq !== 'undefined') mpq.track("install", {"username": username });
+        if (typeof _gaq !== 'undefined') _gaq.push(['_trackEvent', 'Forms', 'Input', username]);
+      }  
       e.preventDefault();
       return false;
     })
