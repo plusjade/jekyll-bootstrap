@@ -1,0 +1,16 @@
+{% comment %}<!--
+The list_item include is a listing helper.
+Usage:
+  list_item is included by pages_list to render each item.
+
+-->{% endcomment %}
+
+{% if site.JB.list_item.provider == "custom" %}
+  {% include custom/list_item %}
+{% else %}
+  {% if page.url == node.url %}
+  <li class="active"><a href="{{ BASE_PATH }}{{node.url}}" class="active">{{node.title}}</a></li>
+  {% else %}
+  <li><a href="{{ BASE_PATH }}{{node.url}}">{{node.title}}</a></li>
+  {% endif %}
+{% endif %}
