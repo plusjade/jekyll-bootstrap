@@ -273,9 +273,11 @@ end
 #        
 # Returns theme manifest hash
 def verify_manifest(theme_path)
-  manifest = File.join(theme_path, "manifest.yml")
-  abort("rake aborted: repo must contain valid manifest.yml") unless File.exist? manifest
-  manifest = YAML.load_file(manifest)
+  manifest_path = File.join(theme_path, "manifest.yml")
+  manifest_file = File.open( manifest_path )
+  abort("rake aborted: repo must contain valid manifest.yml") unless File.exist? manifest_file
+  manifest = YAML.load( manifest_file )
+  manifest_file.close
   manifest
 end
 
