@@ -5,6 +5,8 @@
   {% include JB/analytics-providers/google %}
 {% when "getclicky" %}
   {% include JB/analytics-providers/getclicky %}
+{% when "mixpanel" %}
+  {% include JB/analytics-providers/mixpanel %}
 {% when "custom" %}
   {% include custom/analytics %}
 {% endcase %}
