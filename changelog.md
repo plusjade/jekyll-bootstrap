@@ -5,8 +5,9 @@ Incremental version bumps that were not released publicly are nested where appro
 
 P.S. If there is a standard (popular) changelog format, please let me know.
 
-- **0.2.7 : 2012.03.01**   
+- **0.2.8 : 2012.03.01**   
     - **Features**
+    - 0.2.8 : @metalelf0 Added option to specify a custom date when creating post.
     - 0.2.7 : @daz Updates twitter theme framework to use 2.x while still maintaining core layout. #50
               @philips and @treggats add support for page.tagline metadata. #31 & #48
     - 0.2.6 : @koomar Adds Mixpanel analytics provider. #49
