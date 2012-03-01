@@ -2,14 +2,14 @@
 html, body {
   background-color: #eee;
 }
-body {
-  padding-top: 40px; /* 40px to make the container go all the way to the bottom of the topbar */
+.navbar {
+  margin-bottom: 0;
+}
+.container > footer {
+  margin-top: 20px;
 }
 .container > footer p {
   text-align: center; /* center align it with the container */
-}
-.container {
-  width: 820px; /* downsize our container to make the content feel a bit tighter and more cohesive. NOTE: this removes two full columns from the grid, meaning you only go to 14 columns and not 16. */
 }
 
 /* The white background content wrapper */
