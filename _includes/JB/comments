@@ -1,4 +1,4 @@
-{% if site.JB.comments.provider and page.JB.comments != false %}
+{% if site.JB.comments.provider and page.comments != false %}
 
 {% case site.JB.comments.provider %}
 {% when "disqus" %}
