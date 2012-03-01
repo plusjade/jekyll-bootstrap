@@ -5,6 +5,18 @@ Incremental version bumps that were not released publicly are nested where appro
 
 P.S. If there is a standard (popular) changelog format, please let me know.
 
+- **0.2.7 : 2012.03.01**   
+    - **Features**
+    - 0.2.7 : @daz Updates twitter theme framework to use 2.x while still maintaining core layout. #50
+              @philips and @treggats add support for page.tagline metadata. #31 & #48
+    - 0.2.6 : @koomar Adds Mixpanel analytics provider. #49
+    - 0.2.5 : @nolith Adds ability to load custom rake scripts. #33
+    - 0.2.4 : @tommyblue Updated disqus comments provider to be compatible with posts imported from Wordpress. #47
+
+    - **Bug Fixes**
+    - 0.2.3 : @3martini Adds Windows MSYS Support and error checks for git system calls. #40
+    - 0.2.2 : @sstar Resolved an issue preventing disabling comments for individual pages #44
+    - 0.2.1 : Resolve incorrect HOME\_PATH/BASE\_PATH settings
 
 - **0.2.0 : 2012.02.01**   
   Features
@@ -19,8 +31,7 @@ P.S. If there is a standard (popular) changelog format, please let me know.
 
 - **0.1.0 : 2012.01.24**   
   First major versioned release.   
-  
-  Features
+  Features   
     - Standardize Public API
     - Use name-spacing and modulation where possible.
     - Ability to override public methods with custom code.
@@ -31,5 +42,4 @@ P.S. If there is a standard (popular) changelog format, please let me know.
   First public release, lots of updates =p
   Thank you everybody for dealing with the fast changes and helping
   me work out the API to a manageable state.
-  
   
