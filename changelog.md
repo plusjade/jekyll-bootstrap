@@ -5,6 +5,10 @@ Incremental version bumps that were not released publicly are nested where appro
 
 P.S. If there is a standard (popular) changelog format, please let me know.
 
+- **0.2.9 : 2012.03.01**   
+    - **Bug Fixes**
+    - 0.2.9 : @alishutc Fixes the error on post creation if date was not specified.
+
 - **0.2.8 : 2012.03.01**   
     - **Features**
     - 0.2.8 : @metalelf0 Added option to specify a custom date when creating post.
