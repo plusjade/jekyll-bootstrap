@@ -5,6 +5,15 @@ Incremental version bumps that were not released publicly are nested where appro
 
 P.S. If there is a standard (popular) changelog format, please let me know.
 
+- **0.2.13 : 2012.03.24**   
+    - **Features**
+    - 0.2.13 : @mjpieters Updates pages_list helper to only show pages having a title.
+    - 0.2.12 : @sway recommends showing page tagline only if tagline is set.
+    - 0.2.11 : @LukasKnuth adds 'description' meta-data field to post/page scaffold.
+
+    - **Bug Fixes**
+    - 0.2.10 : @koriroys fixes typo in atom feed
+
 - **0.2.9 : 2012.03.01**   
     - **Bug Fixes**
     - 0.2.9 : @alishutc Fixes the error on post creation if date was not specified.
