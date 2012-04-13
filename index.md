@@ -97,6 +97,43 @@ head_title: Blogging with Jekyll Tutorial
   </div>
 </div>
 
+
+<h2 style="position:relative; top:-25px">Hi there! I'm Jade, the creator of Jekyll-Bootstrap.</h2>
+
+<div class="row" style="margin-bottom:30px;">
+  <div class="span3">
+    <img src="http://ruhoh.com/_media/first-post.jpg" style="display:block; margin:auto">
+  </div>
+  <div class="span4">
+    <h4 style="margin-bottom:5px">The Future of Jekyll-Bootstrap</h4>
+    <p>
+      I built JB to make it easier for developers to share their knowledge.
+      I chose Jekyll because of its native support with GitHub Pages.
+    </p>
+    <p>
+      I feel I've taken JB as far as it can go without sacrificing simplicity.
+      I will still maintain JB, however further development will stall 
+      as I focus on my new project which incorporates what I've learned from JB...
+    </p>
+  </div>
+
+  <div class="span4">
+    <h4 style="margin-bottom:5px">My New Project</h4>
+    <p>
+      <a href="http://ruhoh.com">http://ruhoh.com</a> is the Universal Static Blog Generator.
+      ruhoh is simpler, faster, and language agnostic.
+    </p>
+    <p>
+      ruhoh is made for technical blogging and will be developed at lightning speed.
+      Conversely, GitHub depends on Jekyll to run GitHub Pages and development has plateaued.
+    </p>
+    <p>
+      <strong>Thank You!</strong> If you like JB, please give <a href="http://ruhoh.com">ruhoh</a> a try!
+    </p>
+  </div>
+  
+</div>
+
 <h1 id="start-now">Zero to Hosted Jekyll Blog in 3 Minutes</h1>
 
 <form action="#" id="generate_code" class="alert alert-block alert-warn form-inline" style="text-align:center; vertical-align:middle">
