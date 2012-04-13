@@ -2,11 +2,11 @@
 
 <div id="sidebar" class="sidebar">
   <h4>Start Blogging</h4>
-	<ul>
-	  {% assign pages_list = site.categories.usage %}  
-	  {% include JB/pages_list %}
-	</ul>
-	
+  <ul>
+    {% assign pages_list = site.categories.usage %}  
+    {% include JB/pages_list %}
+  </ul>
+  
 </div>
 
 {% elsif page.categories contains "api" or page.categories contains "lessons" %}

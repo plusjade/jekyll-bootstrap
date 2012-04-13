@@ -100,26 +100,26 @@ Jekyll expects your website directory to be laid out like so:
 {% endhighlight %}
 
 - **\_config.yml**  
-	Stores configuration data.
+  Stores configuration data.
 
 - **\_includes**  
-	This folder is for partial views.
+  This folder is for partial views.
 
 - **\_layouts**   
-	This folder is for the main templates your content will be inserted into.
-	You can have different layouts for different pages or page sections.
+  This folder is for the main templates your content will be inserted into.
+  You can have different layouts for different pages or page sections.
 
 - **\_posts**  
-	This folder contains your dynamic content/posts.
-	the naming format is required to be `@YEAR-MONTH-DATE-title.MARKUP@`.
+  This folder contains your dynamic content/posts.
+  the naming format is required to be `@YEAR-MONTH-DATE-title.MARKUP@`.
 
 - **\_site**  
-	This is where the generated site will be placed once Jekyll is done transforming it. 
+  This is where the generated site will be placed once Jekyll is done transforming it. 
 
 - **assets**  
-	This folder is not part of the standard jekyll structure.
-	The assets folder represents _any generic_ folder you happen to create in your root directory.
-	Directories and files not properly formatted for jekyll will be left untouched for you to serve normally.
+  This folder is not part of the standard jekyll structure.
+  The assets folder represents _any generic_ folder you happen to create in your root directory.
+  Directories and files not properly formatted for jekyll will be left untouched for you to serve normally.
 
 (read more: <https://github.com/mojombo/jekyll/wiki/Usage>)
 
@@ -317,7 +317,7 @@ Static assets should be used for images, css, and javascript files.
 Remember Jekyll is a processing engine. There are two main types of parsing in Jekyll.
 
 - **Content parsing.**   
-	This is done with textile or markdown.
+  This is done with textile or markdown.
 - **Template parsing.**   
   This is done with the liquid templating language.
 
@@ -326,8 +326,8 @@ And thus there are two main types of file formats needed for this parsing.
 - **Post and Page files.**  
   All content in Jekyll is either a post or a page so valid posts and pages are parsed with markdown or textile.
 - **Template files.**    
-	These files go in `_layouts` folder and contain your blogs **templates**. They should be made in HTML with the help of Liquid syntax.
-	Since include files are simply injected into templates they are essentially parsed as if they were native to the template.
+  These files go in `_layouts` folder and contain your blogs **templates**. They should be made in HTML with the help of Liquid syntax.
+  Since include files are simply injected into templates they are essentially parsed as if they were native to the template.
 
 **Arbitrary files and folders.**   
 Files that _are not_ valid pages are treated as static content and pass through 
@@ -383,12 +383,12 @@ The following is an outline of how that's done:
 3. **Jekyll liquifies posts and templates.**  
   Next jekyll loops through each post file and converts (through markdown or textile) and **liquifies** the post inside of its respective layout(s).
   Once the post is parsed and liquified inside the the proper layout structure, the layout itself is "liquified".   
-	**Liquification** is defined as follows: Jekyll initiates a Liquid template, and passes a simpler hash representation of the ruby site object as well as a simpler
+  **Liquification** is defined as follows: Jekyll initiates a Liquid template, and passes a simpler hash representation of the ruby site object as well as a simpler
   hash representation of the ruby post object. These simplified data structures are what you have access to in the templates.
-	
+  
 3. **Jekyll generates output.**   
-	Finally the liquid templates are "rendered", thereby processing any liquid syntax provided in the templates
-	and saving the final, static representation of the file.
+  Finally the liquid templates are "rendered", thereby processing any liquid syntax provided in the templates
+  and saving the final, static representation of the file.
  
 **Notes.**  
 Because Jekyll computes the entire site in one fell swoop, each template is given access to 

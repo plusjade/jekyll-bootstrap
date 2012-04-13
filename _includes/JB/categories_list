@@ -5,9 +5,9 @@ Usage:
   2) include JB/categories_list
   example:
     <ul>
-  	  {% assign categories_list = site.categories %}  
-  	  {% include JB/categories_list %}
-  	</ul>
+      {% assign categories_list = site.categories %}  
+      {% include JB/categories_list %}
+    </ul>
   
   Notes: 
     Categories can be either a Hash of Category objects (hashes) or an Array of category-names (strings).
@@ -22,15 +22,15 @@ Usage:
 {% else %}
   {% if categories_list.first[0] == null %}
     {% for category in categories_list %} 
-    	<li><a href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ category }}-ref">
-    		{{ category | join: "/" }} <span>{{ site.categories[category].size }}</span>
-    	</a></li>
+      <li><a href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ category }}-ref">
+        {{ category | join: "/" }} <span>{{ site.categories[category].size }}</span>
+      </a></li>
     {% endfor %}
   {% else %}
     {% for category in categories_list %} 
-    	<li><a href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ category[0] }}-ref">
-    		{{ category[0] | join: "/" }} <span>{{ category[1].size }}</span>
-    	</a></li>
+      <li><a href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ category[0] }}-ref">
+        {{ category[0] | join: "/" }} <span>{{ category[1].size }}</span>
+      </a></li>
     {% endfor %}
   {% endif %}
 {% endif %}

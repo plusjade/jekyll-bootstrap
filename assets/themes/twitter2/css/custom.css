@@ -14,15 +14,15 @@ h3 {margin:0px 0 10px 0}
   .content.splash h1, .content.landing h1 { 
   margin-left:-60px; 
   padding:10px 20px;
-	background:#046D8B;
-	color:#FFF;
-	border-radius:5px;
+  background:#046D8B;
+  color:#FFF;
+  border-radius:5px;
 }
 .content.page h2, .content.post h2{ 
   margin:20px 0 20px -40px;
   padding:7px 20px;
-	background:#FBF3DC;
-	border-radius:5px;
+  background:#FBF3DC;
+  border-radius:5px;
 }
 .content.page h3, .content.post h3{
   margin-left:-10px; 
@@ -30,24 +30,24 @@ h3 {margin:0px 0 10px 0}
 
 /* SIDEBAR ======================================================== */ 
 .sidebar {
- 	position:fixed;
-	top:70px;
-	left:0;
+   position:fixed;
+  top:70px;
+  left:0;
   max-width: 200px;
   background:#FFF;
-	overflow:auto;
-	z-index:0;
+  overflow:auto;
+  z-index:0;
 }
 .sidebar h4 {
   padding:5px;
-	font-size:14px;
-	color:#555;
-	margin-bottom:5px;
+  font-size:14px;
+  color:#555;
+  margin-bottom:5px;
 }
 
 .sidebar ul {
-	list-style: none;
-	margin:0 0 0 15px;
+  list-style: none;
+  margin:0 0 0 15px;
 }
 .sidebar ul li {
   margin-bottom:5px;
@@ -56,8 +56,8 @@ h3 {margin:0px 0 10px 0}
   display:block;
   padding:0 8px;
   background:#E8F3F8;
-	line-height:21px;
-	border-radius:2px;
+  line-height:21px;
+  border-radius:2px;
 }
 
 #sidebar ul.nest {
@@ -75,40 +75,40 @@ h3 {margin:0px 0 10px 0}
 }
 #sidebar ul li a.active {
   display:block;
-	background:#046D8B;
-	color:#FFF;
-	border:0;
+  background:#046D8B;
+  color:#FFF;
+  border:0;
 }
 
 /* TAGS ======================================================== */
 .tag_box {
-	list-style:none;
-	margin:0;
-	padding:5px 0 ;
-	overflow:hidden;
+  list-style:none;
+  margin:0;
+  padding:5px 0 ;
+  overflow:hidden;
 }
 .tag_box li {
-	line-height:1.8em;
+  line-height:1.8em;
 }
 .tag_box.inline li {
-	float:left;
+  float:left;
 }
 .tag_box a {
-	padding: 3px 6px;
-	margin: 2px;
-	background: #eee;
-	border-radius: 3px;
-	border:1px dashed #ccc;
-	text-decoration:none;
+  padding: 3px 6px;
+  margin: 2px;
+  background: #eee;
+  border-radius: 3px;
+  border:1px dashed #ccc;
+  text-decoration:none;
 }
 .tag_box a span{
-	vertical-align:super;
-	font-size:0.8em;
+  vertical-align:super;
+  font-size:0.8em;
 }
 .tag_box a.active {
-	background:#57A957;
-	border:1px solid #4C964D;
-	color:#FFF;
+  background:#57A957;
+  border:1px solid #4C964D;
+  color:#FFF;
 }
 
 /* LANDING PAGE ================================================= */

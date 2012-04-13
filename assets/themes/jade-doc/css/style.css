@@ -3,8 +3,8 @@ html, body {
   background-color: #eee;
 }
 .container {
- 	width: 720px; /* downsize our container to make the content feel a bit tighter and more cohesive. NOTE: this removes two full columns from the grid, meaning you only go to 14 columns and not 16. */
-	box-shadow: 1px -2px 18px #ccc;
+   width: 720px; /* downsize our container to make the content feel a bit tighter and more cohesive. NOTE: this removes two full columns from the grid, meaning you only go to 14 columns and not 16. */
+  box-shadow: 1px -2px 18px #ccc;
 }
 /* The white background content wrapper */
 .container > .content {
@@ -18,32 +18,32 @@ html, body {
           box-shadow: 0 1px 2px rgba(0,0,0,.15);
 }
 .sidebar {
- 	position:absolute;
-	top:30px;
-	right:-195px;
+   position:absolute;
+  top:30px;
+  right:-195px;
   width: 175px;
-	eight:100%;
+  eight:100%;
   background:transparent;
- 	ox-shadow: inset 1px -2px 18px #ccc;
-	overflow:auto;
-	z-index:0;
+   ox-shadow: inset 1px -2px 18px #ccc;
+  overflow:auto;
+  z-index:0;
 }
 .sidebar h4 {
-	font-size:14px;
-	color:#555;
-	margin:0;
+  font-size:14px;
+  color:#555;
+  margin:0;
 }
 .sidebar ul {
-	list-style: none;
-	margin:0 0 0 10px;
-	padding-left: 1em;
-	text-indent: -1em;
+  list-style: none;
+  margin:0 0 0 10px;
+  padding-left: 1em;
+  text-indent: -1em;
 }
 .sidebar ul li {
-	line-height:1.5em;
+  line-height:1.5em;
 }
 .sidebar ul li:before {
-	content: "\00BB \0020";
+  content: "\00BB \0020";
 }
 
 
@@ -52,15 +52,15 @@ ul li, ol li {
 }
 h1 {
   margin:20px 0 20px -100px;
-	background:#046D8B;
-	color:#FFF;
-	padding:10px 20px;
-	border-radius:5px;
+  background:#046D8B;
+  color:#FFF;
+  padding:10px 20px;
+  border-radius:5px;
 }
 h2 {
-	margin:10px 0 10px -40px;
-	border-bottom: 3px solid #A2BF6B;
-	border-bottom: 3px solid #CDE59A;
+  margin:10px 0 10px -40px;
+  border-bottom: 3px solid #A2BF6B;
+  border-bottom: 3px solid #CDE59A;
 }
 h2.title {
   padding:10px 15px;
@@ -72,10 +72,10 @@ h2.title {
 }
  
 ul li a.active, ol li a.active {
-	background:#57A957;
-	padding:1px 4px;
-	color:#FFF;
-	border-radius:3px;
+  background:#57A957;
+  padding:1px 4px;
+  color:#FFF;
+  border-radius:3px;
 }
 
 .highlight-wrap span{ background:#FFFFCC }
@@ -83,56 +83,56 @@ ul li a.active, ol li a.active {
 /* tag_box ======================================================== */
 
 .tag_box {
-	list-style:none;
-	margin:0;
-	padding:5px 0 ;
-	overflow:hidden;
+  list-style:none;
+  margin:0;
+  padding:5px 0 ;
+  overflow:hidden;
 }
 .tag_box li {
-	line-height:1.8em;
+  line-height:1.8em;
 }
 .tag_box.inline li {
-	float:left;
+  float:left;
 }
 .tag_box a {
-	padding: 3px 6px;
-	margin: 2px;
-	background: #eee;
-	border-radius: 3px;
-	border:1px dashed #ccc;
-	text-decoration:none;
+  padding: 3px 6px;
+  margin: 2px;
+  background: #eee;
+  border-radius: 3px;
+  border:1px dashed #ccc;
+  text-decoration:none;
 }
 .tag_box a span{
-	vertical-align:super;
-	font-size:0.8em;
+  vertical-align:super;
+  font-size:0.8em;
 }
 .tag_box a.active {
-	background:#57A957;
-	border:1px solid #4C964D;
-	color:#FFF;
+  background:#57A957;
+  border:1px solid #4C964D;
+  color:#FFF;
 }
 
 
 /* project-list*/
 
 .project-list {
-	list-style:none;
-	margin-left: 280px;
-	padding:2px 0;
+  list-style:none;
+  margin-left: 280px;
+  padding:2px 0;
 }
 .project-list li {
-	display:inline;
-	margin-right:3px;
+  display:inline;
+  margin-right:3px;
 }
 
 .project-list li a {
-	display:inline;
-	padding:4px 8px;
-	border-bottom:1px dashed #ccc;
+  display:inline;
+  padding:4px 8px;
+  border-bottom:1px dashed #ccc;
 }
 
 .addthis_toolbox {
-	width:400px;
+  width:400px;
 }
 
 
