@@ -9,12 +9,12 @@ pygments: true
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Jekyll Bootstrap
+title : White Crow's Fantasy Thinking
 tagline: Site Tagline
 author :
-  name : Name Lastname
-  email : blah@email.test
-  github : username
+  name : White Crow
+  email : lsihao.cn@gmail.com
+  github : WhiteCrow
   twitter : username
   feedburner : feedname
 
