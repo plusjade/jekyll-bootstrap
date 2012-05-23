@@ -19,7 +19,7 @@ task :flickr, :urls do |t, args|
     photos << Fleakr.resource_from_url(url)
   end
 
-  date = Time.now.strftime('%Y-%m-%d')
+  date = Time.parse(photos[0].taken).strftime('%Y-%m-%d')
   slug = photos[0].title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
   filename = File.join(CONFIG['posts'], "#{date}-#{slug}.#{CONFIG['post_ext']}")
   if File.exist?(filename)
@@ -43,7 +43,7 @@ task :flickr, :urls do |t, args|
     post.puts "{% include JB/setup %}"
 
     photos.each do |photo|
-      post.puts "<img alt='#{photo.title}' title='#{photo.title}' src='#{photo.large.url}'>"
+      post.puts "<a href='#{photo.url}'><img alt='#{photo.title}' title='View \"#{photo.title}\" on Flickr' src='#{photo.large.url}'></a>"
     end
   end
 end
