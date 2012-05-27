@@ -1,10 +1,10 @@
 {% if site.JB.sharing.enabled %}
 
     {% capture sharing_url %}{{ site.production_url }}{{ page.url }}/{% endcapture %}
-    {% capture sharing_prefix %}Share "{{ page.title }}" on{% endcapture %}
+    {% capture sharing_title %}Share "{{ page.title }}" on{% endcapture %}
 
     {% if site.JB.sharing.provider.twitter %}
-        {% capture sharing_title %}{{ sharing_prefix }} Twitter{% endcapture %}
+        {% capture sharing_title %}{{ sharing_title }} Twitter{%endcapture %}
         {% include JB/sharing-providers/twitter %}
     {% endif %}
     {% if site.JB.sharing.provider.facebook %}
