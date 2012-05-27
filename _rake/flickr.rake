@@ -1,7 +1,8 @@
 # Rake task to create a photo post.
 # Copyright 2012 Tom Vincent <http://tlvince.com/contact/>
 # Usage: rake FLICKR_API_KEY="xxx" FLICKR_SHARED_SECRET="xxx" \
-#             "flickr[http://www.flickr.com/photos/tlvince/6467485431 ...]"
+#             "flickr[http://www.flickr.com/photos/tlvince/6467485431 ...]" \
+#             [ignore="tag1,tag2]
 # vim: ts=2 sw=2 sts=2
 
 require 'fleakr'
@@ -31,6 +32,10 @@ task :flickr, :urls do |t, args|
       photo.tags.each do |tag|
       tags << tag.value
     end
+  end
+
+  if ENV["ignore"]
+    tags -= ENV["ignore"].split(",")
   end
 
   open(filename, 'w') do |post|
