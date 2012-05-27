@@ -1,8 +1,11 @@
 {% comment %}<!--
 The sharing include is a sharing helper for a number of providers.
 Usage:
-  1) Optionally assign the 'sharing_message_prefix' variable with a string
-  2) Include JB/sharing
+  1) Include JB/sharing
+  2) Optionally assign the 'sharing_message_prefix' variable with a string
+  3) Optionally assign the 'sharing_context' variable with a context, where
+     "context" is a page object. Defaults to the current page if unset. See
+     "themes/tlvince/metabox.html" for an example.
   Example:
     <ul>
         {% assign sharing_message_prefix = "Photo " %}
@@ -13,7 +16,11 @@ Usage:
   https://github.com/tlvince/jb-theme-tlvince
 -->{% endcomment %}
 
-{% if site.JB.sharing %}
+{% if site.JB.sharing.enabled %}
+
+    {% if sharing_context %}
+        {% assign page = sharing_context %}
+    {% endif %}
 
     {% capture sharing_url %}{{ site.production_url }}{{ page.url }}/{% endcapture %}
     {% capture sharing_prefix %}Share "{{ page.title }}" on{% endcapture %}
