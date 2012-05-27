@@ -1,8 +1,19 @@
-{% if site.safe and site.JB.sharing.provider and page.JB.sharing != false %}
+{% if site.JB.sharing.enabled %}
 
-{% case site.JB.sharing.provider %}
-{% when "custom" %}
-  {% include custom/sharing %}
-{% endcase %}
+    {% capture sharing_url %}{{ site.production_url }}{{ page.url }}/{% endcapture %}
+    {% capture sharing_prefix %}Share "{{ page.title }}" on{% endcapture %}
+
+    {% if site.JB.sharing.provider.twitter %}
+        {% capture sharing_title %}{{ sharing_prefix }} Twitter{% endcapture %}
+        {% include JB/sharing-providers/twitter %}
+    {% endif %}
+    {% if site.JB.sharing.provider.facebook %}
+        {% capture sharing_title %}{{ sharing_prefix }} Facebook{% endcapture %}
+        {% include JB/sharing-providers/facebook %}
+    {% endif %}
+    {% if site.JB.sharing.provider.google-plus %}
+        {% capture sharing_title %}{{ sharing_prefix }} Google Plus{% endcapture %}
+        {% include JB/sharing-providers/google-plus %}
+    {% endif %}
 
 {% endif %}
