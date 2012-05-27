@@ -1,1 +1,3 @@
-<li><i class="icon-facebook-alt icon-large"></i></li>
+<li><a href='https://www.facebook.com/sharer.php?u={{ sharing_url }}'
+title='{{ sharing_title }}'>
+<i class="icon-facebook-alt icon-large"></i></a>

@@ -1,10 +1,25 @@
-{% if site.JB.sharing.enabled %}
+{% comment %}<!--
+The sharing include is a sharing helper for a number of providers.
+Usage:
+  1) Optionally assign the 'sharing_message_prefix' variable with a string
+  2) Include JB/sharing
+  Example:
+    <ul>
+        {% assign sharing_message_prefix = "Photo " %}
+        {% include JB/sharing %}
+    </ul>
+
+  This help can be seen in use in the "tlvince" theme by Tom Vincent:
+  https://github.com/tlvince/jb-theme-tlvince
+-->{% endcomment %}
+
+{% if site.JB.sharing %}
 
     {% capture sharing_url %}{{ site.production_url }}{{ page.url }}/{% endcapture %}
-    {% capture sharing_title %}Share "{{ page.title }}" on{% endcapture %}
+    {% capture sharing_prefix %}Share "{{ page.title }}" on{% endcapture %}
 
     {% if site.JB.sharing.provider.twitter %}
-        {% capture sharing_title %}{{ sharing_title }} Twitter{%endcapture %}
+        {% capture sharing_title %}{{ sharing_prefix }} Twitter{% endcapture %}
         {% include JB/sharing-providers/twitter %}
     {% endif %}
     {% if site.JB.sharing.provider.facebook %}

@@ -1,1 +1,3 @@
-<li><i class="icon-google-plus icon-large"></i></li>
+<li><a href='https://plus.google.com/share?url={{ sharing_url }}'
+title='{{ sharing_title }}'>
+<i class="icon-google-plus icon-large"></i></a>
