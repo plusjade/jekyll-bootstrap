@@ -102,7 +102,7 @@ head_title: Blogging with Jekyll Tutorial
 
 <div class="row" style="margin-bottom:30px;">
   <div class="span3">
-    <img src="http://ruhoh.com/_media/first-post.jpg" style="display:block; margin:auto">
+    <img src="http://ruhoh.com/assets/media/first-post.jpg" style="display:block; margin:auto">
   </div>
   <div class="span4">
     <h4 style="margin-bottom:5px">The Future of Jekyll-Bootstrap</h4>
