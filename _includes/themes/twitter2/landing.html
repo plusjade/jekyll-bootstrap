@@ -1,34 +1,5 @@
-<div class="row">
-  <div class="span12">
-    <div class="content landing">
-      <h2 style="background:#FFF; padding:0; margin-bottom:30px;">{{ page.title }}</h2>
-      {{ content }}
-      
-      <div style="width:500px; float:right; text-align:right">
-        <a href="{{ BASE_PATH }}{{ site.categories.usage.first.url }}" class="btn btn-success btn-large">{{ site.categories.usage.first.title }} &rarr;</a>
-      </div>
-           
-      <div id="mc_embed_signup" style="width:350px">
-        <form action="http://jekyllbootstrap.us1.list-manage1.com/subscribe/post?u=af7ae466c004441192ef9e2c5&amp;id=acbfe7dccb" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate well form-search" target="_blank">
-          <h3>Subscribe to Our Mailing List</h3>
-          <p>
-           This newsletter will be sent:
-           <br><strong>maximum once per week</strong> and will cover:
-           <ul>
-             <li>New Version Releases</li>
-             <li>New Feature Releases</li>
-             <li>New Theme Releases</li>
-             <li>Community News</li>
-           </ul>
-          </p>
-          <div class="mc-field-group">
-            <label for="mce-EMAIL" style="font-weight:bold">Email Address  <span class="asterisk">*</span></label>
-            <br><input type="email" value="" name="EMAIL" class="required email input-medium" id="mce-EMAIL">
-             <button name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary">Subscribe</button>
-          </div>
-        </form>
-      </div>
-      
-    </div>  
-  </div>
+<div class="landing">
+  <div class="row-fluid">
+    {{ content }}
+  </div>  
 </div>

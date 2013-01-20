@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if page.head_title %}{{ page.head_title }}{% else %}{{ page.title }}{% endif %} | Jekyll-Bootstrap</title>
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
     <meta name="author" content="{{ site.author.name }}">
@@ -16,29 +17,21 @@
   </head>
 
   <body>
-    <div id="navbar" class="navbar">
-      <div class="navbar-inner" style="background:#342A14">
-        <div class="conainer" style="margin-left:20px; overflow:hidden">
-          <a class="brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
-          <ul class="nav">
-            <li class="divider-vertical"></li>
-            {% assign pages_list = site.topbar %}
-            {% include JB/pages_list %}
-          </ul>
-          
-          <ul class="nav pull-right">
-            <li class="sharing">{% include JB/sharing %}</li>
-            <li class="divider-vertical"></li>
-            <li><a>
-              JB latest version: <span class="label" style="background:#777">0.2.13</span> 
-              <span class="label" style="background:#777">24-03-2012</span>
-            </a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
 
-    <div id="main" class="container" style="position:relative">
+    <div id="navigation">
+      <ul>
+        <li><a class="brand" href="{{ HOME_PATH }}">Home</a></li>
+        {% assign pages_list = site.topbar %}
+        {% include JB/pages_list %}
+        <li class="divider-vertical"></li>
+        <li><a>
+          Latest Version: <span class="label" style="background:#777">0.2.13</span> 
+          <span class="label" style="background:#777">24-03-2012</span>
+        </a></li>
+      </ul>
+    </div>
+    
+    <div id="main" class="container" style="width:90%; margin:0 auto; position:relative">
       {{ content }}
       <hr>
       <footer class="footer" style="text-align:center; margin:40px 0">
@@ -54,8 +47,7 @@
       </footer>
     </div> <!-- /container -->
     
-    {% include sidebar.html %}
-    <a href="http://github.com/plusjade/jekyll-bootstrap"><img style="position: absolute; top: 40px; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
+    <a href="http://github.com/plusjade/jekyll-bootstrap"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="{{ ASSET_PATH }}/js/jquery.min.js"><\/script>')</script>
     <script src="/assets/app.js?v=0.1"></script>

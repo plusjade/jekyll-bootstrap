@@ -3,7 +3,7 @@
 {% else %}
   {% for node in pages_icons %}
     {% if group == null or group == node.group %}
-      <li class="span4 page_icon">
+      <li class="span3 page_icon">
         <div class="thumbnail">
           <h4><a href="{{ BASE_PATH }}{{node.url}}">{{node.title}}</a></h4>
           <p>{{ node.description }}</p>

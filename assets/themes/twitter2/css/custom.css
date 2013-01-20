@@ -12,14 +12,13 @@ h2 {margin:10px 0 10px 0}
 h3 {margin:0px 0 10px 0}
 .content.page h1, .content.post h1, 
   .content.splash h1, .content.landing h1 { 
-  margin-left:-60px; 
   padding:10px 20px;
   background:#046D8B;
   color:#FFF;
   border-radius:5px;
 }
 .content.page h2, .content.post h2{ 
-  margin:20px 0 20px -40px;
+  margin:20px 0;
   padding:7px 20px;
   background:#FBF3DC;
   border-radius:5px;
@@ -30,9 +29,6 @@ h3 {margin:0px 0 10px 0}
 
 /* SIDEBAR ======================================================== */ 
 .sidebar {
-   position:fixed;
-  top:70px;
-  left:0;
   max-width: 200px;
   background:#FFF;
   overflow:auto;
@@ -155,3 +151,46 @@ h3 {margin:0px 0 10px 0}
   -moz-border-radius: 10px;
   border-radius: 10px;
 }
+
+
+
+
+#tab-list li {float:right;}
+
+#navigation {
+  padding:0;
+  background-color:#333;
+  margin-bottom:10px;
+}
+#navigation ul {
+  width:90%;
+  margin:0 auto;
+  list-style:none;
+  padding:10px 0;
+}
+
+#navigation ul li { 
+  list-style:none;
+  display:inline;
+  margin-right:10px;
+}
+
+#navigation ul a {
+  padding:6px 12px;
+  border-radius:3px;
+  color:#eee;
+}
+
+#tab-content-wrapper ul {list-style:none}
+@media all and (max-width: 867px) {
+  #left-pane {
+    width:100%;
+  }
+  #right-pane {
+    width:100%;
+    clear:both;
+    text-align:left !important;
+  }
+  #tab-list li {float:left;}
+}
+

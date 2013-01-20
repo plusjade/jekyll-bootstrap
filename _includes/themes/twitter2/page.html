@@ -1,9 +1,12 @@
-<div class="row">
-  <div class="span8 offset2">
+<div class="row-fluid">
+  <div id="left-pane" class="span7">
     <div class="content page">
       <h1 class="title">{% if page.header %}{{ page.header }}{% else %}{{ page.title }}{% endif %}</h1>
       {{ page.description }}
       {{ content }}
     </div>  
+  </div>
+  <div id="right-pane" class"span5">
+    {% include sidebar.html %}
   </div>
 </div>
