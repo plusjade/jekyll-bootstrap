@@ -46,11 +46,7 @@
       </div>
 
       <footer>
-        <script type="text/javascript">
-          var currentTime = new Date();
-        </script> 
-
-        <p>&copy; {{ site.author.name }} <script type="text/javascript">document.write(currentTime.getFullYear());</script> 
+        <p>&copy; {{ site.author.name }} {{ site.time | date: '%Y' }}
           with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
           and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
         </p>
