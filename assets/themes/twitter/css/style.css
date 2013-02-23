@@ -68,4 +68,8 @@ html, body {
 	border:1px solid #4C964D;
 	color:#FFF;
 }
+footer p{
+	text-align: center;
+	margin-top: 4px;
+}
 	
