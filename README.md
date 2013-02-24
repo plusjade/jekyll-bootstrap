@@ -39,4 +39,4 @@ The master and gh-pages branch do not share the same ancestry. Please treat them
 
 ## License
 
-[Creative Commons](http://creativecommons.org/licenses/by-nc-sa/3.0/)
+[MIT](http://opensource.org/licenses/MIT)
