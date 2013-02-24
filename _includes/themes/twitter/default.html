@@ -6,6 +6,9 @@
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
     <meta name="author" content="{{ site.author.name }}">
 
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -28,7 +31,7 @@
 
     <div class="navbar">
       <div class="navbar-inner">
-        <div class="container">
+        <div class="container-fluid">
           <a class="brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
           <ul class="nav">
             {% assign pages_list = site.pages %}
@@ -39,7 +42,7 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container-fluid">
 
       <div class="content">
         {{ content }}
@@ -52,7 +55,7 @@
         </p>
       </footer>
 
-    </div> <!-- /container -->
+    </div> <!-- /container-fluid -->
 
     {% include JB/analytics %}
   </body>
