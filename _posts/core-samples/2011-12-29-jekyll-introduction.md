@@ -90,8 +90,8 @@ Jekyll expects your website directory to be laid out like so:
     |   |-- default.html
     |   |-- post.html
     |-- _posts
-    |   |-- 20011-10-25-open-source-is-good.markdown
-    |   |-- 20011-04-26-hello-world.markdown
+    |   |-- 2011-10-25-open-source-is-good.markdown
+    |   |-- 2011-04-26-hello-world.markdown
     |-- _site
     |-- index.html
     |-- assets
