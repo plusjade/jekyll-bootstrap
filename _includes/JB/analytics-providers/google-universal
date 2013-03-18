@@ -4,7 +4,7 @@
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', '{{ site.JB.analytics.google.tracking_id }}', '{{ site.JB.analytics.google.domain }}');
+  ga('create', '{{ site.JB.analytics.google-universal.tracking_id }}', '{{ site.JB.analytics.google-universal.domain }}');
   ga('send', 'pageview');
 
 </script>
