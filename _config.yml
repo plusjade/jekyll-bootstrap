@@ -99,10 +99,10 @@ JB :
   # Set 'provider' to false to turn analytics off globally.
   #        
   analytics :
-    provider : google-classic 
-    google-classic : 
+    provider : google_classic 
+    google_classic : 
         tracking_id : 'UA-123-12'
-    google-universal : 
+    google_universal : 
         tracking_id : 'UA-123-12'
         domain: 'github.com'
     getclicky :
