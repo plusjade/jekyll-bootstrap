@@ -93,6 +93,9 @@ JB :
       num_posts: 5
       width: 580
       colorscheme: light
+    weibo :
+      appkey : 123
+      ralateuid : 123
    
   # Settings for analytics helper
   # Set 'provider' to the analytics provider you want to use.
