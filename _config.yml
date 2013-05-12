@@ -95,6 +95,7 @@ JB :
       colorscheme: light
    
   # Settings for analytics helper
+  # Set 'site.safe' to true to enable analytics plugin
   # Set 'provider' to the analytics provider you want to use.
   # Set 'provider' to false to turn analytics off globally.
   #        
@@ -106,6 +107,8 @@ JB :
       site_id : 
     mixpanel :
         token : '_MIXPANEL_TOKEN_'
+    baidu :
+        token : '_BAIDU_TOKEN_'
 
   # Settings for sharing helper. 
   # Sharing is for things like tweet, plusone, like, reddit buttons etc.
