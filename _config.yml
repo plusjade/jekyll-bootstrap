@@ -95,6 +95,7 @@ JB :
       colorscheme: light
    
   # Settings for analytics helper
+  # Set 'site.safe' to true to enable analytics plugin
   # Set 'provider' to the analytics provider you want to use.
   # Set 'provider' to false to turn analytics off globally.
   #        
