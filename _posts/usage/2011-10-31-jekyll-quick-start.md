@@ -9,7 +9,7 @@ description : |
 
 ## 1. Install Jekyll-Bootstrap
 
-[Install Jekyll-Bootsrap](/index.html#start-now) if you haven't already.
+[Install Jekyll-Bootstrap](/index.html#start-now) if you haven't already.
 Jekyll-bootstrap is a blogging framework with built-in support for theming, analytics, comments, and post/page creation.
 
 ## 2. Run Jekyll Locally
