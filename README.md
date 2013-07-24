@@ -2,17 +2,6 @@
 
 The quickest way to start and publish your Jekyll powered blog. 100% compatible with GitHub pages
 
-## Upgrade checklist
-### Feature
-- Add drafts: Jekyll 1.1.0 has the ability to [work with drafts](http://jekyllrb.com/docs/drafts/)
-- Provide rake task to install plugins
-- *Triage*: support for blog migrations, or provide documentation
-- What should we do for [extra](http://jekyllrb.com/docs/extras/)
-
-### Documentation
-### Recruitment
-
-
 ## Usage
 
 For all usage and documentation please see: <http://jekyllbootstrap.com>
