@@ -109,7 +109,7 @@ namespace :theme do
   # Public: Switch from one theme to another for your blog.
   #
   # name - String, Required. name of the theme you want to switch to.
-  #        The the theme must be installed into your JB framework.
+  #        The theme must be installed into your JB framework.
   #
   # Examples
   #
