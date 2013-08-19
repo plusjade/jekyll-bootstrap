@@ -61,7 +61,7 @@ However, as shown above, you can pass-by-reference, and assign local variables t
 
 So to pass in data-structures, you need to define them in your YAML Front Matter, or `_config.yml` file first, then pass them in by reference.
 
-## Contibuting 
+## Contributing 
 
 If you have a good idea for another helper, please follow the outlines above,
 then submit a pull request to [Jekyll-Bootstrap](http://github.com/plusjade/jekyll-bootstrap) and I'll include it. 
