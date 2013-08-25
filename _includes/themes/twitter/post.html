@@ -8,7 +8,11 @@
       <span>{{ page.date | date_to_long_string }}</span>
     </div>
     <div class="content">
-      {{ content }}
+      {% if page.emojify == true %}
+         {{ content | emojify }}
+      {% else %}
+         {{ content }}
+      {% endif %}
     </div>
 
   {% unless page.categories == empty %}
