@@ -35,9 +35,9 @@ module Jekyll
         end
       end
 
-      content.to_str.gsub(/[^:]:([\w\d+-]+):/) do |match|
-        if Emoji.names.include?($1) and emoji_dir
-          '<img alt="' + $1 + '" src="' + emoji_dir + "/#{$1}.png" + '" class="emoji" />'
+      content.to_str.gsub(/([^:]):([\w\d+-]+):/) do |match|
+        if Emoji.names.include?($2) and emoji_dir
+          $1 + '<img alt="' + $2 + '" src="' + emoji_dir + "/#{$2}.png" + '" class="emoji" />'
         else
           match
         end
