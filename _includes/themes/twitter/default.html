@@ -49,7 +49,11 @@
     <div class="container-narrow">
 
       <div class="content">
-        {{ content }}
+        {% if page.emojify == true %}
+           {{ content | emojify }}
+        {% else %}
+           {{ content }}
+        {% endif %}
       </div>
       <hr>
       <footer>

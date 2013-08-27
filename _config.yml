@@ -2,9 +2,33 @@
 # For more see: http://jekyllrb.com/docs/permalinks/
 permalink: /:categories/:year/:month/:day/:title 
 
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "Gemfile"]
 auto: true
 pygments: true
+
+# Path to the directory containing Emoji icons.
+#
+# Note: you also have to include tje following tag in the each post's YAML Front Matter
+#       to trigger the Emoji plugin 
+#       -------------
+#       emojify: true
+#       -------------
+#
+# Directory definition examples:
+#    
+#    Pointing to a web server
+#        emoji_dir: https://public.blog.url/images/emoji
+#
+#    Using directory, will work only on the local machine
+#        emoji_dir: ./images/emoji
+#
+#     If you will be serving emoji icons from your website,
+#     defined first as directory and run 'jekyll build'.
+#     This will copy the icons from the gemoji gem to the 
+#     directory you specified. Test locally then change to URL.
+#     See class EmojiGenerator in the plugin code for more information
+emoji_dir: ./images/emoji
+
 
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
