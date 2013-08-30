@@ -21,7 +21,7 @@ You don't have to run a local version but it helps if you want to preview your c
 $ gem install jekyll
 {% endhighlight %}
 
-If you run into a problem please consult the original [Jekyll installation documentation](https://github.com/mojombo/jekyll/wiki/Install).
+If you run into a problem please consult the original [Jekyll installation documentation](http://jekyllrb.com/docs/installation/).
 You can also [create a support issue](https://github.com/plusjade/jekyll-bootstrap/issues) using GitHub Issues.
 
 Once the gem is installed you can navigate to your Jekyll-Bootstrap directory.
