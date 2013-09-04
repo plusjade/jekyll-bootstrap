@@ -11,3 +11,6 @@
 
 ### Site Enhancements
 
+### Compatibility updates
+  * Update `preview` task
+
