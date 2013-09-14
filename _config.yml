@@ -92,6 +92,8 @@ JB :
       num_posts: 5
       width: 580
       colorscheme: light
+    duoshuo :
+      short_name : jekyllbootstrap
    
   # Settings for analytics helper
   # Set 'provider' to the analytics provider you want to use.
