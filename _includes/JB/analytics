@@ -7,6 +7,8 @@
   {% include JB/analytics-providers/getclicky %}
 {% when "mixpanel" %}
   {% include JB/analytics-providers/mixpanel %}
+{% when "piwik" %}
+  {% include JB/analytics-providers/piwik %}
 {% when "custom" %}
   {% include custom/analytics %}
 {% endcase %}
