@@ -30,7 +30,7 @@ Once in the directory you'll run jekyll with server support:
 
 {% highlight bash %}
 $ cd USERNAME.github.com 
-$ jekyll --server
+$ jekyll serve
 # remember to change USERNAME to your GitHub username.
 {% endhighlight %}
 
