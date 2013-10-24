@@ -1,0 +1,23 @@
+{% comment%}<!--
+
+Intended to be used with ![picturefill.js](https://github.com/scottjehl/picturefill).  Much tidier
+
+*Unfortunately you cannot pass object or arrays to an include...
+
+Usage:
+  1) {% include JB/picturefill alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia" folder="assets/img" small_src="small.jpg" medium_src="medium.jpg" medium_media="400px" large_src="large.jpg" large_media="800px" extralarge_src="extralarge.jpg" extralarge_media="1000px" %}
+  2) Include the picturefill javascript in your page.
+
+-->{% endcomment %}
+
+<span data-picture="true" data-alt="{{ include.alt }}">
+  <span data-src="{{ include.folder }}/{{ include.small_src }}"> </span>
+  <span data-src="{{ include.folder }}/{{ include.medium_src }}" data-media="(min-width: {{ include.medium_media }})"> </span>
+  <span data-src="{{ include.folder }}/{{ include.large_src }}" data-media="(min-width: {{ include.large_media }})"> </span>
+  <span data-src="{{ include.folder }}/{{ include.extralarge_src }}" data-media="(min-width: {{ include.extralarge_media }})"> </span>
+
+  <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+  <noscript>
+    <img src="{{ include.folder }}/{{ include.src_small }}" alt="{{ include.alt }}">
+  </noscript>
+</span>
