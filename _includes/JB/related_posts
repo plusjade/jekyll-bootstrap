@@ -1,0 +1,37 @@
+{% comment %}
+<!--
+The related_posts include is a listing helper for related posts
+Usage;
+  1) Tweak JB.related_posts_max in _config.yml
+  2) include JB/related_posts
+  example :
+    <ul>
+      {% include JB/related_posts %}
+    </ul>
+
+    This helper can be seen in use at: ../_layouts/post.html
+-->
+{% endcomment %}
+
+{% assign categories_list = page.categories | sort %}
+{% assign max_count = site.JB.related_posts_max %}
+{% assign count = 1 %}
+{% for post in site.posts %}
+{% assign index_post = forloop.index %}
+{% assign post_categories = post.categories | sort %}
+   {% if count <= max_count %}
+     {% if categories_list == post_categories %}
+       {% if post.title != page.title %}
+       <li><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+       {% assign count = count | plus:'1' %}
+       {% endif %}
+     {% else %}
+      {% for cat in post_categories %}
+        {% if cat == categories_list[forloop.index0] %}
+           <li><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+          {% assign count = count | plus:'1' %}
+        {% endif %}
+      {% endfor %}
+     {% endif %}
+   {% endif %}
+{% endfor %}

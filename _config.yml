@@ -116,6 +116,10 @@ JB :
   #
   sharing :
     provider : false
+
+
+  # Setting for related_posts method
+  related_posts_max: 4
     
   # Settings for all other include helpers can be defined by creating 
   # a hash with key named for the given helper. ex:
