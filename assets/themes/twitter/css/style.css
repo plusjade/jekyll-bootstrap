@@ -63,3 +63,24 @@
   background: #57A957;
   border: 1px solid #4c964d;
   color: #FFF; }
+
+ /* tag cloud */
+.cloud-container {
+  width: 300px;
+}
+
+.tag-cloud-0 { font-size: 1em; }
+.tag-cloud-1 { font-size: 1.5em; }
+.tag-cloud-2 { font-size: 1.5em; font-weight: bold; }
+.tag-cloud-3 { font-size: 2em; }
+.tag-cloud-4 { font-size: 2em; font-weight: bold; }
+.tag-cloud-5 { font-size: 2.5em; }
+.tag-cloud-6 { font-size: 2.5em; font-weight: bold; }
+.tag-cloud-7 { font-size: 2.75em; }
+.tag-cloud-8 { font-size: 2.75em; font-weight: bold; }
+.tag-cloud-9 { font-size: 2.75em;
+  font-weight: bold;
+  font-style: italic;
+}
+.tag-cloud-10 { font-size: 3em; }
+/* end tag cloud */
