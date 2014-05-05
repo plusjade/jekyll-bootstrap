@@ -7,7 +7,7 @@ Using one will break the other if you plan to deploy to GitHub pages.
   see: https://github.com/mojombo/jekyll/issues/425
 
 Since I don't want to mess with Liquid versions, I'll just rewrite the way I 
-intend to give liquid examples. It's not an elegant by any means:
+intend to give liquid examples. It's not an elegant solution by any means:
 
 Usage: 
   1) Define a 'text' variable with the block of liquid code you intend to display.
