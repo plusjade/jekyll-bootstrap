@@ -73,7 +73,7 @@ The main point here is keeping themes modular; this way editing one does not aff
 
 ### Adding Templates
 
-You are free add extra template files to `_layouts` in order to customize your blog.
+You are free to add extra template files to `_layouts` in order to customize your blog.
 
 However if you want to add theme-specific layouts you should add them to the theme's directory in `_includes`.
 After your files are added make sure to run the switcher again:
