@@ -1,10 +1,11 @@
 # This is the default format. 
-# For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
+# For more see: http://jekyllrb.com/docs/permalinks/
 permalink: /:categories/:title.html
 
 exclude: [".rbenv-version", "README.md", "Rakefile", "CNAME"]
 auto: true
 pygments: true
+gems: ["jekyll-sitemap"]
 
 topbar:
   - 
