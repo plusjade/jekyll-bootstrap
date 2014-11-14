@@ -221,14 +221,9 @@ hr.small {
 }
 
 /* Map */
-.map{
-    overflow: hidden;
-}
 
-section.map iframe {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.map {
+    height: 500px;
 }
 
 @media(max-width:768px) {
@@ -240,5 +235,5 @@ section.map iframe {
 /* Footer */
 
 footer {
-    padding: 0px 0;
+    padding: 100px 0;
 }
