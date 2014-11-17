@@ -8,6 +8,12 @@
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
     <meta name="author" content="{{ site.author.name }}">
 
+    {% if page.categories %}
+    <meta name="keywords" content="{{ page.categories }}" />
+    {% else %}
+    <meta name="keywords" content="{{ site.keywords }}" />
+    {% endif %}
+
     <!-- Enable responsive viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 

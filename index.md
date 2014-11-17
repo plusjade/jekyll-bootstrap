@@ -2,6 +2,7 @@
 layout: page
 title: Jennings Consultants
 tagline: Simplifying Business Improvement & support
+description: Jennings Consultants providing simple effective services for your organisation's needs
 ---
 {% include JB/setup %}
 
