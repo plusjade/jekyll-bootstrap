@@ -16,7 +16,7 @@ We are a small team of business professionals with over 20 years’ experience w
 
 We have held senior management positions within organisations reporting at board level on Business performance and assisted in driving improvements from the top.
 
-Please see our available services to the left of this page and contact us below to further discuss how we can assist you and your organization in the most effective way.
+Please see our available services to the left of this page and contact us below to further discuss how we can assist you and your organisation in the most effective way.
                 </div>
             </div>
             <!-- /.row -->
