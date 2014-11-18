@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Jennings Consulting
-tagline: Simplifying Business Improvement & support
+tagline: <BR>Simplifying Business Improvement & support
 description: Jennings Consultants providing simple effective services for your organisation's needs
 ---
 {% include JB/setup %}
