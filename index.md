@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Jennings Consultants
+title: Jennings Consulting
 tagline: Simplifying Business Improvement & support
 description: Jennings Consultants providing simple effective services for your organisation's needs
 ---
@@ -11,7 +11,7 @@ description: Jennings Consultants providing simple effective services for your o
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>Effective services for your organisation’s needs!</h2>
-                    <p class="lead">Here at Jennings Consultants we pride ourselves in providing simple effective services for your organisation’s needs.
+                    <p class="lead">Here at Jennings Consulting we pride ourselves in providing simple effective services for your organisation’s needs.
 
 We are a small team of business professionals with over 20 years’ experience within Manufacturing and the Service industries.
 
