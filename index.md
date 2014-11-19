@@ -11,13 +11,13 @@ description: Jennings Consultants providing simple effective services for your o
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>Effective services for your organisation’s needs!</h2>
-                    <p class="lead">Here at Jennings Consulting we pride ourselves in providing simple effective services for your organisation’s needs.
+                    <p class="lead">Here at Jennings Consulting we pride ourselves in providing effective and comprehensive solutions for your organisation’s needs.
 
-We are a small team of business professionals with over 20 years’ experience within Manufacturing and the Service industries.
+We are a small team of business professionals with over 20 years’ experience within the Service and Manufacturing industries.
 
-We have held senior management positions within organisations reporting at board level on Business performance and assisted in driving improvements from the top.
+We have held senior management positions within organisations reporting at board level on Business performance driving improvements from the top.
 
-Please see our available services to the left of this page and contact us below to further discuss how we can assist you and your organisation in the most effective way.
+Contact us below to further discuss how our services will work with you to take your business to it's next level.
                 </div>
             </div>
             <!-- /.row -->
