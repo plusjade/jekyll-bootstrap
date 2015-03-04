@@ -95,7 +95,7 @@ end # task :page
 
 desc "Launch preview environment"
 task :preview do
-  system "jekyll --auto --serve"
+  system "jekyll serve --drafts"
 end # task :preview
 
 # Public: Alias - Maintains backwards compatability for theme switching.
