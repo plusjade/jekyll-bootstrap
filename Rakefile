@@ -49,7 +49,7 @@ task :post do
   begin
     date = (ENV['date'] ? Time.parse(ENV['date']) : Time.now).strftime('%Y-%m-%d')
   rescue Exception => e
-    puts "Error - date format must be YYYY-MM-DD, please check you typed it correctly!"
+    puts "Error - date format must be YYYY-MM-DD, please make sure you typed it correctly!"
     exit -1
   end
   filename = File.join(CONFIG['posts'], "#{date}-#{slug}.#{CONFIG['post_ext']}")
@@ -95,7 +95,7 @@ end # task :page
 
 desc "Launch preview environment"
 task :preview do
-  system "jekyll --auto --server"
+  system "jekyll --auto --serve"
 end # task :preview
 
 # Public: Alias - Maintains backwards compatability for theme switching.
@@ -144,7 +144,7 @@ namespace :theme do
     end
     
     puts "=> Theme successfully switched!"
-    puts "=> Reload your web-page to check it out =)"
+    puts "=> Reload your site to check it out =)"
   end # task :switch
   
   # Public: Install a theme using the theme packager.
@@ -172,11 +172,11 @@ namespace :theme do
     packaged_theme_path = JB::Path.build(:theme_packages, :node => name)
     
     abort("rake aborted!
-      => ERROR: 'name' cannot be blank") if name.empty?
+      => ERROR: 'name' cannot be blank.") if name.empty?
     abort("rake aborted! 
       => ERROR: '#{packaged_theme_path}' directory not found.
       => Installable themes can be added via git. You can find some here: http://github.com/jekyllbootstrap
-      => To download+install run: `rake theme:install git='[PUBLIC-CLONE-URL]'`
+      => To download and install, run: `rake theme:install git='[PUBLIC-CLONE-URL]'`
       => example : rake theme:install git='git@github.com:jekyllbootstrap/theme-the-program.git'
     ") unless FileTest.directory?(packaged_theme_path)
     
