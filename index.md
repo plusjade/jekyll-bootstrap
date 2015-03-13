@@ -1,9 +1,11 @@
 ---
 layout: page
-title: Hello World!
+title: xiao xiao!
 tagline: Supporting tagline
 ---
 {% include JB/setup %}
+
+Email:wangxiaoxiang_cn@163.com
 
 Read [Jekyll Quick Start](http://jekyllbootstrap.com/usage/jekyll-quick-start.html)
 
