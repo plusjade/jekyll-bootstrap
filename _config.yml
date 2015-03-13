@@ -8,10 +8,10 @@ highlighter: pygments
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Jekyll Bootstrap
-tagline: Site Tagline
+title : Xiao xiao 的博客
+tagline: 会飞的程序猿
 author :
-  name : xiaoxiao
+  name : Xiaoxiao
   email : wangxiaoxiang_cn@163.com
   github : XiaoXiangWang
   twitter : Not
