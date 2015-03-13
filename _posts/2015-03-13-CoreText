@@ -1,0 +1,17 @@
+---
+layout: page
+title: CoreText
+---
+
+##Font
+
+```objc
+
+@interface AKAssetsCell : UICollectionViewCell
+
+@property (weak, nonatomic) IBOutlet UIImageView *thumbnailView;
+
+@property (weak, nonatomic) IBOutlet UIButton* checkMark;
+
+@end
+```
