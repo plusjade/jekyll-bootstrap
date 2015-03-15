@@ -41,7 +41,8 @@ You might want to run 0.3.0 in a branch to make sure you are ok with the theme d
 |------|---------------
 |#98 |GIST Integration
 |#244|JB/file_exists Helper
-#42 |Sort collections of Pages / Posts
+|#42 |Sort collections of Pages / Posts
+|#84 |Detecting production mode
 
 ### TODOS
 
