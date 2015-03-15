@@ -14,6 +14,43 @@ For all usage and documentation please see: <http://jekyllbootstrap.com>
 However, the actual API has not changed at all.
 You might want to run 0.3.0 in a branch to make sure you are ok with the theme design changes.
 
+## Milestones
+
+[0.4.0](https://github.com/plusjade/jekyll-bootstrap/milestones/v%200.4.0) - next release [ETA 03/29/2015]
+
+### GOALS
+
+* No open PRs against master branch.
+* Squash some bugs.
+* Add some new features (low-hanging fruit).
+* Establish social media presence.
+
+
+### Bugs
+
+|Bug |Description
+|------|---------------
+|#86 |Facebook Comments
+|#113|ASSET_PATH w/ page & post
+|#144|BASE_PATH w/ FQDN
+|#227|Redundant JB/setup
+
+### Features
+
+|Bug |Description
+|------|---------------
+|#98 |GIST Integration
+|#244|JB/file_exists Helper
+#42 |Sort collections of Pages / Posts
+
+### TODOS
+
+Review existing pull requests against plusjake/jekyll-bootstrap:master. Merge or close each.
+
+* Create twitter account. Add link / icon on jekyllbootstrap.com.
+* Create blog posts under plusjade/gh-pages, expose on jekyllbootstrap.com, feed to twitter account.
+* Announce state of project, announce roadmap(s), announce new versions as they’re released.
+
 ## Contributing
 
 
