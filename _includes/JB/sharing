@@ -1,8 +1,41 @@
-{% if site.safe and site.JB.sharing.provider and page.JB.sharing != false %}
+{% comment %}<!--
+The sharing include is a sharing helper for a number of providers.
+Usage:
+  1) Include JB/sharing
+  2) Optionally assign the 'sharing_message_prefix' variable with a string
+  3) Optionally assign the 'sharing_context' variable with a context, where
+     "context" is a page object. Defaults to the current page if unset. See
+     "themes/tlvince/metabox.html" for an example.
+  Example:
+    <ul>
+        {% assign sharing_message_prefix = "Photo " %}
+        {% include JB/sharing %}
+    </ul>
 
-{% case site.JB.sharing.provider %}
-{% when "custom" %}
-  {% include custom/sharing %}
-{% endcase %}
+  This help can be seen in use in the "tlvince" theme by Tom Vincent:
+  https://github.com/tlvince/jb-theme-tlvince
+-->{% endcomment %}
+
+{% if site.JB.sharing.enabled %}
+
+    {% if sharing_context %}
+        {% assign page = sharing_context %}
+    {% endif %}
+
+    {% capture sharing_url %}{{ site.production_url }}{{ page.url }}/{% endcapture %}
+    {% capture sharing_prefix %}Share "{{ page.title }}" on{% endcapture %}
+
+    {% if site.JB.sharing.provider.twitter %}
+        {% capture sharing_title %}{{ sharing_prefix }} Twitter{% endcapture %}
+        {% include JB/sharing-providers/twitter %}
+    {% endif %}
+    {% if site.JB.sharing.provider.facebook %}
+        {% capture sharing_title %}{{ sharing_prefix }} Facebook{% endcapture %}
+        {% include JB/sharing-providers/facebook %}
+    {% endif %}
+    {% if site.JB.sharing.provider.google-plus %}
+        {% capture sharing_title %}{{ sharing_prefix }} Google Plus{% endcapture %}
+        {% include JB/sharing-providers/google-plus %}
+    {% endif %}
 
 {% endif %}

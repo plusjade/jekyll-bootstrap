@@ -1,0 +1,5 @@
+<li><a href='https://twitter.com/intent/tweet?text=
+{% if sharing_message_prefix %}{{ sharing_message_prefix }}{% endif %}
+"{{ page.title }}" by {{ site.author.name }} (@{{ site.author.twitter }})
+&url={{ sharing_url }}' title='{{ sharing_title }}'>
+<i class="icon-twitter-alt icon-large"></i></a>
