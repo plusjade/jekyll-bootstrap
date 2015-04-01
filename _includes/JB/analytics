@@ -1,6 +1,4 @@
-{% include JB/is_production %}
-
-{% if is_production and site.JB.analytics.provider and page.JB.analytics != false %}
+{% if site.safe and site.JB.analytics.provider and page.JB.analytics != false %}
 
 {% case site.JB.analytics.provider %}
 {% when "google" %}
