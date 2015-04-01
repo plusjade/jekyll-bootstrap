@@ -1,7 +1,6 @@
 <div id="disqus_thread"></div>
 <script type="text/javascript">
-    {% include JB/is_production %}
-    {% if is_production == false %}var disqus_developer = 1;{% endif %}
+    {% if site.safe == false %}var disqus_developer = 1;{% endif %}
     var disqus_shortname = '{{ site.JB.comments.disqus.short_name }}'; // required: replace example with your forum shortname
     {% if page.wordpress_id %}var disqus_identifier = '{{page.wordpress_id}} {{site.production_url}}/?p={{page.wordpress_id}}';{% endif %}
     /* * * DON'T EDIT BELOW THIS LINE * * */
