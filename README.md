@@ -9,9 +9,6 @@ For all usage and documentation please see: <http://jekyllbootstrap.com>
 ## Version
 
 0.3.0 - stable and versioned using [semantic versioning](http://semver.org/).
-
-## Milestones
-
 [0.4.0](https://github.com/plusjade/jekyll-bootstrap/milestones/v%200.4.0) - next release [ETA 03/29/2015]
 
 ### GOALS
