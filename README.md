@@ -1,6 +1,6 @@
 # dijonkitchen blog
 
-The quickest way to start and publish your Jekyll powered blog. 100% compatible with GitHub pages
+A Jekyll Bootstrap powered blog made with GitHub pages that is a playground for learning how to be a best of breed software engineer. Feel free to offer suggestions or fork on GitHub!
 
 ## Usage
 
