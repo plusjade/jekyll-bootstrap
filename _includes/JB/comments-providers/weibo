@@ -1,0 +1,13 @@
+<script type="text/javascript">
+(function(){
+var pageUrl = encodeURIComponent("{{site.production_url}}{{page.permalink}}");
+var url = "http://widget.weibo.com/distribution/comments.php?width=0&url="+pageUrl+"&ralateuid={{ site.JB.commets.weibo.ralateuid}}&appkey={{ site.JB.comments.weibo.appkey }}&dpc=1";
+document.write('<iframe id="WBCommentFrame" src="' + url + '" scrolling="no" frameborder="0" style="width:100%"></iframe>');
+})();
+</script>
+<script src="http://tjs.sjs.sinajs.cn/open/widget/js/widget/comment.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+window.WBComment.init({
+    "id": "WBCommentFrame"
+    });
+</script>
