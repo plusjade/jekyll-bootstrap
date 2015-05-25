@@ -9,6 +9,8 @@
   {% include JB/comments-providers/intensedebate %}
 {% when "facebook" %}
   {% include JB/comments-providers/facebook %}
+{% when "duoshuo" %}
+  {% include JB/comments-providers/duoshuo %}
 {% when "custom" %}
   {% include custom/comments %}
 {% endcase %}
