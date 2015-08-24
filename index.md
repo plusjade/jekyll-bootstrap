@@ -42,7 +42,7 @@ Key suppliers are as important to your delivery programme as your own internal p
 We have a wealth of experience auditing suppliers both in China and Europe.  So if you are considering utilising a low cost manufacturing source such as China then call us for a competetive quotation to help gain confidence with your extended supply chain.
 
 ## Internal Audits
-Processes are only as good as the people that use them so it is important to ensure that your team understand and follow your processes correctly.  We can carry out an independent review of the documented processes within your organisation to the current ISO 9001 and or 14001 standards as well as to your organisation’s requirements.  Agreed corrective actions will be documented with agreed timescales for completion, follow up audits can be conducted to ensure action closure.
+Processes are only as good as the people that use them so it is important to ensure that your team understand and follow your processes correctly.  We can carry out an independent review of the documented processes within your organisation to the current ISO 9001 and or 14001 standards as well as to your organisation’s requirements.  Agreed corrective actions will be documented with agreed timescales for completion Follow up audits can be conducted to ensure action closure.
 
 ## Business system reviews
 We can review the way your organisation works along with the documentation and processes currently in use.  From this we will produce a report sympathetic to your business strategy detailing recommended changes required to improve the performance and streamline processes.
