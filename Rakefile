@@ -1,5 +1,6 @@
 require "rubygems"
 require 'rake'
+<<<<<<< HEAD
 require 'yaml'
 require 'time'
 
@@ -41,10 +42,24 @@ module JB
 end #JB
 
 # Usage: rake post title="A Title" [date="2012-02-09"] [tags=[tag1,tag2]] [category="category"]
+=======
+
+SOURCE = "."
+CONFIG = {
+  'version' => "0.1.0",
+  'themes' => File.join(SOURCE, "_includes", "themes"),
+  'layouts' => File.join(SOURCE, "_layouts"),
+  'posts' => File.join(SOURCE, "_posts"),
+  'post_ext' => "md"
+}
+
+# Usage: rake post title="A Title"
+>>>>>>> origin/docs-theme-packages
 desc "Begin a new post in #{CONFIG['posts']}"
 task :post do
   abort("rake aborted: '#{CONFIG['posts']}' directory not found.") unless FileTest.directory?(CONFIG['posts'])
   title = ENV["title"] || "new-post"
+<<<<<<< HEAD
   tags = ENV["tags"] || "[]"
   category = ENV["category"] || ""
   category = "\"#{category.gsub(/-/,' ')}\"" if !category.empty?
@@ -56,6 +71,10 @@ task :post do
     exit -1
   end
   filename = File.join(CONFIG['posts'], "#{date}-#{slug}.#{CONFIG['post_ext']}")
+=======
+  slug = title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+  filename = File.join(CONFIG['posts'], "#{Time.now.strftime('%Y-%m-%d')}-#{slug}.#{CONFIG['post_ext']}")
+>>>>>>> origin/docs-theme-packages
   if File.exist?(filename)
     abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
   end
@@ -65,9 +84,14 @@ task :post do
     post.puts "---"
     post.puts "layout: post"
     post.puts "title: \"#{title.gsub(/-/,' ')}\""
+<<<<<<< HEAD
     post.puts 'description: ""'
     post.puts "category: #{category}"
     post.puts "tags: #{tags}"
+=======
+    post.puts "category: "
+    post.puts "tags: []"
+>>>>>>> origin/docs-theme-packages
     post.puts "---"
     post.puts "{% include JB/setup %}"
   end
@@ -92,12 +116,16 @@ task :page do
     post.puts "---"
     post.puts "layout: page"
     post.puts "title: \"#{title}\""
+<<<<<<< HEAD
     post.puts 'description: ""'
+=======
+>>>>>>> origin/docs-theme-packages
     post.puts "---"
     post.puts "{% include JB/setup %}"
   end
 end # task :page
 
+<<<<<<< HEAD
 desc "Launch preview environment"
 task :preview do
   system "jekyll serve -w"
@@ -292,6 +320,43 @@ def verify_manifest(theme_path)
   manifest_file.close
   manifest
 end
+=======
+desc "Switch between Jekyll-bootstrap themes."
+task :switch_theme do
+  theme_name = ENV["name"].to_s
+  theme_path = File.join(CONFIG['themes'], theme_name)
+  settings_file = File.join(theme_path, "settings.yml")
+  non_layout_files = ["settings.yml"]
+  
+  abort("rake aborted: name cannot be blank") if theme_name.empty?
+  abort("rake aborted: '#{theme_path}' directory not found.") unless FileTest.directory?(theme_path)
+  abort("rake aborted: '#{CONFIG['layouts']}' directory not found.") unless FileTest.directory?(CONFIG['layouts'])
+  
+  Dir.glob("#{theme_path}/*") do |filename|
+    next if non_layout_files.include?(File.basename(filename).downcase)
+    puts "Generating '#{theme_name}' layout: #{File.basename(filename)}"
+    
+    open(File.join(CONFIG['layouts'], File.basename(filename)), 'w') do |page|
+      if File.basename(filename, ".html").downcase == "default"
+        page.puts "---"
+        page.puts File.read(settings_file) if File.exist?(settings_file)
+        page.puts "---"
+      else
+        page.puts "---"
+        page.puts "layout: default"
+        page.puts "---"
+      end 
+      page.puts "{% include JB/setup %}"
+      page.puts "{% include themes/#{theme_name}/#{File.basename(filename)} %}" 
+    end
+  end
+end # task :switch_theme
+
+desc "Launch preview environment"
+task :preview do
+  system "jekyll --auto --server"
+end # task :preview
+>>>>>>> origin/docs-theme-packages
 
 def ask(message, valid_options)
   if valid_options
@@ -305,7 +370,11 @@ end
 def get_stdin(message)
   print message
   STDIN.gets.chomp
+<<<<<<< HEAD
 end
 
 #Load custom rake scripts
 Dir['_rake/*.rake'].each { |r| load r }
+=======
+end
+>>>>>>> origin/docs-theme-packages
