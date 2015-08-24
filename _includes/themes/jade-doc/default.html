@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<title>{% if page.head_title %}{{ page.head_title }}{% else %}{{ page.title }}{% endif %} | Jekyll-Bootstrap</title>
+{% if page.meta_description %}
+	<meta name="description" content="{{ page.meta_description }}">
+{% endif %}
+	<link href="{{ ASSET_PATH }}/css/bootstrap-1.4.0-min.css" rel="stylesheet" type="text/css" media="all">
+	<link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+</head>
+<body>
+  <div class="container" style="position:relative">
+	  
+	  <div id="main-content" class="content">
+	    <div class="row">
+      <div class="span10 offset1">
+        <div style="overflow:hidden">
+          <div style="float:right; color:#555">
+            JB latest version: <span class="label" style="background:#777">0.1.0</span> 
+            <span class="label" style="background:#777">24-01-2012</span>
+          </div>
+          {% include JB/sharing %}
+        </div>
+				{{ content }}
+			</div>
+			</div>
+	  </div>
+	  		
+    <div class="sidebar">
+      <h4>Start Blogging</h4>
+  		<ul>
+  		  <li><a href="/">Home</a></li>
+  		  {% assign pages_list = site.categories.usage %}  
+  		  {% include JB/pages_list %}
+  		</ul>
+
+  	  <h4>Learn Jekyll</h4>
+  		<ul>
+  	    {% assign pages_list = site.categories.lessons %}  
+  	    {% include JB/pages_list %}
+  		</ul>
+
+  		<h4>Customize Jekyll</h4>
+  		<ul>
+  		  {% assign pages_list = site.categories.api %}  
+  		  {% include JB/pages_list %}
+  		</ul>
+
+  		<h4>Example Pages</h4>
+  		<ul>
+  		  {% assign pages_list = site.pages %}  
+  		  {% assign group = 'example-page' %}
+  		  {% include JB/pages_list %}
+  		</ul>
+
+      <h4>Info</h4>
+      <ul>
+  		  {% assign pages_list = site.pages %}
+  		  {% assign group = 'project' %}
+  		  {% include JB/pages_list %}
+  		</ul>
+
+    </div>
+		
+  </div>
+  
+  
+  <a href="http://github.com/plusjade/jekyll-bootstrap" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/30f550e0d38ceb6ef5b81500c64d970b7fb0f028/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub"></a>
+  
+{% if page.url == "/index.html" %}  
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" charset="utf-8"></script>
+  <script>
+    var Tabs = {
+      $list : null,
+      $content : null,
+      
+      init : function(list, content){
+       Tabs.$list = $(list);
+       Tabs.$content = $(content);
+       
+       Tabs.$list.find("a").click(function(e){
+         Tabs.show($(this).parent().index());
+         e.preventDefault();
+         return false;
+       })
+       
+       Tabs.show(0);
+      },
+      
+      show : function(index){
+        Tabs.$list
+          .find("li").removeClass("active")
+          .eq(index).addClass("active");
+        Tabs.$content
+          .find("div").hide()
+          .eq(index).show();
+      }
+    }
+    
+    $(function(){
+      Tabs.init("#tab-list", "#tab-content-wrapper");
+      
+      var $codeContainer = $("#2__install_jekyllbootstrap").next("pre").find("code");
+      var code = $codeContainer.text();
+      var $repoName = $("#repo_name");
+      var $blogLink = $("#blog_link");
+      $("form").submit(function(e){
+        var username = $("#github_username").val();
+        $codeContainer.text(code.replace(/USERNAME/g, username));
+        $repoName.text( username + ".github.com");
+        $blogLink.text("http://" + username + ".github.com").attr("href", "http://" + username + ".github.com");
+        if ($.trim(username) !== "") _gaq.push(['_trackEvent', 'Forms', 'Input', username]);
+        e.preventDefault();
+        return false;
+      })
+    })
+  </script>
+{% endif %}
+  {% include JB/analytics %}
+</body>
+</html>

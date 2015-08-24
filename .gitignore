@@ -1,10 +1,16 @@
 _site/*
+<<<<<<< HEAD
 _theme_packages/*
+=======
+>>>>>>> origin/docs-theme-packages
 
 Thumbs.db
 .DS_Store
 
 !.gitkeep
+<<<<<<< HEAD
 
 .rbenv-version
 .rvmrc
+=======
+>>>>>>> origin/docs-theme-packages

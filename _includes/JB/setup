@@ -5,7 +5,11 @@
   {% if site.JB.setup.provider == "custom" %}
     {% include custom/setup %}
   {% else %}
+<<<<<<< HEAD
     {% if site.safe and site.JB.BASE_PATH and site.JB.BASE_PATH != '' %}
+=======
+    {% if site.safe and site.JB.BASE_PATH %}
+>>>>>>> origin/docs-theme-packages
       {% assign BASE_PATH = site.JB.BASE_PATH %}
       {% assign HOME_PATH = site.JB.BASE_PATH %}
     {% else %}
