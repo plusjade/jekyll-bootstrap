@@ -31,7 +31,8 @@ Contact us on the number below to find out how we can help you to take your busi
   <div markdown="1">
 ## SERVICES
 
-## ISO 9001 certification packages - We offer a simple and effective bespoke management system which ensures compliance to ISO 9001 at a cost effective price.  ISO 9001 is becomming a requirement more and more these days, with business's among other things using it to help them choose who to award tenders to.  With our certifiation package a bespoke system is integrated into your daily business processes offering many advantages such as making the tender process just a formality to winning lucrative contracts.
+## ISO 9001 Certification Packages
+We offer a simple and effective bespoke management system which ensures compliance to ISO 9001 at a cost effective price.  ISO 9001 is becomming a requirement more and more these days, with business's among other things using it to help them choose who to award tenders to.  With our certifiation package a bespoke system is integrated into your daily business processes offering many advantages such as making the tender process just a formality to winning lucrative contracts.
 
 ## Supplier Audits
 Key suppliers are as important to your delivery programme as your own internal processes.  Working closely with them ensures their understanding of your requirements and shows them that they are important to you as an effective supplier.  Our supplier audits can be tailored to your organisation’s needs and can be from a half day to multiple days’ duration depending on your needs.  A full report is provided with agreed timescales for completion of actions. Follow up audits can be conducted to ensure action closure.
