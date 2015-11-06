@@ -7,6 +7,8 @@
   {% include JB/analytics-providers/gauges %}
 {% when "google" %}
   {% include JB/analytics-providers/google %}
+{% when "googleUA" %}
+  {% include JB/analytics-providers/google-universal %}
 {% when "getclicky" %}
   {% include JB/analytics-providers/getclicky %}
 {% when "mixpanel" %}
