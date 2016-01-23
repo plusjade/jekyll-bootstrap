@@ -8,29 +8,40 @@ Usage:
   	  {% assign pages_list = site.pages %}  
   	  {% include JB/pages_list %}
   	</ul>
-  	
-  Grouping: (optional): 
+	
+  	Notes: 
+    To influence ordering, assign an optional 'weight' meta-data value of between of 0 and 100 to each 
+	page/post. The greater the weight value, the higher the order priority when listing pages. Pages/posts
+	without weight values assigned default to a weight value of 0.
+
+	Grouping: (optional): 
   	assign the 'group' variable to constrain the list to only pages/posts
   	in the given group. Note you must define the group manually in the page/post
   	meta-data to use this feature.
   	Grouping is mainly helpful for non-post pages.
   	If you want to group posts, it's easier/better to tag them, then pass the tagged posts array.
   	i.e. site.tags.cool_tag (this returns an array of posts tagged: cool_tag)
-  	
+	
   This helper can be seen in use at: ../_layouts/default.html
 -->{% endcomment %}
 
 {% if site.JB.pages_list.provider == "custom" %}
   {% include custom/pages_list %}
 {% else %}
-  {% for node in pages_list %}
-    {% if group == null or group == node.group %}
-    	{% if page.url == node.url %}
-    	<li class="active"><a href="{{ BASE_PATH }}{{node.url}}" class="active">{{node.title}}</a></li>
-    	{% else %}
-    	<li><a href="{{ BASE_PATH }}{{node.url}}">{{node.title}}</a></li>
-    	{% endif %}
-    {% endif %}
+  {% for weight in (0..100) reversed %}
+	  {% for node in pages_list %}
+		{% if node.weight == weight or node.weight == null and weight == 0 %}
+			{% if node.title != null %}
+			  {% if group == null or group == node.group %}
+				{% if page.url == node.url %}
+				<li class="active"><a href="{{ BASE_PATH }}{{node.url}}" class="active">{{node.title}}</a></li>
+				{% else %}
+				<li><a href="{{ BASE_PATH }}{{node.url}}">{{node.title}}</a></li>
+				{% endif %}
+			  {% endif %}
+			{% endif %}
+		{% endif %}
+	  {% endfor %}
   {% endfor %}
 {% endif %}
 {% assign pages_list = nil %}
