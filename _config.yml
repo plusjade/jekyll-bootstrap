@@ -27,6 +27,8 @@ author :
 #
 production_url : http://username.github.io
 
+gems: ["jekyll-sitemap"]
+
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
 JB :
