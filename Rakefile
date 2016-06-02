@@ -2,15 +2,21 @@ require "rubygems"
 require 'rake'
 require 'yaml'
 require 'time'
+require 'less'
 
 SOURCE = "."
+LESS = File.join(SOURCE, "assets", "themes", "twitter") # set theme here
 CONFIG = {
   'version' => "0.3.0",
   'themes' => File.join(SOURCE, "_includes", "themes"),
   'layouts' => File.join(SOURCE, "_layouts"),
   'posts' => File.join(SOURCE, "_posts"),
   'post_ext' => "md",
-  'theme_package_version' => "0.1.0"
+  'theme_package_version' => "0.1.0",
+  'less' => File.join(LESS, "less"),
+  'css' => File.join(LESS, "css"),
+  'input' => "style.less",
+  'output' => "style.css"
 }
 
 # Path configuration helper
@@ -102,6 +108,23 @@ desc "Launch preview environment"
 task :preview do
   system "jekyll serve -w"
 end # task :preview
+
+desc "Compile Less"
+task :lessc do
+  less   = CONFIG['less']
+
+  input  = File.join( less, CONFIG['input'] )
+  output = File.join( CONFIG['css'], CONFIG['output'] )
+
+  source = File.open( input, "r" ).read
+
+  parser = Less::Parser.new( :paths => [less] )
+  tree = parser.parse( source )
+
+  File.open( output, "w+" ) do |f|
+    f.puts tree.to_css( :compress => true )
+  end
+end # task :lessc
 
 # Public: Alias - Maintains backwards compatability for theme switching.
 task :switch_theme => "theme:switch"
