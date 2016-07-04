@@ -1,0 +1,64 @@
+<!-- Pagination bar -->
+<nav class="pagination {{ include.section }}">
+
+	<!-- First column -->
+	<div class="column column1">
+
+		<!-- If previous page exist -->
+		{% if paginator.previous_page %}
+
+			<!-- If previous page is 1 -->
+			{% if paginator.previous_page == 1 %}
+
+				<!-- Giving the button base url link -->
+				<a href="{{ site.baseurl }}">{% if site.lang == "tr" %}Yeni Yazılar{% else %}Newer Posts{% endif %}</a>
+
+			<!-- If previous page is not 1 -->
+			{% else %}
+
+				<!-- Giving the button pagination link -->
+				<a href="{{ site.baseurl }}/{{ site.paginateLabel }}/{{ paginator.previous_page }}">{% if site.lang == "tr" %}Yeni Yazılar{% else %}Newer Posts{% endif %}</a>
+
+			{% endif %}
+
+		<!-- If previous page doesn't exist -->
+		{% else %}
+
+			<!-- Simple fix for next divs -->
+			&nbsp;
+
+		{% endif %}
+
+	</div><!-- .column1 -->
+
+	<!-- Second column -->
+	<div class="column column2">
+
+		<!-- Page number -->
+		<span> 
+			{% if site.lang == "tr" %}
+				Sayfa {{ paginator.page }}/{{ paginator.total_pages }}
+			{% else %}
+				Page {{ paginator.page }} of {{ paginator.total_pages }}
+			{% endif %} 
+		</span>
+
+	</div><!-- .column2 -->
+
+	<!-- Third column -->
+	<div class="column column3">
+
+		<!-- If next page exist -->
+		{% if paginator.next_page %}
+
+			<!-- Giving the button pagination link -->
+			<a href="{{ site.baseurl }}/{{ site.paginateLabel }}/{{ paginator.next_page }}">{% if site.lang == "tr" %}Eski Yazılar{% else %}Older Posts{% endif %}</a>
+
+		{% endif %}
+
+	</div><!-- .column3 -->
+
+	<!-- Clear:both -->
+	<div class="cb"></div>
+
+</nav><!-- .pagination -->

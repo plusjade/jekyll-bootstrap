@@ -1,0 +1,6 @@
+ftp_host: "domain.com"
+ftp_dir: "/public_html"
+ftp_passive: false
+ftp_port: 21
+ftp_username: "username"
+ftp_password: "password"

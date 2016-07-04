@@ -1,0 +1,62 @@
+---
+layout: default
+---
+
+<!-- Article -->
+<article{% if site.addthisId == "" && site.disqusUsername == "" %} class="noBorder"{% endif %}>
+
+	<!-- Article title -->
+	<h1>{{ page.title }}</h1>
+
+	<!-- Article date -->
+	<span class="article__date">
+		{% if site.lang == "tr" %}
+			{% assign m = page.date | date: "%-m" %}
+			{{ page.date | date: "%-d" }} 
+			{% case m %}
+				{% when "1" %}OCAK 
+				{% when "2" %}ŞUBAT 
+				{% when "3" %}MART 
+				{% when "4" %}NİSAN 
+				{% when "5" %}MAYIS 
+				{% when "6" %}HAZİRAN 
+				{% when "7" %}TEMMUZ 
+				{% when "8" %}AĞUSTOS 
+				{% when "9" %}EYLÜL 
+				{% when "10" %}EKİM 
+				{% when "11" %}KASIM 
+				{% when "12" %}ARALIK 
+			{% endcase %}
+			{{ page.date | date: "%Y" }}
+		{% else %}
+			{{ page.date | date_to_long_string | upcase }}
+		{% endif %}
+	</span>
+
+	<!-- Article description -->
+	<section>{{ page.content }}</section>
+
+</article><!-- article -->
+
+<!-- If addthisId declared -->
+{% if site.addthisId != "" %}
+
+	<!-- Addthis -->
+	<div class="addthis_sharing_toolbox mt"></div>
+	<script async src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-{{ site.addthisId }}"></script>
+
+{% endif %}
+
+<!-- If disqusUsername declared -->
+{% if site.disqusUsername != "" %}
+
+	<!-- Full width -->
+	<div class="full">
+
+		<!-- Disqus -->
+		<div id="disqus_thread" class="mt mb"></div>
+		<script async src="//{{ site.disqusUsername }}.disqus.com/embed.js"></script>
+
+	</div><!-- .full -->
+
+{% endif %}

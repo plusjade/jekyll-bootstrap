@@ -1,0 +1,37 @@
+/* Vendor1 */
+@mixin vendor1($property, $expression...) {
+	#{$property}: $expression;
+	-o-#{$property}: $expression;
+	-ms-#{$property}: $expression;
+	-moz-#{$property}: $expression;
+	-webkit-#{$property}: $expression;
+}/* @mixin vendor1() */
+
+/* Vendor2 */
+@mixin vendor2($property, $expression...) {
+	#{$property}: #{$expression};
+	#{$property}: -o-#{$expression};
+	#{$property}: -ms-#{$expression};
+	#{$property}: -moz-#{$expression};
+	#{$property}: -webkit-#{$expression};
+}/* @mixin vendor2() */
+
+/* Aspect ratio */
+@mixin aspectRatio($ratio1, $ratio2) {
+	display: block;
+	position: relative;
+	&:before {
+		content: "";
+		display: block;
+		padding-bottom: ($ratio2 / $ratio1) * 100%;
+	}
+	>.ar-content {
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		position: absolute;
+		background-position: center center;
+		@include vendor1(background-size, cover);
+	}
+}/* @mixin aspectRatio() */

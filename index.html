@@ -1,0 +1,73 @@
+---
+layout: default
+---
+
+<!-- Don't show pagination bar in homepage -->
+{% if paginator.page > 1 %}
+
+	<!-- Include pagination bar -->
+	{% include pagination.html section="top" %}
+
+{% endif %}
+
+<!-- Loop for posts by paginator -->
+{% for post in paginator.posts %}
+
+	<!-- Article -->
+	<article>
+
+		<!-- Article title -->
+		<a href="{{ site.baseurl }}{{ post.url }}" class="h1">{{ post.title }}</a>
+
+			<!-- If article has a cover photo -->
+			{% if post.coverPhoto %}
+
+				<!-- Article image with aspect ratio -->
+				<a href="{{ site.baseurl }}{{ post.url }}" class="ar-container">
+					<span class="ar-content" style="background-image: url({{ post.coverPhoto }});"></span>
+				</a><!-- .ar-container -->
+
+			{% endif %}
+
+		<!-- Article pre description -->
+		<section class="max-height">{{ post.content | strip_html | slice: 0, 200 }}</section>
+
+		<!-- Article date & article continue reading button container -->
+		<div class="article__bottom">
+
+			<!-- Article date -->
+			<span class="article__date">
+				{% if site.lang == "tr" %}
+					{% assign m = post.date | date: "%-m" %}
+					{{ post.date | date: "%-d" }} 
+					{% case m %}
+						{% when "1" %}OCAK 
+						{% when "2" %}ŞUBAT 
+						{% when "3" %}MART 
+						{% when "4" %}NİSAN 
+						{% when "5" %}MAYIS 
+						{% when "6" %}HAZİRAN 
+						{% when "7" %}TEMMUZ 
+						{% when "8" %}AĞUSTOS 
+						{% when "9" %}EYLÜL 
+						{% when "10" %}EKİM 
+						{% when "11" %}KASIM 
+						{% when "12" %}ARALIK 
+					{% endcase %}
+					{{ post.date | date: "%Y" }}
+				{% else %}
+					{{ post.date | date_to_long_string | upcase }}
+				{% endif %}
+			</span>
+
+			<!-- Article continue reading button -->
+			<a class="article__button" href="{{ site.baseurl }}{{ post.url }}">{% if site.lang == "tr" %}DEVAMINI OKU{% else %}CONTINUE READING{% endif %}</a>
+
+		</div><!-- .article__bottom -->
+
+	</article><!-- article -->
+
+{% endfor %}
+
+<!-- Include pagination bar -->
+{% include pagination.html section="bottom" %}

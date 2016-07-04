@@ -1,0 +1,92 @@
+/* Fonts */
+$generalFontFamily: "Open Sans", sans-serif;
+$articleFontFamily: "Roboto Slab", serif;
+
+/* Screen resolutions */
+$mobile-max: 767px;
+$tablet-min: 768px; $tablet-max: 991px;
+$computer-min: 992px; $computer-max: 1199px;
+$largescreen-min: 1200px; $largescreen-max: 1919px;
+$widescreen-min: 1920px;
+
+/* Sizes */
+$containerWidth-mobile: 100%;
+$containerWidth-tablet: 100%;
+$containerWidth-computer: 800px;
+$containerWidth-largescreen: 900px;
+$containerWidth-widescreen: 1000px;
+
+$containerPadding-mobile: 40px;
+$containerPadding-tablet: 80px;
+$containerPadding-computer: 100px;
+$containerPadding-largescreen: 120px;
+$containerPadding-widescreen: 140px;
+
+$homeTitleMarginTop-mobile: 20px;
+$homeTitleMarginTop-tablet: 30px;
+$homeTitleMarginTop-computer: 30px;
+$homeTitleMarginTop-largescreen: 40px;
+$homeTitleMarginTop-widescreen: 50px;
+
+$h1FontSize-mobile: 24px; $h1LineHeight-mobile: 30px;
+$h1FontSize-tablet: 28px; $h1LineHeight-tablet: 34px;
+$h1FontSize-computer: 30px; $h1LineHeight-computer: 38px;
+$h1FontSize-largescreen: 42px; $h1LineHeight-largescreen: 46px;
+$h1FontSize-widescreen: 42px; $h1LineHeight-widescreen: 46px;
+
+$h2FontSize-mobile: 22px; $h2LineHeight-mobile: 29px;
+$h2FontSize-tablet: 24px; $h2LineHeight-tablet: 31px;
+$h2FontSize-computer: 26px; $h2LineHeight-computer: 33px;
+$h2FontSize-largescreen: 28px; $h2LineHeight-largescreen: 35px;
+$h2FontSize-widescreen: 30px; $h2LineHeight-widescreen: 37px;
+
+$h3FontSize-mobile: 17px; $h3LineHeight-mobile: 23px;
+$h3FontSize-tablet: 19px; $h3LineHeight-tablet: 25px;
+$h3FontSize-computer: 21px; $h3LineHeight-computer: 27px;
+$h3FontSize-largescreen: 23px; $h3LineHeight-largescreen: 29px;
+$h3FontSize-widescreen: 25px; $h3LineHeight-widescreen: 31px;
+
+$h4FontSize-mobile: 17px; $h4LineHeight-mobile: 22px;
+$h4FontSize-tablet: 18px; $h4LineHeight-tablet: 23px;
+$h4FontSize-computer: 19px; $h4LineHeight-computer: 24px;
+$h4FontSize-largescreen: 20px; $h4LineHeight-largescreen: 25px;
+$h4FontSize-widescreen: 21px; $h4LineHeight-widescreen: 26px;
+
+$h5FontSize-mobile: 14px; $h5LineHeight-mobile: 20px;
+$h5FontSize-tablet: 15px; $h5LineHeight-tablet: 21px;
+$h5FontSize-computer: 16px; $h5LineHeight-computer: 22px;
+$h5FontSize-largescreen: 17px; $h5LineHeight-largescreen: 23px;
+$h5FontSize-widescreen: 18px; $h5LineHeight-widescreen: 24px;
+
+$h6FontSize-mobile: 11px; $h6LineHeight-mobile: 14px;
+$h6FontSize-tablet: 12px; $h6LineHeight-tablet: 15px;
+$h6FontSize-computer: 13px; $h6LineHeight-computer: 16px;
+$h6FontSize-largescreen: 14px; $h6LineHeight-largescreen: 17px;
+$h6FontSize-widescreen: 15px; $h6LineHeight-widescreen: 18px;
+
+$pFontSize-mobile: 16px; $pLineHeight-mobile: 29px;
+$pFontSize-tablet: 17px; $pLineHeight-tablet: 31px;
+$pFontSize-computer: 19px; $pLineHeight-computer: 33px;
+$pFontSize-largescreen: 21px; $pLineHeight-largescreen: 35px;
+$pFontSize-widescreen: 23px; $pLineHeight-widescreen: 37px;
+
+$headerHeight: 100px;
+$header__iconHeight: 40px;
+$header__iconFontSize: 20px;
+$footerHeight: 100px;
+$generalFontSize: 15px;
+$footerFontSize: 12px;
+$articleImageBorderRadius: 4px;
+$aspectRatioX: 2;
+$aspectRatioY: 1;
+
+/* Colors */
+$titleTextColor: #4a4a4a;
+$paragraphTextColor: #3A4145;
+$generalTextColor: lighten($titleTextColor, 40%);
+$linkBorderColor: #b4e7f8;
+$headerBackgroundColor: #f9f9f9;
+$headerBorderColor: darken($headerBackgroundColor, 3%);
+$footerBackgroundColor: $headerBackgroundColor;
+$footerBorderColor: darken($footerBackgroundColor, 3%);
+$aspectRatioBackgroundColor: $headerBorderColor;

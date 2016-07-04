@@ -1,0 +1,289 @@
+
+/* IMPORTS */
+@import "mixins";
+@import "variables";
+
+/* Html, body */
+html, body {
+	/* overflow-x: hidden; */
+}/* html, body */
+
+/* Body */
+body {
+	overflow-y: scroll;
+}/* body */
+
+/* All elements */
+* {
+	margin: 0;
+	padding: 0;
+	font-weight: 400;
+	/* color: $generalTextColor; */
+	font-size: $generalFontSize;
+	font-family: $generalFontFamily;
+	@include vendor1(box-sizing, border-box);
+}/* * */
+
+/* Bold texts */
+strong {
+	font-weight: bold;
+}/* strong */
+
+/* Codes and keyboard tags */
+code:not([class*="language-"]), kbd {
+	border: none;
+	padding: 3px 6px;
+	font-weight: bold;
+	font-size: 80% !important;
+	@include vendor1(border-radius, $articleImageBorderRadius);
+	font-family: Menlo, Monaco, Consolas, "Courier New", monospace !important;
+}/* code, kbd */
+
+/* Codes */
+code:not([class*="language-"]) {
+	color: #c7254e !important;
+	background-color: #f9f2f4;
+}/* code */
+
+/* Keyboard tags */
+kbd {
+	background-color: #666;
+	color: #F4F4F4 !important;
+}/* kbd */
+
+/* Blockquotes */
+blockquote {
+
+	font-style: italic;
+	margin-left: -50px;
+	display: inline-block;
+	padding-left: 50px - 8px;
+	border-left: 8px solid $paragraphTextColor;
+
+	/* Mobile */
+	@media(max-width:$mobile-max) {
+		margin-left: -25px;
+		padding-left: 25px - 4px;
+		border-left: 4px solid $paragraphTextColor;
+	}
+
+}/* blockquote */
+
+/* Headings */
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-weight: 700;
+	color: $titleTextColor;
+}/* h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 */
+
+/* Heading 1 */
+h1, .h1 {
+
+	/* Mobile */
+	@media(max-width:$mobile-max) {
+		font-size: $h1FontSize-mobile;
+		line-height: $h1LineHeight-mobile;
+	}
+	/* Tablet */
+	@media(min-width:$tablet-min) and (max-width:$tablet-max) {
+		font-size: $h1FontSize-tablet;
+		line-height: $h1LineHeight-tablet;
+	}
+	/* Computer */
+	@media(min-width:$computer-min) and (max-width:$computer-max) {
+		font-size: $h1FontSize-computer;
+		line-height: $h1LineHeight-computer;
+	}
+	/* Largescreen */
+	@media(min-width:$largescreen-min) and (max-width:$largescreen-max) {
+		font-size: $h1FontSize-largescreen;
+		line-height: $h1LineHeight-largescreen;
+	}
+	/* Widescreen */
+	@media(min-width:$widescreen-min) {
+		font-size: $h1FontSize-widescreen;
+		line-height: $h1LineHeight-widescreen;
+	}
+
+}/* h1, .h1 */
+
+/* Heading 2 */
+h2, .h2 {
+
+	/* Mobile */
+	@media(max-width:$mobile-max) {
+		font-size: $h2FontSize-mobile;
+		line-height: $h2LineHeight-mobile;
+	}
+	/* Tablet */
+	@media(min-width:$tablet-min) and (max-width:$tablet-max) {
+		font-size: $h2FontSize-tablet;
+		line-height: $h2LineHeight-tablet;
+	}
+	/* Computer */
+	@media(min-width:$computer-min) and (max-width:$computer-max) {
+		font-size: $h2FontSize-computer;
+		line-height: $h2LineHeight-computer;
+	}
+	/* Largescreen */
+	@media(min-width:$largescreen-min) and (max-width:$largescreen-max) {
+		font-size: $h2FontSize-largescreen;
+		line-height: $h2LineHeight-largescreen;
+	}
+	/* Widescreen */
+	@media(min-width:$widescreen-min) {
+		font-size: $h2FontSize-widescreen;
+		line-height: $h2LineHeight-widescreen;
+	}
+
+}/* h2, .h2 */
+
+/* Heading 3 */
+h3, .h3 {
+
+	/* Mobile */
+	@media(max-width:$mobile-max) {
+		font-size: $h3FontSize-mobile;
+		line-height: $h3LineHeight-mobile;
+	}
+	/* Tablet */
+	@media(min-width:$tablet-min) and (max-width:$tablet-max) {
+		font-size: $h3FontSize-tablet;
+		line-height: $h3LineHeight-tablet;
+	}
+	/* Computer */
+	@media(min-width:$computer-min) and (max-width:$computer-max) {
+		font-size: $h3FontSize-computer;
+		line-height: $h3LineHeight-computer;
+	}
+	/* Largescreen */
+	@media(min-width:$largescreen-min) and (max-width:$largescreen-max) {
+		font-size: $h3FontSize-largescreen;
+		line-height: $h3LineHeight-largescreen;
+	}
+	/* Widescreen */
+	@media(min-width:$widescreen-min) {
+		font-size: $h3FontSize-widescreen;
+		line-height: $h3LineHeight-widescreen;
+	}
+
+}/* h3, .h3 */
+
+/* Heading 4 */
+h4, .h4 {
+
+	/* Mobile */
+	@media(max-width:$mobile-max) {
+		font-size: $h4FontSize-mobile;
+		line-height: $h4LineHeight-mobile;
+	}
+	/* Tablet */
+	@media(min-width:$tablet-min) and (max-width:$tablet-max) {
+		font-size: $h4FontSize-tablet;
+		line-height: $h4LineHeight-tablet;
+	}
+	/* Computer */
+	@media(min-width:$computer-min) and (max-width:$computer-max) {
+		font-size: $h4FontSize-computer;
+		line-height: $h4LineHeight-computer;
+	}
+	/* Largescreen */
+	@media(min-width:$largescreen-min) and (max-width:$largescreen-max) {
+		font-size: $h4FontSize-largescreen;
+		line-height: $h4LineHeight-largescreen;
+	}
+	/* Widescreen */
+	@media(min-width:$widescreen-min) {
+		font-size: $h4FontSize-widescreen;
+		line-height: $h4LineHeight-widescreen;
+	}
+
+}/* h4, .h4 */
+
+/* Heading 5 */
+h5, .h5 {
+
+	/* Mobile */
+	@media(max-width:$mobile-max) {
+		font-size: $h5FontSize-mobile;
+		line-height: $h5LineHeight-mobile;
+	}
+	/* Tablet */
+	@media(min-width:$tablet-min) and (max-width:$tablet-max) {
+		font-size: $h5FontSize-tablet;
+		line-height: $h5LineHeight-tablet;
+	}
+	/* Computer */
+	@media(min-width:$computer-min) and (max-width:$computer-max) {
+		font-size: $h5FontSize-computer;
+		line-height: $h5LineHeight-computer;
+	}
+	/* Largescreen */
+	@media(min-width:$largescreen-min) and (max-width:$largescreen-max) {
+		font-size: $h5FontSize-largescreen;
+		line-height: $h5LineHeight-largescreen;
+	}
+	/* Widescreen */
+	@media(min-width:$widescreen-min) {
+		font-size: $h5FontSize-widescreen;
+		line-height: $h5LineHeight-widescreen;
+	}
+
+}/* h5, .h5 */
+
+/* Heading 6 */
+h6, .h6 {
+
+	/* Mobile */
+	@media(max-width:$mobile-max) {
+		font-size: $h6FontSize-mobile;
+		line-height: $h6LineHeight-mobile;
+	}
+	/* Tablet */
+	@media(min-width:$tablet-min) and (max-width:$tablet-max) {
+		font-size: $h6FontSize-tablet;
+		line-height: $h6LineHeight-tablet;
+	}
+	/* Computer */
+	@media(min-width:$computer-min) and (max-width:$computer-max) {
+		font-size: $h6FontSize-computer;
+		line-height: $h6LineHeight-computer;
+	}
+	/* Largescreen */
+	@media(min-width:$largescreen-min) and (max-width:$largescreen-max) {
+		font-size: $h6FontSize-largescreen;
+		line-height: $h6LineHeight-largescreen;
+	}
+	/* Widescreen */
+	@media(min-width:$widescreen-min) {
+		font-size: $h6FontSize-widescreen;
+		line-height: $h6LineHeight-widescreen;
+	}
+
+}/* h6, .h6 */
+
+/* Links */
+a {
+	outline: none;
+	text-decoration: none;
+}/* a */
+
+/* Display: table */
+.dt {
+
+	width: 100%;
+	height: 100%;
+	display: table;
+
+	/* Display: table-cell */
+	>.dtc {
+		text-align: center;
+		display: table-cell;
+		vertical-align: middle;
+	}/* >.dtc */
+
+}/* .dt */
+
+/* Clear:both */
+.cb {
+	clear: both;
+}/* .cb */
