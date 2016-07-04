@@ -1,164 +1,20 @@
----
-layout: htmlCompressor
----
-
 <!DOCTYPE html>
-<html lang="{{ site.lang }}" itemscope itemtype="http://schema.org/WebPage">
-<head>
+<html>
 
-	<!-- SEO -->
-	<title>{% if page.title %}{{ page.title }}{% elsif site.name %}{{ site.name }}{% endif %}</title>
-	<meta name="description" content="{% if page.title %}{{ page.content | strip_html | slice: 0, 150 }}{% elsif site.description %}{{ site.description }}{% endif %}">
+  {% include head.html %}
 
-	<!-- Meta for robots -->
-	<meta charset="UTF-8">
-	<meta name="revisit-after" content="1 days">
-	<meta name="robots" content="index, follow">
-	<meta name="author" content="{{ site.author }}">
-	<meta name="generator" content="Jekyll v{{ jekyll.version }}">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <body>
 
-	<!-- Google+ -->
-	<meta itemprop="name" content="{% if page.title %}{{ page.title }}{% elsif site.name %}{{ site.name }}{% endif %}">
-	<meta itemprop="description" content="{% if page.title %}{{ page.content | strip_html | slice: 0, 150 }}{% elsif site.description %}{{ site.description }}{% endif %}">
+    {% include header.html %}
 
-	<!-- Open Graph(Facebook, Pinterest) -->
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="{{ site.baseurl }}{{ page.url }}">
-	<meta property="og:title" content="{% if page.title %}{{ page.title }}{% elsif site.name %}{{ site.name }}{% endif %}">
-	<meta property="og:locale" content="{{ site.locale }}">
-	<meta property="og:site_name" content="{{ site.name }}">
-	<meta property="og:description" content="{% if page.title %}{{ page.content | strip_html | slice: 0, 150 }}{% elsif site.description %}{{ site.description }}{% endif %}">
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </div>
 
-	<!-- Twitter -->
-	<meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% elsif site.name %}{{ site.name }}{% endif %}">
-	<meta name="twitter:site" content="{{ site.name }}">
-	<meta name="twitter:url" content="{{ site.baseurl }}{{ page.url }}">
-	<meta name="twitter:creator" content="{{ site.author }}">
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:description" content="{% if page.title %}{{ page.content | strip_html | slice: 0, 150 }}{% elsif site.description %}{{ site.description }}{% endif %}">
+    {% include footer.html %}
 
-	<!-- If article has a cover photo -->
-	{% if page.coverPhoto %}
-		<meta itemprop="image" content="{{ page.coverPhoto }}">
-		<meta property="og:image" content="{{ page.coverPhoto }}">
-		<meta name="twitter:image" content="{{ page.coverPhoto }}">
-	{% endif %}
+  </body>
 
-	<!-- iOS web app -->
-	<meta name="format-detection" content="telephone=yes">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-title" content="{% if page.title %}{{ page.title }}{% elsif site.name %}{{ site.name }}{% endif %}">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-	<!-- Search engine verifications -->
-	{% if site.bing != "" %}<meta name="msvalidate.01" content="{{ site.bing }}">{% endif %}
-	{% if site.yandex != "" %}<meta name="yandex-verification" content="{{ site.yandex }}">{% endif %}
-	{% if site.google != "" %}<meta name="google-site-verification" content="{{ site.google }}">{% endif %}
-
-	<!-- Favicon & RSS -->
-	<link rel="icon" href="{{ site.baseurl }}/assets/img/favicon.ico">
-	<link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.baseurl }}/rss.xml">
-
-	<!-- CSS & JS files -->
-	<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/prod/style.min.css">
-	<script src="{{ site.baseurl }}/assets/js/prod/prism.min.js"></script>
-	<script src="{{ site.baseurl }}/assets/js/prod/fastclick.min.js"></script>
-	<script src="{{ site.baseurl }}/assets/js/prod/init.min.js"></script>
-
-</head>
-<body>
-
-	<!-- Header -->
-	<header>
-
-		<!-- Header container -->
-		<section>
-
-			<!-- Homepage -->
-			<a href="{{ site.baseurl }}"><i class="icon-home"></i></a>
-
-			<!-- Site name & description -->
-			<div>
-
-				<!-- Display: table -->
-				<div class="dt">
-
-					<!-- Display: table-cell -->
-					<div class="dtc">
-
-						<h3>{{ site.name }}</h3>
-						<h6>{{ site.description }}</h6>
-
-					</div><!-- .dtc -->
-
-				</div><!-- .dt -->
-
-			</div><!-- div -->
-
-			<!-- Mail -->
-			<a href="mailto:{{ site.email }}"><i class="icon-envelope-o"></i></a>
-
-		</section><!-- section -->
-
-	</header><!-- header -->
-
-	<!-- Main -->
-	<main>
-
-		<!-- Main container -->
-		<section>
-
-			<!-- Content -->
-			{{ content }}
-
-		</section><!-- section -->
-
-	</main><!-- main -->
-
-	<!-- Footer -->
-	<footer>
-
-		<!-- Footer container -->
-		<section>
-
-			<!-- Display: table -->
-			<div class="dt">
-
-				<!-- Display: table-cell -->
-				<div class="dtc h6">
-
-					<!-- Copyright -->
-					<a href="{{ site.baseurl }}" class="h6">{{ site.name }}</a> &copy; {{ site.time | date: "%Y" }} &bull; {% if site.lang == "tr" %}Tüm hakları saklıdır{% else %}All rights reserved{% endif %}.
-					<br>
-					{% if site.lang == "tr" %}
-						<a href="https://github.com/jekyll/jekyll" class="h6" target="_blank">Jekyll</a> ile <a href="https://github.com/ozgrozer/dasper" class="h6" target="_blank">Dasper</a> teması kullanılarak oluşturulmuştur.
-					{% else %}
-						Proudly published with <a href="https://github.com/jekyll/jekyll" class="h6" target="_blank">Jekyll</a> using <a href="https://github.com/ozgrozer/dasper" class="h6" target="_blank">Dasper</a> theme.
-					{% endif %}
-
-				</div><!-- .dtc -->
-
-			</div><!-- .dt -->
-
-		</section><!-- section -->
-
-	</footer><!-- footer -->
-
-	<!-- If googleAnalyticsId declared -->
-	{% if site.googleAnalyticsId != "" %}
-
-		<!-- Google analytics tracking code -->
-		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-			ga('create', '{{ site.googleAnalyticsId }}', 'auto');
-			ga('send', 'pageview');
-		</script><!-- script -->
-
-	{% endif %}
-
-</body>
 </html>

@@ -1,38 +1,21 @@
-# Website details
-name: ""
-description: ""
-email: ""
-author: ""
-lang: ""
-locale: ""
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
-# Jekyll
-paginate: 10
-highlighter: ""
+# Site settings
+title: Your awesome title
+email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+twitter_username: jekyllrb
+github_username:  jekyll
+
+# Build settings
 markdown: kramdown
-gems: [jekyll-paginate]
-timezone: Europe/Istanbul
-paginateLabel: page
-paginate_path: "page/:num"
-permalink: /:categories/:year/:month/:day/:title
-baseurl: http://domain.com
-
-# Includes
-addthisId: ""
-disqusUsername: ""
-googleAnalyticsId: ""
-
-# Search engine verifications
-bing: ""
-yandex: ""
-google: ""
-
-#Sitemap
-sitemap:
-    file: "/sitemap.xml"
-    exclude:
-        - "/404.html"
-    include_posts:
-        - "/index.html"
-    change_frequency_name: "daily"
-    priority_name: "1.00"
