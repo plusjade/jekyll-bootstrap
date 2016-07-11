@@ -382,7 +382,7 @@ The following is an outline of how that's done:
 
 3. **Jekyll liquifies posts and templates.**  
   Next jekyll loops through each post file and converts (through markdown or textile) and **liquifies** the post inside of its respective layout(s).
-  Once the post is parsed and liquified inside the the proper layout structure, the layout itself is "liquified".   
+  Once the post is parsed and liquified inside the proper layout structure, the layout itself is "liquified".   
   **Liquification** is defined as follows: Jekyll initiates a Liquid template, and passes a simpler hash representation of the ruby site object as well as a simpler
   hash representation of the ruby post object. These simplified data structures are what you have access to in the templates.
   
