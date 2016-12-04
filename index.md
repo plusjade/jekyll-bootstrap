@@ -13,7 +13,7 @@ Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllb
 
 In `_config.yml` remember to specify your own data:
     
-    title : My Blog =)
+    title : Liang  =)
     
     author :
       name : Name Lastname
