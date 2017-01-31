@@ -1,0 +1,8 @@
+{% comment %}
+	Creates a tag cloud on your page.
+{% endcomment %}
+{% for tag in site.tags %}
+  <span class="tag-cloud-{{ tag | last | size | times: 10 | divided_by: site.tags.size }}">
+  	<a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag | first | slugize] }}-ref">{{ tag | first }}</a>
+  </span>
+{% endfor %}
