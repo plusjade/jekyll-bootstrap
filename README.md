@@ -1,10 +1,17 @@
+# Archived
+
+Hi this repo is no longer maintained. I also failed to renew the jekyllbootstap dot com website. It's now been abused =/
+
+This repo still highlights usable patterns for jekyll-based blogs and advanced/hackable liquid techniques. It's been fun! Thank you all.
+
+
 # Jekyll-Bootstrap
 
 The quickest way to start and publish your Jekyll powered blog. 100% compatible with GitHub pages
 
 ## Usage
 
-For all usage and documentation please see: <http://jekyllbootstrap.com>
+For all usage and documentation please see: (website no longer maintained)
 
 ## Version
 
